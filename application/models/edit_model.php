@@ -32,7 +32,16 @@ class Edit_model extends CI_Model{
 		$this->db->where('id', $id);
 		$data = $this->db->get('floorplans');
 		return $data;
+	}
 
+	public function insert_floorplan_name($id){
+
+	}
+
+
+	public function get_pets(){
+		$data = $this->db->get('pet_policy');
+		return $data;
 	}
 
 

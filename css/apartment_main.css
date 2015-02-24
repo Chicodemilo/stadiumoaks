@@ -563,6 +563,18 @@ footer {padding: 5px;
                 top: -40px;}
 
 
+/******************************** PETS EDIT PAGE ***************************/
+
+.pet_submit  {position:absolute;
+                /*left:0px;*/
+                top:128px;
+                z-index: 1;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-left: 30px;
+                width: 770px;
+                border-bottom: 1px solid gray;
+                background-color: rgba(139, 134, 130, .5);}
 
 
 

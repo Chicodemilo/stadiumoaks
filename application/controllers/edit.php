@@ -4,6 +4,9 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Edit extends CI_Controller {
 
+
+// SESSION *********************************************************************************
+
 	public function __construct(){
         parent::__construct();
         $this->load->database();
@@ -24,6 +27,7 @@ class Edit extends CI_Controller {
 	}
 
 
+// INDEX *********************************************************************************
 
    	public function index($user_id = 0){
         $role = $this->session->userdata('role');
@@ -39,6 +43,7 @@ class Edit extends CI_Controller {
 
 
 
+// DATABASES *********************************************************************************
 
     public function db_maker(){
         $role = $this->session->userdata('role');
@@ -82,6 +87,7 @@ class Edit extends CI_Controller {
 
     }
 
+// MAIN INFO *********************************************************************************
 
     public function submit_main_edits(){
         // print_r($_POST);
@@ -100,6 +106,9 @@ class Edit extends CI_Controller {
         $this->db->update('main_info', $data);
         redirect(base_url().'edit');
     }
+
+
+// AMENITIES *********************************************************************************
 
     public function amenities(){
         $this->load->model('edit_model', 'our_amenities');
@@ -192,6 +201,7 @@ class Edit extends CI_Controller {
 
     }
 
+// HOURS *********************************************************************************
 
     public function hours(){
         $this->load->model('edit_model', 'hours');
@@ -227,7 +237,7 @@ class Edit extends CI_Controller {
     }
 
 
-
+// FLOORPLANS *********************************************************************************
 
     public function floorplans(){
 
@@ -321,21 +331,48 @@ class Edit extends CI_Controller {
 
             $file_name = $data['upload_data']['file_name'];
             $data_b['floorplan_pic'] = $file_name;
-            // echo $file_name;
 
             $this->db->where('id', $id);
-            $this->db->update('floorplans', $data_b);
-
-            
-            
+            $this->db->update('floorplans', $data_b);     
             redirect('edit/floorplans/');
 
-
-            // $this->load->view('edit/upload_success', $data);
         }
     }
 
+// PETS *********************************************************************************
 
+    public function pets(){
+        $this->load->model('edit_model', 'pets');
+        $pets = $this->pets->get_pets()->result_array();
+
+        $data['pets'] = $pets;
+
+        $this->load->view('edit/header.php');
+        $this->load->view('edit/pets.php', $data);
+        $this->load->view('edit/footer.php');
+    }
+
+    public function submit_pets(){
+        $data['day_type'] = $_POST['day_type'];
+        $data['open_hour'] = $_POST['open_hour'];
+        $data['open_min'] = $_POST['open_min'];
+        $data['open_am_pm'] = $_POST['open_am_pm'];
+        $data['close_hour'] = $_POST['close_hour'];
+        $data['close_min'] = $_POST['close_min'];
+        $data['close_am_pm'] = $_POST['close_am_pm'];
+        $data['day_condition'] = $_POST['day_condition'];
+        // print_r($data);
+        $this->db->insert('office_hours', $data);
+        redirect(base_url().'edit/hours');
+    }
+
+
+    public function delete_pets($id){
+        $this->db->where('id', $id);
+        $this->db->delete('pet_policy');
+        redirect(base_url().'edit/pets');
+
+    }
 
 
 

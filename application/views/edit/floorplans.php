@@ -20,7 +20,7 @@
 					<td><select name="bedroom" id="bedroom">
 						<option value="">None</option>
 						<?php 
-							for ($i=1; $i <= 8; $i++) { 
+							for ($i=1; $i <= 9; $i++) { 
 								if($i == 1){
 									echo '<option value="'.$i.'" selected="selected">'.$i.'</option>';
 								}else{

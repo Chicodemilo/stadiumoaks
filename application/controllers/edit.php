@@ -339,6 +339,16 @@ class Edit extends CI_Controller {
         }
     }
 
+
+
+    function delete_this_diagram($id = 0){
+        $data['floorplan_pic'] = '';
+        $this->db->where('id', $id);
+        $this->db->update('floorplans', $data);
+        redirect('edit/edit_floorplan/'.$id);
+
+    }
+
 // PETS *********************************************************************************
 
     public function pets(){

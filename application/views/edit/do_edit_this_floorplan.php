@@ -95,11 +95,21 @@
 			</table>
 			</div>
 			<div class="floorplans_submit_uploader">
-				<input type="submit">
+				<input type="submit" value="Submit Edits">
 			</div>
-			<div class="floorplans_pic">
-				<img src="<?php echo base_url() ?>images/floorplans/<?php  echo $floorplan_info[0]['id']?>/<?php echo $floorplan_info[0]['floorplan_pic'] ?>" alt="<?php echo $floorplan_info[0]['name'] ?>" width='500px'>
-			</div>
+
+			<?php  
+
+			if($floorplan_info[0]['floorplan_pic'] != ''){
+				echo	'<div class="floorplans_pic">
+						<img src="'.base_url().'images/floorplans/'.$floorplan_info[0]['id'].'/'.$floorplan_info[0]['floorplan_pic'].'" alt="'.$floorplan_info[0]['name'].'" width="500px">
+						<br>
+						<a href="'.base_url().'edit/upload_this/'.$floorplan_info[0]['id'].'" class="not_fancy" style="font-size: .6em;">Upload Another Diagram</a>
+						<br>
+						<a href="'.base_url().'edit/delete_this_diagram/'.$floorplan_info[0]['id'].'" class="not_fancy" style="font-size: .6em;">Delete This Diagram</a>
+					</div>';
+			}
+			?>
 		</form>
 
 		

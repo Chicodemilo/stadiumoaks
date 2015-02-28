@@ -557,10 +557,16 @@ footer {padding: 5px;
 .upload_window  {width:800px;
                 margin: auto;}
 
-.floorplans_pic{margin: 20px;
+.floorplans_pic{margin-top: 30px;
+                margin-bottom: 0px;
+                margin-left: 0px;
+                margin-right: 0px;
+                width: 760px;
+                padding: 20px;
+                background-color: #C1C1C1;
                 /*border: 1px solid gray;*/
-                position: relative;
-                top: -40px;}
+                /*position: relative;
+                top: -40px;*/}
 
 
 /******************************** PETS EDIT PAGE ***************************/

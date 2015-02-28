@@ -70,15 +70,6 @@
 					<td>
 						<input type="text" name="name" placeholder="Enter A Custom Amenity.  30 Characters Max." maxlength="30" style="width: 90%;"> 
 						<input type="hidden" name="active" value="Y">
-<!-- 					</td>
-					<td>
-						<input type="hidden" name="select_units" value="N">
-						<input type="checkbox" name="select_units" value="Y" id="select_units">
-					</td>
-					<td>
-						<input type="hidden" name="extra_fees" value="N">
-						<input type="checkbox" name="extra_fees" value="Y" id="extra_fees">
-					</td> -->
 				</tr>
 				</table>
 				<div class="their_amenities_submit_maker">

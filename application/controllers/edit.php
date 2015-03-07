@@ -363,17 +363,10 @@ class Edit extends CI_Controller {
     }
 
     public function submit_pets(){
-        $data['day_type'] = $_POST['day_type'];
-        $data['open_hour'] = $_POST['open_hour'];
-        $data['open_min'] = $_POST['open_min'];
-        $data['open_am_pm'] = $_POST['open_am_pm'];
-        $data['close_hour'] = $_POST['close_hour'];
-        $data['close_min'] = $_POST['close_min'];
-        $data['close_am_pm'] = $_POST['close_am_pm'];
-        $data['day_condition'] = $_POST['day_condition'];
-        // print_r($data);
-        $this->db->insert('office_hours', $data);
-        redirect(base_url().'edit/hours');
+        $data = $_POST;
+        $this->db->empty_table('pet_policy');
+        $this->db->insert('pet_policy', $data);
+        redirect(base_url().'edit/pets');
     }
 
 

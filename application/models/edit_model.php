@@ -45,6 +45,12 @@ class Edit_model extends CI_Model{
 	}
 
 
+	public function get_specials(){
+		$data = $this->db->get('special');
+		return $data;
+	}
+
+
 
 
 

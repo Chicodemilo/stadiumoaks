@@ -32,7 +32,13 @@
 					<th colspan="2">Custom Condition</th>
 				</tr>
 				<tr>
-					<td></td>
+					<td>
+						<select name="condition_1" id="condition_1">
+							<option value="*In Select Units">*In Select Units</option>
+							<option value="*New Residents Only">*New Residents Only</option>
+							<option value="*Year Lease Required">*Year Lease Required</option>
+						</select>
+					</td>
 					<td></td>
 					<td colspan="2"></td>
 				</tr>

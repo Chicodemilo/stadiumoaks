@@ -383,7 +383,7 @@ class Edit extends CI_Controller {
 
         public function specials(){
         $this->load->model('edit_model', 'specials');
-        $specials = $this->specials->get_pets()->result_array();
+        $specials = $this->specials->get_specials()->result_array();
 
         $data['specials'] = $specials;
 

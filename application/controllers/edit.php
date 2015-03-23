@@ -381,7 +381,7 @@ class Edit extends CI_Controller {
 
 // SPECIALS *********************************************************************************
 
-        public function specials(){
+    public function specials(){
         $this->load->model('edit_model', 'specials');
         $specials = $this->specials->get_specials()->result_array();
 
@@ -406,7 +406,48 @@ class Edit extends CI_Controller {
 
     }
 
+
+
+
+// USERS *********************************************************************************
+
+    public function users(){
+        $this->load->model('edit_model', 'users');
+        $users = $this->users->get_users()->result_array();
+
+        $data['users'] = $users;
+
+        $this->load->view('edit/header.php');
+        $this->load->view('edit/users.php', $data);
+        $this->load->view('edit/footer.php');
+    }
+
+    public function submit_users(){
+        $data = $_POST;
+        $this->db->insert('membership', $data);
+        redirect(base_url().'edit/users');
+    }
+
+    public function delete_users($id){
+        $this->db->where('id', $id);
+        $this->db->delete('membership');
+        redirect(base_url().'edit/users');
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
-
-
 ?>

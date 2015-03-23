@@ -51,6 +51,12 @@ class Edit_model extends CI_Model{
 	}
 
 
+	public function get_users(){
+		$data = $this->db->get('membership');
+		return $data;
+	}
+
+
 
 
 
@@ -789,6 +795,64 @@ class Edit_model extends CI_Model{
 				$data = array('name' => $amenity, 'active' => 'N', 'select_units' => 'N', 'extra_fees' => 'N');
 				$this->db->insert('our_amenities_list', $data); 
 			}
+
+
+			$membership = array('id' => array(
+											'type' => 'INT',
+											'constraint' => 5,
+											'unsigned' => TRUE,
+											'auto_increment' => TRUE
+											 ),
+							'first_name' => array(
+											'type' => 'VARCHAR',
+											'constraint' => 35,
+											),
+							'last_name' => array(
+											'type' => 'VARCHAR',
+											'constraint' => 35,
+											),
+							'username' => array(
+											'type' => 'VARCHAR',
+											'constraint' => 35,
+											),
+							'password' => array(
+											'type' => 'VARCHAR',
+											'constraint' => 32,
+											),
+							'email' => array(
+											'type' => 'VARCHAR',
+											'constraint' => 50,
+											),
+							'role' => array(
+											'type' => 'VARCHAR',
+											'constraint' => 11,
+											),
+							'verified' => array(
+											'type' => 'VARCHAR',
+											'constraint' => 3,
+											),
+							'last_login' => array(
+											'type' => 'DATETIME',
+											),
+							'get_message' => array(
+											'type' => 'VARCHAR',
+											'constraint' => 1,
+											),
+							'get_maint' => array(
+											'type' => 'VARCHAR',
+											'constraint' => 1,
+											),
+							'get_pre_app' => array(
+											'type' => 'VARCHAR',
+											'constraint' => 1,
+											),
+
+				);
+
+			$this->dbforge->add_field($membership);
+			$this->dbforge->add_key('id', TRUE);
+			$made = $this->dbforge->create_table('membership', TRUE);
+
 
 			$password = md5('bayrum42');
 			$data = array('first_name' => 'Bay', 'last_name' => 'Rum', 'username' => 'bayrummedia', 'password' => $password, 'email' => 'master@bayrummedia.com', 'role' => 'master', 'verified' => 'Y');

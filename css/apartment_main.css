@@ -630,6 +630,49 @@ footer {padding: 5px;
                 border-bottom: 1px solid gray;
                 background-color: rgba(139, 134, 130, .5);}
 
+/******************************** USERS EDIT PAGE ***************************/
+
+.users_box  {width: 800px;
+            /*border: 1px solid red;*/
+            background-color: #FCFCFC;
+            margin: auto;
+            box-shadow: 5px 5px 5px #dddddd;
+            }
+
+#users_box_lower {margin-top: 0px;}
+
+
+
+.users_box table {width: 100%;
+                    margin-top: 30px;
+                    margin-left: 0px;
+                    margin-bottom: 0px;}
+
+.users_box tr td    {font-size: .8em;
+                    border: 1px solid #e0e0e0;;
+                    border-bottom: 1px solid #e0e0e0;}
+
+.users_box tr th{font-size: .8em;}
+
+.users_table    {width:800px;
+                padding-top: 1px;}
+
+.users_table_b   {width:100%;}
+
+.users_table_b_div   {width:800px;
+                    padding-top: 30px;
+                    margin-top: 30px;}
+
+.users_submit  {position:absolute;
+                /*left:0px;*/
+                top:229px;
+                z-index: 1;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-left: 30px;
+                width: 770px;
+                border-bottom: 1px solid gray;
+                background-color: rgba(139, 134, 130, .5);}
 
 
 

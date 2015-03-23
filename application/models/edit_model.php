@@ -499,6 +499,10 @@ class Edit_model extends CI_Model{
 											'type' => 'VARCHAR',
 											'constraint' => 70,
 											),
+							'condition_4' => array(
+											'type' => 'VARCHAR',
+											'constraint' => 300,
+											),
 
 				);
 

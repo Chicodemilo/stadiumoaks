@@ -392,6 +392,20 @@ class Edit extends CI_Controller {
         $this->load->view('edit/footer.php');
     }
 
+    public function submit_specials(){
+        $data = $_POST;
+        $this->db->empty_table('special');
+        $this->db->insert('special', $data);
+        redirect(base_url().'edit/specials');
+    }
+
+    public function delete_special($id){
+        $this->db->where('id', $id);
+        $this->db->delete('special');
+        redirect(base_url().'edit/specials');
+
+    }
+
 }
 
 

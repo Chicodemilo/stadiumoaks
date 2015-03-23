@@ -104,6 +104,22 @@ a.not_fancy:hover   {color:white;
             background: none;}
 a.not_fancy:visited {}
 a.not_fancy:active  {color:#DEDEDE; 
+          background: none;} 
+
+a.not_fancy_dark:link  {text-decoration: none; 
+        display: inline;
+        font-size: .9em;
+        border: none;
+        margin: 1px;
+        padding: 1px;
+        border-radius: 0px;
+        background: none;
+        color: #3D59AB;}
+
+a.not_fancy_dark:hover   {color:#4169E1;
+            background: none;}
+a.not_fancy_dark:visited {}
+a.not_fancy_dark:active  {color:#C2C2C2; 
           background: none;}
 
 a.small_link:link  {text-decoration: none; 

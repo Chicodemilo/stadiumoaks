@@ -49,8 +49,9 @@
 				echo "<td>$".$value['pet_deposit']."</td>";
 				echo "<td>$".$value['pet_deposit_refundable']."</td>";
 				echo "<td>".$value['restrictions']."</td>";
-				
 				echo "</tr>";
+				echo "<tr><td colspan='4'><a href='".base_url()."edit/delete_pets/".$value['id']."' id='noblock'>delete pet policy</a></td></tr>";
+
 			}
 			?>
 			</table>

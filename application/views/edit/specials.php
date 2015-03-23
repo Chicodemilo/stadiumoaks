@@ -79,12 +79,16 @@
 				echo "<tr><th>Title</th><th>Description</th><th>Start Date</th><th>End Date</th></tr>";
 			}
 			foreach ($specials as $key => $value) {
+				$start_date = $value['start']; 
+				$phpdate = strtotime( $start_date);
+				$start_date = date( 'd-m-y', $phpdate );
+				
 				
 
 				echo "<tr>";
 				echo "<td>".$value['title']."</td>";
 				echo "<td>".$value['description']."</td>";
-				echo "<td>".$value['start']."</td>";
+				echo "<td>".$start_date."</td>";
 				echo "<td>".$value['end']."</td>";
 				echo "</tr>";
 				echo "<tr>";

@@ -13,9 +13,8 @@
 					<th>Role</th>
 					<th>Verified</th>
 					<th>Last Login</th>
-					<th>Messages</th>
-					<th>Maintenance</th>
-					<th>Pre-Applications</th>
+					<th></th>
+					<th></th>
 				</tr>
 				<?php 
 					$users = array_slice($users, 1);

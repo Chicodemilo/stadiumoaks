@@ -679,9 +679,9 @@ footer {padding: 5px;
                     padding-top: 30px;
                     margin-top: 30px;}
 
-.users_submit  {position:absolute;
+.users_submit  {/*position:absolute;*/
                 /*left:0px;*/
-                top:229px;
+                /*top:229px;*/
                 z-index: 1;
                 padding-top: 10px;
                 padding-bottom: 10px;

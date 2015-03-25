@@ -428,7 +428,7 @@ class Edit extends CI_Controller {
         redirect(base_url().'edit/users');
     }
 
-    public function delete_users($id){
+    public function delete_user($id){
         $this->db->where('id', $id);
         $this->db->delete('membership');
         redirect(base_url().'edit/users');

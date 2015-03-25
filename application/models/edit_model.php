@@ -57,6 +57,13 @@ class Edit_model extends CI_Model{
 	}
 
 
+	public function get_user($id){
+		$this->db->where('id', $id);
+		$data = $this->db->get('membership');
+		return $data;
+	}
+
+
 
 
 

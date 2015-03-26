@@ -422,13 +422,25 @@ class Edit extends CI_Controller {
         $this->load->view('edit/footer.php');
     }
 
-    public function submit_users(){
-        $data = $_POST;
-        $this->db->insert('membership', $data);
-        redirect(base_url().'edit/users');
+
+    public function submit_users($id){
+        $this->load->model('edit_model', 'user');
+        $user = $this->user->get_user($id)->result_array();
+        $data['user'] = $user;
+
+        if(count($user) > 0){
+            $this->load->view('edit/header.php');
+            $this->load->view('edit/edit_user.php', $data);
+            $this->load->view('edit/footer.php');      
+        }else{
+            $this->load->view('edit/header.php');
+            $this->load->view('edit/no_resource.php');
+            $this->load->view('edit/footer.php');
+        }
     }
 
-    public function delete_users($id){
+
+    public function delete_user($id){
         $this->db->where('id', $id);
         $this->db->delete('membership');
         redirect(base_url().'edit/users');

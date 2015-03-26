@@ -13,9 +13,8 @@
 					<th>Role</th>
 					<th>Verified</th>
 					<th>Last Login</th>
-					<th>Messages</th>
-					<th>Maintenance</th>
-					<th>Pre-Applications</th>
+					<th></th>
+					<th></th>
 				</tr>
 				<?php 
 					$users = array_slice($users, 1);
@@ -38,17 +37,20 @@
 						echo "<td>".$value['verified']."</td>";
 
 						echo "<td>".$last_login."</td>";
-						echo "<td><a href='".base_url()."edit/edit_user/".$value['id']."' class='not_fancy_dark'>edit</a></td>";
-						echo "<td><a href='".base_url()."edit/delete_user/".$value['id']."' class='not_fancy_dark'>delete</a></td>";
+						echo "<td><a href='".base_url()."edit/submit_users/".$value['id']."' class='small_link'>edit</a></td>";
+						echo "<td><a href='".base_url()."edit/delete_user/".$value['id']."' class='small_link'>delete</a></td>";
 						echo "</tr>";
 
 					}
 			?>
+			<tr>
+				<td colspan="9">
+					<a href="<?php echo base_url(); ?>login/create_member">Create A New User</a>
+				</td>
+			</tr>
 			</table>
 			</div>
-			<div class="users_submit">
-				<a href="<?php echo base_url(); ?>login/create_member" class="not_fancy" style="font-size: .7em;">Create A New User</a>
-			</div>
+			
 		
 
 

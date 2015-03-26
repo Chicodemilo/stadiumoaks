@@ -107,6 +107,11 @@ class Login extends CI_Controller
 				$this->load->view('edit/blank_header.php');
 				$this->load->view('membership/signup_successful.php');
 				$this->load->view('page/footer.php');
+				$is_logged_in = $this->session->userdata('is_logged_in');
+				if($is_logged_in == true){
+					sleep(2);
+					redirect(base_url()."edit/users");
+				}
 			}else{
 				$this->load->view('edit/blank_header.php');
 				$this->load->view('membership/problem_member.php');

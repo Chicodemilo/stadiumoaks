@@ -108,7 +108,6 @@
 
 	<script type="text/javascript">
 		$(document).ready(function() {
-			
 			$('#bedroom option[value="<?php echo $floorplan_info[0]["bedroom"] ?>"]').prop('selected',true);
 			$('#bathroom option[value="<?php echo $floorplan_info[0]["bathroom"] ?>"]').prop('selected',true);
 			$('#is_available option[value="<?php echo $floorplan_info[0]["is_available"] ?>"]').prop('selected',true);

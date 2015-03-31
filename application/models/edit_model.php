@@ -34,10 +34,6 @@ class Edit_model extends CI_Model{
 		return $data;
 	}
 
-	public function insert_floorplan_name($id){
-
-	}
-
 
 	public function get_pets(){
 		$data = $this->db->get('pet_policy');

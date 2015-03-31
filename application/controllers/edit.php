@@ -90,9 +90,7 @@ class Edit extends CI_Controller {
 // MAIN INFO *********************************************************************************
 
     public function submit_main_edits(){
-        // print_r($_POST);
         $data = array();
-
 
         foreach ($_POST as $key => $value) {
             if($key == 'property_color_1' || $key == 'property_color_2' || $key == 'property_color_3'){
@@ -186,9 +184,6 @@ class Edit extends CI_Controller {
 
     public function create_their_amenities(){
         $data = $_POST;
-        // print_r($data);
-        
-
         $this->db->insert('their_amenities_list', $data);
         redirect(base_url().'edit/amenities');
 
@@ -444,7 +439,31 @@ class Edit extends CI_Controller {
         $this->db->where('id', $id);
         $this->db->delete('membership');
         redirect(base_url().'edit/users');
+    }
 
+
+    public function submit_user_edits($id){
+        $data = $_POST;
+        $this->db->where('id', $id);
+        $this->db->update('membership', $data);
+        redirect(base_url().'edit/users', 'refresh');
+    }
+
+
+    public function change_password($id, $username){
+        $data = array('id' => $id, 'username' => $username);
+        $this->load->view('edit/header.php');
+        $this->load->view('edit/change_password.php', $data);
+        $this->load->view('edit/footer.php');
+    }
+
+
+    public function submit_change_password($id){
+        $password = md5($this->input->post('password'));
+        $data['password'] = $password;
+        $this->db->where('id', $id);
+        $this->db->update('membership', $data);
+        redirect(base_url().'edit/users');
     }
 
 

@@ -32,6 +32,10 @@ hr {border: 0;
 
 .smaller    {font-size: .7em;}
 
+.error  {color:red;
+        font-size: .8em;
+        font-weight: bold;}
+
 /******************************** WRAPPER ***************************/
     
 .wrapper    {position: relative;

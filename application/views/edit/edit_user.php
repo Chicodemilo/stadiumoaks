@@ -1,10 +1,10 @@
 
-	<form action="<?php echo base_url(); ?>edit/submit_user_edits" method="post">
+	<form action="<?php echo base_url(); ?>edit/submit_user_edits/<?php echo $user[0]['id']; ?>" method="post">
 		<input type="hidden" name="id" id="id" value="<?php echo $user[0]['id'] ?>">
 		<table id="user_edit">
 			<tr>
 				<th colspan="2">
-					USER INFORMATION :: <?php echo $user[0]['username'] ?>
+					USER INFORMATION :: <?php echo $user[0]['username']; ?>
 				</th> 
 			</tr>
 			<tr>
@@ -30,32 +30,67 @@
 			<tr>
 				<td class="righter_light">Receive<br>Site<br>Emails:</td>
 				<td>
-					<select name="" id="">
+					<select name="get_site_notify" id="get_site_notify">
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
 				</td>
 				<td class="righter_light">Receive<br>Message<br>Emails:</td>
 				<td>
-					<select name="" id="">
+					<select name="get_messages" id="get_messages">
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
 				</td>
 				<td class="righter_light">Receive<br>Maintenance<br>Emails:</td>
 				<td>
-					<select name="" id="">
+					<select name="get_maint" id="get_maint">
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
 				</td>
 				<td class="righter_light">Receive<br>Pre-Application<br>Emails:</td>
 				<td>
-					<select name="" id="">
+					<select name="get_pre_ap" id="get_pre_ap">
 						<option value="Y">Yes</option>
 						<option value="N">No</option>
 					</select>
 				</td>
 			</tr>
+			<tr>
+				<th colspan="8"></th>
+			</tr>
+			<tr>
+				<td class="righter_light">Verified:</td>
+				<td colspan="7">
+					<select name="verified" id="verified">
+						<option value="Y">Yes</option>
+						<option value="N">No</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th colspan="8"></th>
+			</tr>
+			<tr>
+				<td colspan="8"><input type="submit" value="Submit Edits"></td>
+			</tr>
 		</table>
 	</form>
+	<br><br>
+	<table style="width:600px; margin:auto;">
+		<tr>
+			<td><a class="not_fancy_dark" href="<?php echo base_url(); ?>edit/change_password/<?php echo $user[0]['id'] ?>/<?php echo $user[0]['username'] ?>">CHANGE PASSWORD</a> for <?php echo $user[0]['username']; ?></td>
+		</tr>
+	</table>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			// window.alert('hello cleveland');
+			$('#get_site_notify option[value="<?php echo $user[0]["get_site_notify"]; ?>"]').prop('selected',true);
+			$('#get_messages option[value="<?php echo $user[0]["get_messages"]; ?>"]').prop('selected',true);
+			$('#get_maint option[value="<?php echo $user[0]["get_maint"]; ?>"]').prop('selected',true);
+			$('#get_pre_ap option[value="<?php echo $user[0]["get_pre_ap"]; ?>"]').prop('selected',true);
+			$('#verified option[value="<?php echo $user[0]["verified"]; ?>"]').prop('selected',true);
+		});
+	</script>

@@ -4,7 +4,6 @@
 		</div>
 		<form action="<?php echo base_url() ?>edit/submit_floorplan_edits/<?php echo $floorplan_info[0]['id']; ?>" method="post">
 			<div class="hours_table">
-
 			<table>
 				<tr>
 					<th style="width: 100px;">Name</th>
@@ -62,7 +61,6 @@
 					<th>Available</th>
 					<th>Units Currently<br>Available</th>
 					<th>Upload A<br>Floorplan Diagram</th>
-					
 				</tr>
 				<tr>
 					<td>
@@ -83,23 +81,18 @@
 								}else{
 									echo '<option value="'.$i.'">'.$i.'</option>';
 								}
-								
 							}
 						 ?>
 						</select>
 					</td>
 					<td><a href="<?php echo base_url() ?>edit/upload_this/<?php echo $floorplan_info[0]['id'] ?>">Upload Diagram</a></td>
-					
 				</tr>
-		
 			</table>
 			</div>
 			<div class="floorplans_submit_uploader">
 				<input type="submit" value="Submit Edits">
 			</div>
-
 			<?php  
-
 			if($floorplan_info[0]['floorplan_pic'] != ''){
 				echo	'<div class="floorplans_pic">
 						<img src="'.base_url().'images/floorplans/'.$floorplan_info[0]['id'].'/'.$floorplan_info[0]['floorplan_pic'].'" alt="'.$floorplan_info[0]['name'].'" width="500px">
@@ -111,10 +104,7 @@
 			}
 			?>
 		</form>
-
-		
 	</div>
-
 
 	<script type="text/javascript">
 		$(document).ready(function() {
@@ -123,12 +113,7 @@
 			$('#bathroom option[value="<?php echo $floorplan_info[0]["bathroom"] ?>"]').prop('selected',true);
 			$('#is_available option[value="<?php echo $floorplan_info[0]["is_available"] ?>"]').prop('selected',true);
 			$('#units_available option[value="<?php echo $floorplan_info[0]["units_available"] ?>"]').prop('selected',true);
-
-		
-
 		});
-
-
 	</script>
 
 

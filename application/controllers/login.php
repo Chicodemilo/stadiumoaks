@@ -16,7 +16,6 @@ class Login extends CI_Controller
 	{
 		$this->load->model('membership_model');
 		$query = $this->membership_model->validate();
-		// $query = false;
 
 		if($query){
 			$this->load->model('user_model');
@@ -30,11 +29,18 @@ class Login extends CI_Controller
 				'last_login' => $more_userdata[0]['last_login'],
 				'role' => $more_userdata[0]['role'],);
 
-
 			$this->session->set_userdata($data);
+			
+			date_default_timezone_set('America/Chicago');
+			$time = date("Y-m-d H:i:s");
+			$data = array('last_login' => $time);
+			$name = $this->session->userdata('username');
+			// echo $name.' '.$time;
+			$this->db->where('username', $name);
+			$this->db->update('membership', $data);
+			
 			redirect('edit/');
 		}else{
-			// echo "No Way!!!";
 			$this->index();
 		}
 	}
@@ -46,6 +52,8 @@ class Login extends CI_Controller
 		$this->load->view('membership/signup_form.php');
 		$this->load->view('page/footer.php');
 	}
+
+
 
 	function forgot_password(){       
         $this->load->view('edit/blank_header.php');
@@ -130,10 +138,7 @@ class Login extends CI_Controller
 			$name = $this->session->userdata('username');
 			$this->db->where('username', $name);
 			$this->db->update('membership', $data);
-
-
 		    $this->session->sess_destroy();
-		    // $this->index();
 		    redirect(base_url()."login");
 		}
 }

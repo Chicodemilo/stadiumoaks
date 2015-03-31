@@ -841,6 +841,10 @@ class Edit_model extends CI_Model{
 							'last_login' => array(
 											'type' => 'DATETIME',
 											),
+							'get_site_notify' => array(
+											'type' => 'VARCHAR',
+											'constraint' => 1,
+											),
 							'get_message' => array(
 											'type' => 'VARCHAR',
 											'constraint' => 1,

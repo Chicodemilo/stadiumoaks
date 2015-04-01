@@ -45,5 +45,26 @@ class Contact extends CI_Controller{
 		redirect(base_url().'contact/messages');
 	}
 
+
+// MAINTENANCE ***************************************************************************
+
+	public function maintenance(){
+		$this->load->model('contact_model', 'maintenance');
+		$maintenance = $this->maintenance->get_maintenance()->result_array();
+		$data['maintenance'] = $maintenance;
+		$this->load->view('edit/header.php');
+		$this->load->view('contact/maintenance.php', $data);
+		$this->load->view('edit/footer.php');
+	}
+
+
+	public function delete_maintenance($id){
+		$this->db->where('id', $id);
+		$this->db->delete('contact');
+		redirect(base_url().'contact/maintenance');
+	}
+
+
+
 }//close of Contact class
  ?>

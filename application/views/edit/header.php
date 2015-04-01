@@ -59,7 +59,7 @@
                             <ul class="contact_menu" id="contact_menu">
                                 <li><a href="<?php echo base_url() ?>contact/messages" class="small_links">Messages</a></li>
                                 <li><a href="<?php echo base_url() ?>contact/maintenance" class="small_links">Maintenance</a></li>
-                                <li><a href="<?php echo base_url() ?>contact/pre_applications" class="small_links">Pre-Applications</a></li>
+                                <!-- <li><a href="<?php echo base_url() ?>contact/pre_applications" class="small_links">Pre-Applications</a></li> -->
                             </ul>
                         </li>
                     </ul>

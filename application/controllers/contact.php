@@ -38,5 +38,12 @@ class Contact extends CI_Controller{
 		$this->load->view('edit/footer.php');
 	}
 
+
+	public function delete_message($id){
+		$this->db->where('id', $id);
+		$this->db->delete('contact');
+		redirect(base_url().'contact/messages');
+	}
+
 }//close of Contact class
  ?>

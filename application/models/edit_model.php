@@ -371,7 +371,7 @@ class Edit_model extends CI_Model{
 											),
 							'phone' => array(
 											'type' => 'VARCHAR',
-											'constraint' => 20,
+											'constraint' => 13,
 											),
 							'message' => array(
 											'type' => 'VARCHAR',

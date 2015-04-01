@@ -701,22 +701,17 @@ footer {padding: 5px;
 
 /******************************** MESSAGES PAGE ***************************/
 
-.message_head   {font-size: .8em;
-                position: relative;
-                box-shadow: none;}
+
+.message_head table tr th {font-size: .7em;}
 
 .message_table  {position: relative;
                 top: -20px;
-                padding: none;
-                margin: none;
-                top: -50;
-                height: 150px;
-                overflow: scroll;
-                border: 1px dotted gray;}
+                padding: 0px;
+                margin: 0px;}
 
-.message_table table {padding: 0px;
-                     margin-top: 0px;
-                    box-shadow: none;}
+.message_table td   {font-size: .7em;}
+
+                        
 
 
 

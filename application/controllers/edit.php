@@ -491,7 +491,57 @@ public function picture_delete($id){
 
 
 public function picture_upload(){
-    
+        $this->load->view('edit/header.php');
+        $this->load->view('edit/upload_picture', $data);
+        $this->load->view('edit/footer.php');
+}
+
+
+public function do_upload_picture(){
+    //need to get an id here
+
+
+    if(!is_dir('./images/pictures/'.$id)){
+            mkdir('./images/pictures/'.$id, 0777, true);
+        }
+                
+        $config['upload_path'] = './images/pictures/'.$id;
+        $config['allowed_types'] = 'gif|jpg|png';
+        $config['max_size'] = '6048';
+        $config['max_width']  = '6024';
+        $config['max_height']  = '2868';
+        $config['min_width'] = '1200';
+        $config['min_height'] = '500';
+
+        $this->load->library('upload', $config);
+
+
+        if ( ! $this->upload->do_upload())
+        {
+            $data['error'] = $this->upload->display_errors();
+            $data['id'] = $id;
+
+            $this->load->view('edit/header.php');
+            $this->load->view('edit/upload_picture');
+            $this->load->view('edit/footer.php');
+        }
+        else
+        {
+            //stopped here
+            $data = array('upload_data' => $this->upload->data());
+
+            $this->load->model('edit_model','edit_model');
+            $data['floorplan_info'] = $this->edit_model->get_flooplan_info($id)->result_array();
+
+            $file_name = $data['upload_data']['file_name'];
+            $data_b['floorplan_pic'] = $file_name;
+
+            $this->db->where('id', $id);
+            $this->db->update('floorplans', $data_b);     
+            redirect('edit/floorplans/');
+
+        }
+
 }
 
 

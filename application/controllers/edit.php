@@ -476,8 +476,24 @@ public function pictures(){
         $this->load->view('edit/header.php');
         $this->load->view('edit/pictures.php', $data);
         $this->load->view('edit/footer.php');
-
 }
+
+
+public function picture_delete($id){
+    $this->load->helper('file');
+    $this->db->where('id', $id);
+    $this->db->delete('pictures');
+    $this->load->model('edit_model', 'pictures');
+    $this->pictures->reorder_pictures();
+    delete_files('./images/pictures/'.$id.'/');
+    redirect(base_url().'edit/pictures', 'refresh');
+}
+
+
+public function picture_upload(){
+    
+}
+
 
 
 

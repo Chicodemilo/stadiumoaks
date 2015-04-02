@@ -60,8 +60,25 @@ class Edit_model extends CI_Model{
 	}
 
 	public function get_pictures(){
+		$this->db->where('logo', 'N');
+		$this->db->where('management_logo', 'N');
+		$this->db->order_by('pic_order', 'asc');
 		$data = $this->db->get('pictures');
 		return $data;
+	}
+
+	public function reorder_pictures(){
+		$this->db->where('logo', 'N');
+		$this->db->where('management_logo', 'N');
+		$this->db->order_by('pic_order', 'asc');
+		$data = $this->db->get('pictures')->result_array();
+		$x = 1;
+		foreach ($data as $value) {
+			$number['pic_order'] = $x;
+			$this->db->where('id', $value['id']);
+			$this->db->update('pictures', $number);
+			$x = $x + 1;
+		}
 	}
 
 

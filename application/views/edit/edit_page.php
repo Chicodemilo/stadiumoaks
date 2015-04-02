@@ -99,6 +99,13 @@
 				<td colspan="2"><input type="text" style="width:90%" name="property_google_plus" id="property_google_plus" placeholder="www.plus.google.com/" value="<?php echo $main_info[0]['property_google_plus'] ?>"></td>
 			</tr>
 			<tr>
+				<td class="righter">Manangement Company Name:</td>
+				<td colspan="2"><input type="text" style="width:90%" name="property_management_name" id="property_management_name" placeholder="The Name Of The Property Management Company" value="<?php echo $main_info[0]['property_management_name'] ?>"></td>
+			
+				<td class="righter">Management Company Website:</td>
+				<td colspan="2"><input type="text" style="width:90%" name="property_management_url" id="property_management_url" placeholder="www.example.com" value="<?php echo $main_info[0]['property_management_url'] ?>"></td>
+			</tr>
+			<tr>
 				<th colspan="6"><input type="submit" value="Submit Edits"></th>
 			</tr>
 		</table>

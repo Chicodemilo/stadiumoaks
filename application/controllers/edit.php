@@ -466,6 +466,40 @@ class Edit extends CI_Controller {
         redirect(base_url().'edit/users');
     }
 
+// PICTURES *********************************************************************************
+
+
+
+public function pictures(){
+        $this->load->model('edit_model', 'pictures');
+        $data['pictures']= $this->pictures->get_pictures()->result_array();
+        $this->load->view('edit/header.php');
+        $this->load->view('edit/pictures.php', $data);
+        $this->load->view('edit/footer.php');
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

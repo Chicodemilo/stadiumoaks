@@ -711,8 +711,24 @@ footer {padding: 5px;
 
 .message_table td   {font-size: .7em;}
 
-                        
 
+
+/******************************** EDIT PICTURES PAGE ***************************/
+                        
+.picture_box    {width: 200px;
+                height: 300px;
+                background-color: #F8F8FF;
+                box-shadow: 5px 5px 5px #dddddd;
+                border: 1px solid #bebebe;
+                margin: 2%;
+                padding: 5px;
+                font-size: .7em;
+                float: left;}
+
+.picture_box img    {display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    height: 130px;}
 
 
 

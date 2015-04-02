@@ -59,6 +59,11 @@ class Edit_model extends CI_Model{
 		return $data;
 	}
 
+	public function get_pictures(){
+		$data = $this->db->get('pictures');
+		return $data;
+	}
+
 
 
 
@@ -199,6 +204,16 @@ class Edit_model extends CI_Model{
 											'constraint' => 70,
 											),
 
+							'property_management_name' => array(
+											'type' => 'VARCHAR',
+											'constraint' => 60,
+											),
+
+							'property_management_url' => array(
+											'type' => 'VARCHAR',
+											'constraint' => 60,
+											),
+
 				);
 
 			$this->dbforge->add_field($main_info);
@@ -281,8 +296,41 @@ class Edit_model extends CI_Model{
 											),
 							'caption' => array(
 											'type' => 'VARCHAR',
-											'constraint' => 150,
+											'constraint' => 120,
 											),
+							'cover_pic' => array(
+											'type' => 'VARCHAR',
+											'constraint' => 1,
+											),
+							'logo' => array(
+											'type' => 'VARCHAR',
+											'constraint' => 1,
+											),
+							'management_logo' => array(
+											'type' => 'VARCHAR',
+											'constraint' => 1,
+											),
+							'amenities_page_main_pic' => array(
+											'type' => 'VARCHAR',
+											'constraint' => 1,
+											),
+							'picture_page_main_pic' => array(
+											'type' => 'VARCHAR',
+											'constraint' => 1,
+											),
+							'pic_order' => array(
+											'type' => 'INT',
+											'constraint' => 3,
+											),
+							'active' => array(
+											'type' => 'VARCHAR',
+											'constraint' => 1,
+											),
+							
+
+
+
+
 
 				);
 
@@ -464,8 +512,12 @@ class Edit_model extends CI_Model{
 											'constraint' => 2
 											),
 							'day_condition' => array(
-											'type' => 'INT',
+											'type' => 'VARCHAR',
 											'constraint' => 50,
+											),
+							'hours_order' => array(
+											'type' => 'INT',
+											'constraint' => 2,
 											),
 
 				);

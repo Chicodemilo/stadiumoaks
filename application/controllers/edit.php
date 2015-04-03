@@ -468,11 +468,11 @@ class Edit extends CI_Controller {
 
 // PICTURES *********************************************************************************
 
-
-
 public function pictures(){
         $this->load->model('edit_model', 'pictures');
         $data['pictures']= $this->pictures->get_pictures()->result_array();
+        $data['logo']= $this->pictures->get_logo()->result_array();
+        $data['man_logo']= $this->pictures->get_man_logo()->result_array();
         $this->load->view('edit/header.php');
         $this->load->view('edit/pictures.php', $data);
         $this->load->view('edit/footer.php');
@@ -502,8 +502,6 @@ public function do_upload_picture(){
     $this->load->model('edit_model', 'id');
     $new_pic_data = $this->id->get_new_picture_data();
     $id = $new_pic_data['id'];
-    
-
 
     if(!is_dir('./images/pictures/'.$id)){
             mkdir('./images/pictures/'.$id, 0777, true);
@@ -518,12 +516,10 @@ public function do_upload_picture(){
         $config['min_height'] = '5000';
         $this->load->library('upload', $config);
 
-
         if ( ! $this->upload->do_upload())
         {
             $data['error'] = $this->upload->display_errors();
             $data['id'] = $id;
-
             $this->load->view('edit/header.php');
             $this->load->view('edit/upload_picture', $data);
             $this->load->view('edit/footer.php');
@@ -541,23 +537,191 @@ public function do_upload_picture(){
             $this->db->where('id', $id);
             $this->db->update('pictures', $data_b);     
             redirect(base_url().'edit/picture_edit/'.$id);
-
         }
-
 }
+
 
 
 public function picture_edit($id){
     $this->load->model('edit_model', 'picture');
     $data['picture'] = $this->picture->get_picture_data($id);
-
+    $data['count'] = count($this->picture->get_pictures()->result_array());
     $this->load->view('edit/header.php');
     $this->load->view('edit/edit_picture', $data);
     $this->load->view('edit/footer.php');
+}
+
+
+
+public function submit_picture_edits($id){
+    $caption = $this->input->post('caption');
+    $cover_pic = $this->input->post('cover_pic');
+    $amenities_page_main_pic = $this->input->post('amenities_page_main_pic');
+    $picture_page_main_pic = $this->input->post('picture_page_main_pic');
+    $pic_order = $this->input->post('pic_order');
+    $active = $this->input->post('active');
+
+    if($cover_pic == 'Y'){
+        $this->load->model('edit_model', 'cover_pic');
+        $this->cover_pic->make_cover_pic($id);
+    }
+    if($amenities_page_main_pic == 'Y'){
+        $this->load->model('edit_model', 'amen_pic');
+        $this->amen_pic->make_amenities_pic($id);
+    }
+    if($picture_page_main_pic == 'Y'){
+        $this->load->model('edit_model', 'pic_pic');
+        $this->pic_pic->make_picture_pic($id);
+    }
+
+    $this->load->model('edit_model', 'picture');
+    $old_pic_data = $this->picture->get_picture_data($id);
+    $old_order = $old_pic_data[0]['pic_order'];
+    if($old_order != $pic_order){
+        $this->load->model('edit_model', 'renumber_pics');
+        $this->renumber_pics->insert_pic_in_order($id, $pic_order, $old_order);
+    }
+    $data = array('caption' => $caption, 'active' => $active, 'cover_pic' => $cover_pic, 'amenities_page_main_pic' => $amenities_page_main_pic, 'picture_page_main_pic' => $picture_page_main_pic );
+    $this->db->where('id', $id);
+    $this->db->update('pictures', $data);
+
+    redirect(base_url().'edit/pictures');
 
 }
 
 
+public function logo_upload(){
+        $data = array('error' => '');
+        $this->load->view('edit/header.php');
+        $this->load->view('edit/upload_logo', $data);
+        $this->load->view('edit/footer.php');
+}
+
+
+public function do_upload_logo(){
+    $this->db->where('logo', 'Y');
+    $old_logo = $this->db->get('pictures')->result_array();
+    $old_id  = $old_logo[0]['id'];
+    $this->db->where('logo', 'Y');
+    $this->db->delete('pictures');
+    // $this->load->helper('file');
+    // delete_files('./images/logos/'.$old_id.'/');
+
+    $this->load->model('edit_model', 'id');
+    $new_pic_data = $this->id->get_new_logo_data();
+    $id = $new_pic_data['id'];
+
+    if(!is_dir('./images/logos/'.$id)){
+            mkdir('./images/logos/'.$id, 0777, true);
+        }
+                
+        $config['upload_path'] = './images/logos/'.$id;
+        $config['allowed_types'] = 'gif|jpg|png';
+        $config['max_size'] = '6048';
+        $config['max_width']  = '6024';
+        $config['max_height']  = '2868';
+        $config['min_width'] = '12000';
+        $config['min_height'] = '5000';
+        $this->load->library('upload', $config);
+
+        if ( ! $this->upload->do_upload())
+        {
+            $data['error'] = $this->upload->display_errors();
+            $data['id'] = $id;
+            $this->load->view('edit/header.php');
+            $this->load->view('edit/upload_logo', $data);
+            $this->load->view('edit/footer.php');
+        }
+        else
+        {   
+            $this->db->where('id', $id);
+            $this->db->insert('pictures', $new_pic_data);
+
+            $data = array('upload_data' => $this->upload->data());
+
+            $file_name = $data['upload_data']['file_name'];
+            $data_b['name'] = $file_name;
+
+            $this->db->where('id', $id);
+            $this->db->update('pictures', $data_b);     
+            redirect(base_url().'edit/pictures/');
+        }
+}
+
+public function logo_delete($id){
+    $this->load->helper('file');
+    $this->db->where('id', $id);
+    $this->db->delete('pictures');
+    delete_files('./images/logos/'.$id.'/');
+    redirect(base_url().'edit/pictures', 'refresh');
+}
+
+
+public function man_logo_upload(){
+        $data = array('error' => '');
+        $this->load->view('edit/header.php');
+        $this->load->view('edit/upload_man_logo', $data);
+        $this->load->view('edit/footer.php');
+}
+
+
+public function do_upload_man_logo(){
+    $this->db->where('management_logo', 'Y');
+    $old_logo = $this->db->get('pictures')->result_array();
+    $old_id  = $old_logo[0]['id'];
+    $this->db->where('management_logo', 'Y');
+    $this->db->delete('pictures');
+    // $this->load->helper('file');
+    // delete_files('./images/logos/'.$old_id.'/');
+
+    $this->load->model('edit_model', 'id');
+    $new_pic_data = $this->id->get_new_man_logo_data();
+    $id = $new_pic_data['id'];
+
+    if(!is_dir('./images/logos/'.$id)){
+            mkdir('./images/logos/'.$id, 0777, true);
+        }
+                
+        $config['upload_path'] = './images/logos/'.$id;
+        $config['allowed_types'] = 'gif|jpg|png';
+        $config['max_size'] = '6048';
+        $config['max_width']  = '6024';
+        $config['max_height']  = '2868';
+        $config['min_width'] = '12000';
+        $config['min_height'] = '5000';
+        $this->load->library('upload', $config);
+
+        if ( ! $this->upload->do_upload())
+        {
+            $data['error'] = $this->upload->display_errors();
+            $data['id'] = $id;
+            $this->load->view('edit/header.php');
+            $this->load->view('edit/upload_man_logo', $data);
+            $this->load->view('edit/footer.php');
+        }
+        else
+        {   
+            $this->db->where('id', $id);
+            $this->db->insert('pictures', $new_pic_data);
+
+            $data = array('upload_data' => $this->upload->data());
+
+            $file_name = $data['upload_data']['file_name'];
+            $data_b['name'] = $file_name;
+
+            $this->db->where('id', $id);
+            $this->db->update('pictures', $data_b);     
+            redirect(base_url().'edit/pictures/');
+        }
+}
+
+public function man_logo_delete($id){
+    $this->load->helper('file');
+    $this->db->where('id', $id);
+    $this->db->delete('pictures');
+    delete_files('./images/logos/'.$id.'/');
+    redirect(base_url().'edit/pictures', 'refresh');
+}
 
 
 

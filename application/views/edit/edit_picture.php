@@ -12,7 +12,7 @@
 			</tr>
 			<tr>
 				<td class="righter">Descripton:</td>
-				<td><textarea  name="username" id="username" style="width:90%;"placeholder="Enter A Picture Caption. 120 Character Max " maxlength="120" rows="3" value="<?php echo $picture[0]['caption'] ?>"></textarea></td>
+				<td><textarea  name="caption" id="caption" style="width:90%;"placeholder="Enter A Picture Caption. 120 Character Max " maxlength="120" rows="3"><?php echo $picture[0]['caption'] ?></textarea></td>
 			</tr>
 			<tr><th colspan="2"></th></tr>
 
@@ -53,13 +53,14 @@
 					</select>
 				</td><td class="righter_light">Order:</td>
 				<td colspan="2">
-					<select name="active" id="active">
-						<option value="1">Start Of List</option>
-						<option value="2">After Pic 1</option>
-						<option value="3">After Pic 2</option>
-						<option value="4">After Pic 3</option>
-						<option value="5">After Pic 4</option>
+					<select name="pic_order" id="pic_order">
+						<?php 
+						for ($i=1; $i <= $count ; $i++) { 
+							echo "<option value='".$i."'>".$i."</option>";
+						}
+						?>
 					</select>
+					<span class='lefter_light'>of <?php echo $count; ?></span>
 				</td>
 			</tr>
 			<tr>
@@ -75,10 +76,13 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			// window.alert('hello cleveland');
-			// $('#get_site_notify option[value="<?php echo $user[0]["get_site_notify"]; ?>"]').prop('selected',true);
-			// $('#get_messages option[value="<?php echo $user[0]["get_messages"]; ?>"]').prop('selected',true);
-			// $('#get_maint option[value="<?php echo $user[0]["get_maint"]; ?>"]').prop('selected',true);
-			// $('#get_pre_ap option[value="<?php echo $user[0]["get_pre_ap"]; ?>"]').prop('selected',true);
-			// $('#verified option[value="<?php echo $user[0]["verified"]; ?>"]').prop('selected',true);
+			$('#cover_pic option[value="<?php echo $picture[0]["cover_pic"]; ?>"]').prop('selected',true);
+			$('#amenities_page_main_pic option[value="<?php echo $picture[0]["amenities_page_main_pic"]; ?>"]').prop('selected',true);
+			$('#picture_page_main_pic option[value="<?php echo $picture[0]["picture_page_main_pic"]; ?>"]').prop('selected',true);
+			$('#active option[value="<?php echo $picture[0]["active"]; ?>"]').prop('selected',true);
+			$('#pic_order option[value="<?php echo $picture[0]["pic_order"]; ?>"]').prop('selected',true);
+			
+
+
 		});
 	</script>

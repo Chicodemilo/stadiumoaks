@@ -716,7 +716,7 @@ footer {padding: 5px;
 /******************************** EDIT PICTURES PAGE ***************************/
                         
 .picture_box    {width: 200px;
-                min-height: 300px;
+                min-height: 330px;
                 background-color: #F8F8FF;
                 box-shadow: 5px 5px 5px #dddddd;
                 border: 1px solid #bebebe;
@@ -733,6 +733,21 @@ footer {padding: 5px;
 
 .picture_box table  {width:97%;
                     margin: 2px;}
+
+.logo_box    {width: 200px;
+                min-height: 330px;
+                background-color: #F8F8FF;
+                box-shadow: 5px 5px 5px #dddddd;
+                border: 1px solid #bebebe;
+                margin: 2%;
+                padding: 5px;
+                font-size: .7em;
+                float: left;}
+
+.logo_box img    {display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 100%;}
 
 
 

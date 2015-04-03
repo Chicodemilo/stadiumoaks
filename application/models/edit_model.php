@@ -105,6 +105,126 @@ class Edit_model extends CI_Model{
 	}
 
 
+	public function make_cover_pic($id){
+		$data['cover_pic'] = 'N';
+		$this->db->where('cover_pic', 'Y');
+		$this->db->update('pictures', $data);
+		$data['cover_pic'] = 'Y';
+		$this->db->where('id', $id);
+		$this->db->update('pictures', $data);
+	}
+
+	public function make_amenities_pic($id){
+		$data['amenities_page_main_pic'] = 'N';
+		$this->db->where('amenities_page_main_pic', 'Y');
+		$this->db->update('pictures', $data);
+		$data['amenities_page_main_pic'] = 'Y';
+		$this->db->where('id', $id);
+		$this->db->update('pictures', $data);
+	}
+
+	public function make_picture_pic($id){
+		$data['picture_page_main_pic'] = 'N';
+		$this->db->where('picture_page_main_pic', 'Y');
+		$this->db->update('pictures', $data);
+		$data['picture_page_main_pic'] = 'Y';
+		$this->db->where('id', $id);
+		$this->db->update('pictures', $data);
+	}
+
+	public function make_logo($id){
+		$data['logo'] = 'N';
+		$this->db->where('logo', 'Y');
+		$this->db->update('pictures', $data);
+		$data['logo'] = 'Y';
+		$this->db->where('id', $id);
+		$this->db->update('pictures', $data);
+	}
+
+	public function management_logo($id){
+		$data['management_logo'] = 'N';
+		$this->db->where('management_logo', 'Y');
+		$this->db->update('pictures', $data);
+		$data['management_logo'] = 'Y';
+		$this->db->where('id', $id);
+		$this->db->update('pictures', $data);
+	}
+
+	public function insert_pic_in_order($id, $pic_order, $old_order){
+		if($pic_order < $old_order){
+			$this->db->where('logo', 'N');
+			$this->db->where('management_logo', 'N');
+			$this->db->where('pic_order >= ', $pic_order);
+			$this->db->where('pic_order <', $old_order);
+			$data = $this->db->get('pictures')->result_array();
+			$start = $pic_order + 1;
+			foreach ($data as $key => $value) {
+				$insert_data['pic_order'] = $start;
+				$this->db->where('id', $value['id']);
+				$this->db->update('pictures', $insert_data);
+				$start = $start + 1;
+			}
+			$data_b['pic_order'] = $pic_order;
+			$this->db->where('id', $id);
+			$this->db->update('pictures', $data_b);
+		}else{
+			$this->db->where('logo', 'N');
+			$this->db->where('management_logo', 'N');
+			$this->db->where('pic_order > ', $old_order);
+			$this->db->where('pic_order <=', $pic_order);
+			$data = $this->db->get('pictures')->result_array();
+			// print_r($data);
+			$start = $old_order;
+			foreach ($data as $key => $value) {
+				$insert_data['pic_order'] = $start;
+				$this->db->where('id', $value['id']);
+				$this->db->update('pictures', $insert_data);
+				$start = $start + 1;
+			}
+			$data_b['pic_order'] = $pic_order;
+			$this->db->where('id', $id);
+			$this->db->update('pictures', $data_b);
+		}
+	}
+
+
+	public function get_new_logo_data(){
+		$this->db->order_by('id', 'desc');
+		$ids = $this->db->get('pictures')->result_array();
+		$id_new = $ids[0]['id'] + 1;
+		$order_new = null;
+		$data = array('id' => $id_new, 'cover_pic' => 'N', 'logo' => 'N', 'management_logo' => 'N', 'amenities_page_main_pic' => 'N', 'picture_page_main_pic' => 'N', 'pic_order' => $order_new, 'active' => 'Y', 'logo' => 'Y');
+		return $data;
+	}
+
+
+	public function get_logo(){
+		$this->db->where('logo', 'Y');
+		$this->db->where('management_logo', 'N');
+		$this->db->order_by('pic_order', 'asc');
+		$data = $this->db->get('pictures');
+		return $data;
+	}
+
+	public function get_new_man_logo_data(){
+		$this->db->order_by('id', 'desc');
+		$ids = $this->db->get('pictures')->result_array();
+		$id_new = $ids[0]['id'] + 1;
+		$order_new = null;
+		$data = array('id' => $id_new, 'cover_pic' => 'N', 'logo' => 'N', 'management_logo' => 'N', 'amenities_page_main_pic' => 'N', 'picture_page_main_pic' => 'N', 'pic_order' => $order_new, 'active' => 'Y', 'management_logo' => 'Y');
+		return $data;
+	}
+
+
+	public function get_man_logo(){
+		$this->db->where('logo', 'N');
+		$this->db->where('management_logo', 'Y');
+		$this->db->order_by('pic_order', 'asc');
+		$data = $this->db->get('pictures');
+		return $data;
+	}
+
+
 
 
 

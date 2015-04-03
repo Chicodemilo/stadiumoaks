@@ -23,6 +23,27 @@ foreach ($pictures as $key => $value) {
 	echo "</div>";
 }
 
+foreach ($logo as $key => $value) {
+	echo "<div id='".$value['name']."' class='logo_box'>";
+	echo "PROPERTY LOGO<hr>";
+	echo "<img src='".base_url()."images/logos/".$value['id']."/".$value['name']."' alt='".$value['caption']."'>";
+	echo "<hr>";
+	echo "<a href='".base_url()."edit/logo_delete/".$value['id']."' class='not_fancy_dark'>DELETE</a>";
+
+	echo "</div>";
+}
+
+
+foreach ($man_logo as $key => $value) {
+	echo "<div id='".$value['name']."' class='logo_box'>";
+	echo "MANAGEMENT COMPANY LOGO<hr>";
+	echo "<img src='".base_url()."images/logos/".$value['id']."/".$value['name']."' alt='".$value['caption']."'>";
+	echo "<hr>";
+	echo "<a href='".base_url()."edit/man_logo_delete/".$value['id']."' class='not_fancy_dark'>DELETE</a>";
+
+	echo "</div>";
+}
+
 
  ?>
 
@@ -35,7 +56,7 @@ foreach ($pictures as $key => $value) {
 	<tr>
 		<td width="33%"><a href="<?php echo base_url(); ?>edit/picture_upload">Upload A Property Picture</a></td>
 		<td width="33%"><a href="<?php echo base_url(); ?>edit/logo_upload">Upload A Property Logo</a></td>
-		<td width="34%"><a href="<?php echo base_url(); ?>edit/picture_upload">Upload A Management Company Logo</a></td>
+		<td width="34%"><a href="<?php echo base_url(); ?>edit/man_logo_upload">Upload A Management Company Logo</a></td>
 		
 	</tr>
 </table>

@@ -716,6 +716,7 @@ footer {padding: 5px;
 /******************************** EDIT PICTURES PAGE ***************************/
                         
 .picture_box    {width: 200px;
+                min-height: 300px;
                 background-color: #F8F8FF;
                 box-shadow: 5px 5px 5px #dddddd;
                 border: 1px solid #bebebe;

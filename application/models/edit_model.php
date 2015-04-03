@@ -82,6 +82,29 @@ class Edit_model extends CI_Model{
 	}
 
 
+	public function get_new_picture_data(){
+		$this->db->order_by('id', 'desc');
+		$ids = $this->db->get('pictures')->result_array();
+		$id_new = $ids[0]['id'] + 1;
+
+		$this->db->where('logo', 'N');
+		$this->db->where('management_logo', 'N');
+		$this->db->order_by('pic_order', 'desc');
+		$orders = $this->db->get('pictures')->result_array();
+		$order_new = $orders[0]['pic_order'] + 1;
+
+		$data = array('id' => $id_new, 'cover_pic' => 'N', 'logo' => 'N', 'management_logo' => 'N', 'amenities_page_main_pic' => 'N', 'picture_page_main_pic' => 'N', 'pic_order' => $order_new, 'active' => 'Y');
+		return $data;
+	}
+
+
+	public function get_picture_data($id){
+		$this->db->where('id', $id);
+		$data = $this->db->get('pictures')->result_array();
+		return $data;
+	}
+
+
 
 
 

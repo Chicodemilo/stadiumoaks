@@ -491,6 +491,7 @@ public function picture_delete($id){
 
 
 public function picture_upload(){
+        $data = array('error' => '');
         $this->load->view('edit/header.php');
         $this->load->view('edit/upload_picture', $data);
         $this->load->view('edit/footer.php');
@@ -498,7 +499,10 @@ public function picture_upload(){
 
 
 public function do_upload_picture(){
-    //need to get an id here
+    $this->load->model('edit_model', 'id');
+    $new_pic_data = $this->id->get_new_picture_data();
+    $id = $new_pic_data['id'];
+    
 
 
     if(!is_dir('./images/pictures/'.$id)){
@@ -510,9 +514,8 @@ public function do_upload_picture(){
         $config['max_size'] = '6048';
         $config['max_width']  = '6024';
         $config['max_height']  = '2868';
-        $config['min_width'] = '1200';
-        $config['min_height'] = '500';
-
+        $config['min_width'] = '12000';
+        $config['min_height'] = '5000';
         $this->load->library('upload', $config);
 
 
@@ -522,25 +525,35 @@ public function do_upload_picture(){
             $data['id'] = $id;
 
             $this->load->view('edit/header.php');
-            $this->load->view('edit/upload_picture');
+            $this->load->view('edit/upload_picture', $data);
             $this->load->view('edit/footer.php');
         }
         else
         {
-            //stopped here
+            $this->db->where('id', $id);
+            $this->db->insert('pictures', $new_pic_data);
+
             $data = array('upload_data' => $this->upload->data());
 
-            $this->load->model('edit_model','edit_model');
-            $data['floorplan_info'] = $this->edit_model->get_flooplan_info($id)->result_array();
-
             $file_name = $data['upload_data']['file_name'];
-            $data_b['floorplan_pic'] = $file_name;
+            $data_b['name'] = $file_name;
 
             $this->db->where('id', $id);
-            $this->db->update('floorplans', $data_b);     
-            redirect('edit/floorplans/');
+            $this->db->update('pictures', $data_b);     
+            redirect(base_url().'edit/picture_edit/'.$id);
 
         }
+
+}
+
+
+public function picture_edit($id){
+    $this->load->model('edit_model', 'picture');
+    $data['picture'] = $this->picture->get_picture_data($id);
+
+    $this->load->view('edit/header.php');
+    $this->load->view('edit/edit_picture', $data);
+    $this->load->view('edit/footer.php');
 
 }
 

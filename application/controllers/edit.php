@@ -63,7 +63,7 @@ class Edit extends CI_Controller {
     }
 
 
-        public function make_databases(){
+    public function make_databases(){
         $role = $this->session->userdata('role');
 
         if($role == 'master'){
@@ -600,22 +600,19 @@ public function logo_upload(){
 
 public function do_upload_logo(){
     $this->db->where('logo', 'Y');
-    $old_logo = $this->db->get('pictures')->result_array();
-    $old_id  = $old_logo[0]['id'];
-    $this->db->where('logo', 'Y');
     $this->db->delete('pictures');
-    // $this->load->helper('file');
-    // delete_files('./images/logos/'.$old_id.'/');
+    $this->load->helper('file');
+    delete_files('./images/logos/property/');
 
     $this->load->model('edit_model', 'id');
     $new_pic_data = $this->id->get_new_logo_data();
     $id = $new_pic_data['id'];
 
-    if(!is_dir('./images/logos/'.$id)){
-            mkdir('./images/logos/'.$id, 0777, true);
+    if(!is_dir('./images/logos/property/')){
+            mkdir('./images/logos/property/', 0777, true);
         }
                 
-        $config['upload_path'] = './images/logos/'.$id;
+        $config['upload_path'] = './images/logos/property';
         $config['allowed_types'] = 'gif|jpg|png';
         $config['max_size'] = '6048';
         $config['max_width']  = '6024';
@@ -652,7 +649,7 @@ public function logo_delete($id){
     $this->load->helper('file');
     $this->db->where('id', $id);
     $this->db->delete('pictures');
-    delete_files('./images/logos/'.$id.'/');
+    delete_files('./images/logos/property/');
     redirect(base_url().'edit/pictures', 'refresh');
 }
 
@@ -667,22 +664,19 @@ public function man_logo_upload(){
 
 public function do_upload_man_logo(){
     $this->db->where('management_logo', 'Y');
-    $old_logo = $this->db->get('pictures')->result_array();
-    $old_id  = $old_logo[0]['id'];
-    $this->db->where('management_logo', 'Y');
     $this->db->delete('pictures');
-    // $this->load->helper('file');
-    // delete_files('./images/logos/'.$old_id.'/');
+    $this->load->helper('file');
+    delete_files('./images/logos/management/');
 
     $this->load->model('edit_model', 'id');
     $new_pic_data = $this->id->get_new_man_logo_data();
     $id = $new_pic_data['id'];
 
-    if(!is_dir('./images/logos/'.$id)){
-            mkdir('./images/logos/'.$id, 0777, true);
+    if(!is_dir('./images/logos/management')){
+            mkdir('./images/logos/management/', 0777, true);
         }
                 
-        $config['upload_path'] = './images/logos/'.$id;
+        $config['upload_path'] = './images/logos/management';
         $config['allowed_types'] = 'gif|jpg|png';
         $config['max_size'] = '6048';
         $config['max_width']  = '6024';
@@ -719,7 +713,7 @@ public function man_logo_delete($id){
     $this->load->helper('file');
     $this->db->where('id', $id);
     $this->db->delete('pictures');
-    delete_files('./images/logos/'.$id.'/');
+    delete_files('./images/logos/management/');
     redirect(base_url().'edit/pictures', 'refresh');
 }
 

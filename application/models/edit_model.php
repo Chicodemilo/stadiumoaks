@@ -228,14 +228,6 @@ class Edit_model extends CI_Model{
 
 
 
-	
-
-
-
-
-
-
-
 
 
 
@@ -382,6 +374,33 @@ class Edit_model extends CI_Model{
 
 
 
+			$captcha = array('id' => array(
+											'type' => 'INT',
+											'constraint' => 11,
+											'unsigned' => TRUE,
+											'auto_increment' => TRUE
+											 ),
+							'time' => array(
+											'type' => 'int',
+											'constraint' => 11,
+											),
+							'ip_address' => array(
+											'type' => 'VARCHAR',
+											'constraint' => 16,
+											),
+							'word' => array(
+											'type' => 'VARCHAR',
+											'constraint' => 11,
+											),
+				);
+
+			$this->dbforge->add_field($captcha);
+			$this->dbforge->add_key('id', TRUE);
+			$made = $this->dbforge->create_table('captcha', TRUE);
+
+
+
+
 			$our_amenities_list = array('id' => array(
 											'type' => 'INT',
 											'constraint' => 5,
@@ -481,17 +500,12 @@ class Edit_model extends CI_Model{
 							'pic_order' => array(
 											'type' => 'INT',
 											'constraint' => 3,
+											'null' => TRUE,
 											),
 							'active' => array(
 											'type' => 'VARCHAR',
 											'constraint' => 1,
 											),
-							
-
-
-
-
-
 				);
 
 			$this->dbforge->add_field($pictures);

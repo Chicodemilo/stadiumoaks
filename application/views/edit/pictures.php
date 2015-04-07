@@ -26,7 +26,7 @@ foreach ($pictures as $key => $value) {
 foreach ($logo as $key => $value) {
 	echo "<div id='".$value['name']."' class='logo_box'>";
 	echo "PROPERTY LOGO<hr>";
-	echo "<img src='".base_url()."images/logos/".$value['id']."/".$value['name']."' alt='".$value['caption']."'>";
+	echo "<img src='".base_url()."images/logos/property/".$value['name']."' alt='".$value['caption']."'>";
 	echo "<hr>";
 	echo "<a href='".base_url()."edit/logo_delete/".$value['id']."' class='not_fancy_dark'>DELETE</a>";
 
@@ -37,7 +37,7 @@ foreach ($logo as $key => $value) {
 foreach ($man_logo as $key => $value) {
 	echo "<div id='".$value['name']."' class='logo_box'>";
 	echo "MANAGEMENT COMPANY LOGO<hr>";
-	echo "<img src='".base_url()."images/logos/".$value['id']."/".$value['name']."' alt='".$value['caption']."'>";
+	echo "<img src='".base_url()."images/logos/management/".$value['name']."' alt='".$value['caption']."'>";
 	echo "<hr>";
 	echo "<a href='".base_url()."edit/man_logo_delete/".$value['id']."' class='not_fancy_dark'>DELETE</a>";
 

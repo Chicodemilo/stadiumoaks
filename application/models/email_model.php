@@ -3,7 +3,7 @@ class Email_model extends CI_Model{
 
 
     
-    function send_password($email, $time){
+    public function send_password($email, $time){
 
             function generateRandomString($length = 6) {
                 $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -25,12 +25,55 @@ class Email_model extends CI_Model{
 
         
             $this->load->library('email');
+            $this->email->set_newline("\r\n");
+
+            $this->email->from('do_not_reply@stadiumoaks.com', 'Do No Reply');
+            $this->email->to($email);
+            $this->email->subject('Password Reset');
+            $this->email->message($this->load->view('email/email_contact',$data, true));
+
+
+            if($this->email->send())
+                {
+                    $this->load->model('membership_model', 'membership_model');
+                    $this->membership_model->insert_new_password($email, $new_password);
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+    }
+
+
+    public function send($email, $first_name, $last_name, $phone, $message, $time){
+
+
+            $this->db->where('get_messages', 'Y');
+            $send_to = $this->db->get('membership')->result_array();
+            for ($i=0; $i < count($send_to); $i++) { 
+                $to[$i] = $send_to[$i]['email'];
+            }
+
+            $site = $this->db->get('main_info')->result_array();
+            $url = $site[0]['property_website'];
+                    
+            $data = array(
+                    'email' => $email, 
+                    'first_name' => $first_name,
+                    'last_name' => $last_name,
+                    'phone' => $phone,
+                    'message' => $message,
+                    'time' => $time,);
+
+        
+            $this->load->library('email');
             
             $this->email->set_newline("\r\n");
 
-            $this->email->from('do_not_reply@sanangeloseniors.com', 'Do No Reply');
-            $this->email->to($email);
-            $this->email->subject('Password Reset');
+            $this->email->from($email, $first_name);
+            $this->email->to($to);
+            $this->email->subject('A Message From '.$url.' Contact Form');
             $this->email->message($this->load->view('email/email_contact',$data, true));
 
 //            $path = $this->config->item('server_root');
@@ -40,8 +83,6 @@ class Email_model extends CI_Model{
 
             if($this->email->send())
                 {
-                    $this->load->model('membership_model', 'membership_model');
-                    $this->membership_model->insert_new_password($email, $new_password);
                     return true;
                 }
                 else

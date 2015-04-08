@@ -1,4 +1,7 @@
-<h3>Your Password Has Been Reset</h3>
-Please <a href="<?php echo base_url(); ?>login">Login Here</a><br>
+<h3>Contact Form</h3>
+<a href="<?php echo base_url(); ?>login">See all your contacts here.</a><br>
 Email Address: <?php echo $email; ?><br>
-New Password: <?php echo $new_password; ?>
+Name: <?php echo $first_name." ".$last_name; ?><br>
+Phone: <?php echo $phone; ?><br>
+Date: <?php echo $time; ?><br>
+Message: <?php echo $message; ?><br>

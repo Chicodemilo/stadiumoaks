@@ -1,16 +1,5 @@
 $(document).ready(function() {
 
-    // $('#contact_drop').bind('mouseover', openSubMenu);
-    // $('#contact_drop').bind('mouseout', closeSubMenu);
-        
-    //     function openSubMenu() {
-            
-    //         $(this).find('ul').fadeToggle('fast');    
-    //     };
-        
-    //     function closeSubMenu() {
-    //         $(this).find('ul').fadeToggle('slow'); 
-    //     };
 
 
     $('#contact_drop').mouseenter(function(event) {

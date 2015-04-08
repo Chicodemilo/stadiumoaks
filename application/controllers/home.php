@@ -28,6 +28,7 @@ class Home extends CI_Controller {
 // MESSAGE PAGES *********************************************************************************
 
 	public function contact(){
+			$this->load->helper('captcha');
             $this->form_validation->set_rules('first_name', 'first_name','trim|strip_tags|xss_clean|required');
             $this->form_validation->set_rules('last_name', 'last_name','trim|strip_tags|xss_clean|required');
             $this->form_validation->set_rules('email', 'email','trim|strip_tags|xss_clean|required|valid_email');
@@ -37,40 +38,39 @@ class Home extends CI_Controller {
             
             if ($this->form_validation->run() === false){
                 $data['image'] = $this->captcha_model->create_image();
-                $this->load->view('header.php');
-                $this->load->view('message_b.php', $data);
-                $this->load->view('footer.php');
+                $this->load->view('page/header.php');
+                $this->load->view('email/message.php', $data);
+                $this->load->view('page/footer.php');
                 }else{
                 if ($this->input->post('message')){
-                    $name = $this->input->post('name');
+                    $first_name = $this->input->post('first_name');
+                    $last_name = $this->input->post('last_name');
                     $email = $this->input->post('email');
-                    $subject = $this->input->post('subject');
+                    $phone = $this->input->post('phone');
                     $message = $this->input->post('message');
                     date_default_timezone_set('US/Central');
-                    $time = date("m/d/Y H:i:s");
+                    $time = date("Y-m-d H:i:s");
                     $comment = array(
                         
-                        'name' => $name, 
+                        'first_name' => $first_name, 
+                        'last_name' => $last_name, 
                         'email' => $email,
-                        'subject' => $subject,
+                        'phone' => $phone,
                         'message' => $message,
                         'time' => $time,);
                     
-                    $sent = $this->db->insert('comments', $comment);
+                    $sent = $this->db->insert('contact', $comment);
                     $this->load->model('email_model', 'email_model');
+                    $this->email_model->send($email, $first_name, $last_name, $phone, $message, $time);
                     
-                    $this->email_model->send($email, $name, $subject, $message, $time);
-                    // $sent_b = $this->email_model->send_b($email, $name, $subject, $message, $time);
                     
                     if ($sent == true){
                                             
-                        $this->load->view('header.php');
+                        $this->load->view('page/header.php');
 
-                        $this->load->view('sucess.php');
+                        $this->load->view('email/sucess.php');
 
-                        $this->load->view('footer.php');
-                    
-//                      header('Refresh: 2; URL='.base_url().'welcome/search');
+                        $this->load->view('page/footer.php');
                     }
                 }
             }

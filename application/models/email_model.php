@@ -57,6 +57,7 @@ class Email_model extends CI_Model{
 
             $site = $this->db->get('main_info')->result_array();
             $url = $site[0]['property_website'];
+            $property_name = $site[0]['property_name'];
                     
             $data = array(
                     'email' => $email, 
@@ -64,14 +65,17 @@ class Email_model extends CI_Model{
                     'last_name' => $last_name,
                     'phone' => $phone,
                     'message' => $message,
-                    'time' => $time,);
+                    'time' => $time,
+                    'property_name' => $property_name,);
+
+            // print_r($to);
 
         
             $this->load->library('email');
             
             $this->email->set_newline("\r\n");
 
-            $this->email->from($email, $first_name);
+            $this->email->from($email, $first_name." ".$last_name);
             $this->email->to($to);
             $this->email->subject('A Message From '.$url.' Contact Form');
             $this->email->message($this->load->view('email/email_contact',$data, true));

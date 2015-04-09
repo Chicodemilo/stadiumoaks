@@ -19,7 +19,11 @@ class Home extends CI_Controller {
 // INDEX PAGE *********************************************************************************
 
 	public function index()
-	{
+	{	
+		$this->load->model('view_model', 'background_data');
+		$background_data = $this->background_data->get_bg_data();
+
+		$this->load->view('page/background.php', $background_data);
 		$this->load->view('page/header.php');
 		$this->load->view('page/footer.php');
 		

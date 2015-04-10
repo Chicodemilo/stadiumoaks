@@ -1,5 +1,4 @@
-<!-- end wrapper div -->
-</div>
+
 <footer>
         <div id="footer_info">
 	        &COPY; PHP Name &nbsp;&nbsp;&nbsp; For More Information Call: PHP Phone<br>

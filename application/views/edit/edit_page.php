@@ -9,7 +9,7 @@
 			</tr>
 			<tr>
 				<td class="righter" width="20%">Name:</td>
-				<td colspan="5"><input type="text" style="width:90%" name="property_name" id="property_name" placeholder="Enter The Name Of Your Property" value="<?php echo $main_info[0]['property_name'] ?>"></td>
+				<td colspan="5"><input type="text" style="width:90%" name="property_name" id="property_name" placeholder="Enter The Name Of Your Property" maxlength="26" value="<?php echo $main_info[0]['property_name'] ?>"></td>
 			</tr>
 			<tr>
 				<td class="righter">Phone Number:</td>
@@ -74,13 +74,13 @@
 				</td>
 			</tr> -->
 			<tr>
-				<td class="righter">Main Color:</td>
+				<td class="righter">Color 1:</td>
 				<td><input type="color" style="width:90%" name="property_color_1" id="property_color_1" value="#<?php echo $main_info[0]['property_color_1']; ?>"></td>
 			
-				<td class="righter">Highlight Color 1:</td>
+				<td class="righter">Color 2:</td>
 				<td><input type="color" style="width:90%" name="property_color_2" id="property_color_2" value="#<?php echo $main_info[0]['property_color_2']; ?>" ></td>
 			
-				<td class="righter">Highlight Color 2:</td>
+				<td class="righter">Color 3:</td>
 				<td><input type="color" style="width:90%" name="property_color_3" id="property_color_3" value="#<?php echo $main_info[0]['property_color_3']; ?>"></td>
 			</tr>
 			<th colspan="6"></th>

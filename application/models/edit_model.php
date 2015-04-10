@@ -243,7 +243,7 @@ class Edit_model extends CI_Model{
 											 ),
 							'property_name' => array(
 											'type' => 'VARCHAR',
-											'constraint' => 150,
+											'constraint' => 26,
 											),
 
 							'property_phone' => array(

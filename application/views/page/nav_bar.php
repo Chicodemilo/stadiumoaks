@@ -11,8 +11,8 @@
     <div id="nav_bar_links" class="nav_bar_links" style="color:#<?php echo $property_color_3; ?>">
             <span>
                 <a href="<?php echo base_url() ?>floorplans">Floorplans &amp; Prices</a>
-                &nbsp;&nbsp;&bull;&nbsp;&nbsp;<a href="<?php echo base_url() ?>pictures">Pictures</a>
-                &nbsp;&nbsp;&bull;&nbsp;&nbsp;<a href="<?php echo base_url() ?>amenities">Amenities</a>
+                &nbsp;&nbsp;&bull;&nbsp;&nbsp;<a href="<?php echo base_url() ?>home/pictures">Pictures</a>
+                &nbsp;&nbsp;&bull;&nbsp;&nbsp;<a href="<?php echo base_url() ?>home/amenities">Amenities</a>
                 &nbsp;&nbsp;&bull;&nbsp;&nbsp;<a href="<?php echo base_url() ?>home/contact">Contact</a>
                 <!-- &nbsp;&nbsp;&bull;&nbsp;&nbsp;<a href="<?php echo base_url() ?>home/contact">Residents</a> -->
             </span>

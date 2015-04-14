@@ -30,13 +30,26 @@ class Home extends CI_Controller {
 		$this->load->view('page/header.php', $header_data);
 		$this->load->view('page/background.php', $background_data);
 		$this->load->view('page/body.php', $body_data);
-		$this->load->view('page/nav_bar.php', $footer_data);
-		
+		$this->load->view('page/nav_bar.php', $nav_data);
+		$this->load->view('page/footer.php', $footer_data);	
+	}
 
-		
-		
-		$this->load->view('page/footer.php');
-		
+	// INDEX PAGE *********************************************************************************
+
+	public function pictures()
+	{	
+		$this->load->model('view_model', 'page_data');
+		$background_data = $this->page_data->get_bg_data();
+		$header_data = $this->page_data->get_header_data();
+		$pic_data = $this->page_data->get_pic_data();
+		$nav_data = $this->page_data->get_nav_data();
+		$footer_data = $this->page_data->get_footer_data();
+
+		$this->load->view('page/header.php', $header_data);
+		$this->load->view('page/background.php', $background_data);
+		$this->load->view('page/pic.php', $pic_data);
+		$this->load->view('page/nav_bar.php', $nav_data);
+		$this->load->view('page/footer.php', $footer_data);	
 	}
 
 // MESSAGE PAGES *********************************************************************************

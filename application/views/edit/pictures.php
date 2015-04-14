@@ -19,7 +19,6 @@ foreach ($pictures as $key => $value) {
 	echo "<hr>";
 	echo "<a href='".base_url()."edit/picture_edit/".$value['id']."' class='not_fancy_dark'>EDIT</a><br><br>";
 	echo "<a href='".base_url()."edit/picture_delete/".$value['id']."' class='not_fancy_dark'>DELETE</a>";
-
 	echo "</div>";
 }
 
@@ -29,7 +28,6 @@ foreach ($logo as $key => $value) {
 	echo "<img src='".base_url()."images/logos/property/".$value['name']."' alt='".$value['caption']."'>";
 	echo "<hr>";
 	echo "<a href='".base_url()."edit/logo_delete/".$value['id']."' class='not_fancy_dark'>DELETE</a>";
-
 	echo "</div>";
 }
 
@@ -40,17 +38,9 @@ foreach ($man_logo as $key => $value) {
 	echo "<img src='".base_url()."images/logos/management/".$value['name']."' alt='".$value['caption']."'>";
 	echo "<hr>";
 	echo "<a href='".base_url()."edit/man_logo_delete/".$value['id']."' class='not_fancy_dark'>DELETE</a>";
-
 	echo "</div>";
 }
-
-
  ?>
-
-
-
-
-
 
 <table>
 	<tr>

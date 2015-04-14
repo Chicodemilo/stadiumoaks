@@ -81,6 +81,34 @@ class View_model extends CI_Model{
             }
 
         return $data;
+    }     
+    
+    public function get_pic_data()
+    {       
+            $this->db->where('picture_page_main_pic', 'Y');
+            $query = $this->db->get('pictures')->result_array();
+            if (count($query) > 0) {
+                $data['main_pic_id'] = $query[0]['id'];
+                $data['main_pic_name'] = $query[0]['name'];
+            }
+            if (count($query) < 1) {
+                $this->db->where('pic_order', 1);
+                $query = $this->db->get('pictures')->result_array();
+                $data['main_pic_id'] = $query[0]['id'];
+                $data['main_pic_name'] = $query[0]['name'];
+            }
+
+            $query = $this->db->get('main_info')->result_array();
+            $data['property_pictures_text'] = $query['0']['property_pictures_text'];
+            $data['property_color_2'] = $query['0']['property_color_2'];
+
+            $this->db->where('logo', 'N');
+            $this->db->where('management_logo', 'N');
+            $this->db->where('active', 'Y');
+            $this->db->order_by('pic_order', 'asc');
+            $data['pictures'] = $this->db->get('pictures')->result_array();
+
+            return $data;
     }    
 
 

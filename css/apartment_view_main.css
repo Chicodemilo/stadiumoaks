@@ -115,7 +115,22 @@ a:active  {color:#DEDEDE;
                     letter-spacing: .1em;
                     font-family: 'Oswald', sans-serif;
                     /*z-index: 5;*/
-                    margin:auto;}    
+                    margin:auto;}   
+
+.nav_bar_links  {display: block;
+                margin-left: 270px;
+                } 
+
+.nav_bar_links  span {
+                    min-width: 570px;
+                    display: table-cell;
+                    vertical-align: bottom;
+                    font-size: 1.5em;
+                    height: 90px;
+                    font-family: 'Oswald', sans-serif;
+                    padding: 10px;}
+
+                   
 
 
 /********************************  FOOTER ***************************/           
@@ -128,13 +143,32 @@ footer {padding: 5px;
         margin-left: 0px;
         margin-right: 0px;
         margin-top: 10px;
-        background-color: #7face3;}      
+        background-color: #7face3;
+        min-width: 650px;}      
 
-#footer_info    {text-align: right;
+#footer_info_right   {text-align: right;
                 color: white;
-                font-size: .7em;
+                font-size: .6em;
                 float: right;
-                padding-right: 30px;}                  
+                padding-right: 50px;}   
+
+#footer_info_left   {
+                    min-height: 40px;
+                    color:white;
+                    padding-left:50px;
+                    width: 200px;
+                    font-size: .6em;
+                    text-align: left;
+                    }
+.property_management_logo_box   {height:20px;
+                                padding: 0px;
+                                margin: 0px;}
+
+.property_management_logo_box img {height: 40px;}
+
+.social_box {position: relative;
+            top:-40px;
+            left: 300px;}               
 
 /******************************** BACKGROUND  ***************************/
 

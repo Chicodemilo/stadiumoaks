@@ -358,7 +358,7 @@ class Edit_model extends CI_Model{
 
 							'property_management_name' => array(
 											'type' => 'VARCHAR',
-											'constraint' => 60,
+											'constraint' => 35,
 											),
 
 							'property_management_url' => array(

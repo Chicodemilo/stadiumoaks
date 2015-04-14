@@ -25,11 +25,12 @@ class Home extends CI_Controller {
 		$header_data = $this->page_data->get_header_data();
 		$body_data = $this->page_data->get_body_data();
 		$nav_data = $this->page_data->get_nav_data();
+		$footer_data = $this->page_data->get_footer_data();
 
 		$this->load->view('page/header.php', $header_data);
 		$this->load->view('page/background.php', $background_data);
 		$this->load->view('page/body.php', $body_data);
-		$this->load->view('page/nav_bar.php', $nav_data);
+		$this->load->view('page/nav_bar.php', $footer_data);
 		
 
 		

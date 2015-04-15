@@ -109,6 +109,13 @@ class View_model extends CI_Model{
             $data['pictures'] = $this->db->get('pictures')->result_array();
 
             return $data;
+    }
+
+    public function get_floorplan_data()
+    {       
+            
+            $data['floorplans'] = $this->db->get('floorplans')->result_array();
+            return $data;
     }    
 
 

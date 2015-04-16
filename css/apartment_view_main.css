@@ -102,7 +102,7 @@ a:active  {color:#DEDEDE;
                 min-width: 870px;
                 padding: 0px;
                 width: 100%;
-                opacity: .7;
+                opacity: .85;
                 background-color:#CAE1FF;
                 position: fixed;
                 height: 45px;
@@ -341,24 +341,20 @@ footer {padding: 5px;
 
 /********************************   FLOORPLANS   ***************************/
 
-
-.floorplan_big_box  {
-                    margin: auto;
-                    width:75%;
-                    margin-bottom: 80px;
-                    min-width: 650px;
-                    max-width: 900px; 
+.floorplan_big_box  {margin: auto;
                     padding:10px;
                     display: block;
                     position: relative;
-                    top:170px;}
+                    top:170px;
+                    margin-bottom: 250px;}
 
 .inner_floorplan_box {box-shadow: 3px 3px 6px #888888;
                     background-color: rgba(255,255,255, .6);
-                    min-width: 300px;
-                    width: 100%;
-                    min-height: 150px;
-                    padding: 15px;}
+                    margin: auto;
+                    width: 750px; 
+                    padding: 15px;
+                    margin-bottom: 20px;
+                    overflow: auto;}
 
 .floorplan_pic  {width: 350px;
                 min-height: 150px;
@@ -366,23 +362,103 @@ footer {padding: 5px;
                 border: 1px solid #ccc;
                 float: left; }
 
+.floorplan_pic img {width: 100%;}
+
+.floorplan_info     {width: 375px;
+                    margin-left: 20px;
+                    float: left;}
+
 
 .floorplan_info table   {width: 100%;
                         border-collapse: collapse;
                         background-color:rgba(255,255,255, .6)}
 
-.floorplan_info table tr    {height: 30px;}
+.floorplan_info table tr    {height: 35px;
+                            border-top: 1px solid #ccc;
+                            border-bottom: 1px solid #ccc;
+                            }
 
-.floorplan_info table tr td {border: 1px solid #ccc;}
+.floorplan_info table tr td {padding:5px;}
 
+.floorplan_name {color:#8B7355;
+                font-family: 'Josefin Slab', Arial, sans-serif;
+                font-size: 1.4em}
 
+.floorplan_text {color:#8B7355;
+                font-family: 'Josefin Slab', Arial, sans-serif;
+                font-size: .9em}
 
+.floorplan_text_small   {font-family: 'Josefin Slab', Arial, sans-serif;
+                        font-size: .8em}
 
+/********************************   AMENITIES   ***************************/
 
+.amenities_big_box  {margin: auto;
+                    padding:10px;
+                    display: block;
+                    position: relative;
+                    top:170px;
+                    margin-bottom: 250px;}
 
+.inner_amenities_box {
+                    /*background-color: rgba(255,255,255, .6);*/
+                    margin: auto;
+                    width: 750px; 
+                    padding: 15px;
+                    margin-bottom: 20px;
+                    overflow: auto;}
 
+.amenities_pic  {width: 350px;
+                padding: 10px;
+                min-height: 150px;
+                background-color:rgba(255,255,255, .8);
+                border: 1px solid #ccc;
+                box-shadow: 3px 3px 6px #888888; }
 
+.amenities_pic img {width: 100%;}
 
+.amenities_text {width: 350px;
+                padding: 10px;
+                background-color:rgba(255,255,255, .8);
+                border: 1px solid #ccc;
+                box-shadow: 3px 3px 6px #888888;
+                color:#8B7355;
+                margin-bottom: 20px;
+                font-family: 'Josefin Slab', Arial, sans-serif;
+                font-size: 1em }
+
+.amenities_pet {width: 350px;
+                padding: 10px;
+                background-color:rgba(255,255,255, .8);
+                border: 1px solid #ccc;
+                box-shadow: 3px 3px 6px #888888;
+                color:#8B7355;
+                margin-top: 20px;
+                font-family: 'Josefin Slab', Arial, sans-serif;
+                font-size: 1.2em }
+
+.amenities_pet_small    {font-size: .8em;}
+.amenities_pet_xsmall    {font-size: .6em;}
+
+.amenities_list {float: right;
+                width: 330px;
+                padding: 10px;
+                background-color:rgba(255,255,255, .8);
+                border: 1px solid #ccc;
+                box-shadow: 3px 3px 6px #888888;
+                color:#8B7355;
+                margin-bottom: 20px;
+                font-family: 'Josefin Slab', Arial, sans-serif;
+                font-size: 1em}
+
+.amenities_list ul li {line-height: 1.5em;}
+
+.amenities_title    {font-size: 1.4em;
+                    display: block;
+                    text-align: center;}
+
+.super  {vertical-align: super;
+        font-size: .4em;}
 
 
 

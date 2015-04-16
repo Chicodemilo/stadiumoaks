@@ -56,6 +56,23 @@ class Home extends CI_Controller {
 
 // FLOORPLAN PAGE *********************************************************************************
 
+	public function amenities()
+	{	
+		$this->load->model('view_model', 'page_data');
+		$background_data = $this->page_data->get_bg_data();
+		$header_data = $this->page_data->get_header_data();
+		$amenities_data = $this->page_data->get_amenities_data();
+		$nav_data = $this->page_data->get_nav_data();
+		$footer_data = $this->page_data->get_footer_data();
+
+		$this->load->view('page/header.php', $header_data);
+		$this->load->view('page/background.php', $background_data);
+		$this->load->view('page/amenities.php', $amenities_data);
+		$this->load->view('page/nav_bar.php', $nav_data);
+		$this->load->view('page/footer.php', $footer_data);	
+	}
+// AMENITIES PAGE *********************************************************************************
+
 	public function floorplans()
 	{	
 		$this->load->model('view_model', 'page_data');

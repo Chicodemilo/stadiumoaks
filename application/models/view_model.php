@@ -24,23 +24,12 @@ class View_model extends CI_Model{
 
     public function get_header_data()
     {
-        // $this->db->where('logo', 'Y');
-        // $query = $this->db->get('pictures')->result_array();
-        // if (count($query) > 0) {
-        //     $data['logo_id'] = $query[0]['id'];
-        //     $data['logo_name'] = $query[0]['name'];
-        // }else{
-        //     $data['logo_id'] = 'N';
-        //     $data['logo_name'] = 'N';
-        // }
-
         $query = $this->db->get('main_info')->result_array();
         $data['property_name'] = $query[0]['property_name'];
         $data['property_city'] = $query[0]['property_city'];
         $data['property_state'] = $query[0]['property_state'];
         $data['property_slogan'] = $query[0]['property_slogan'];
         $data['property_description'] = $query[0]['property_description'];
-
         return $data;
     }
 
@@ -115,6 +104,59 @@ class View_model extends CI_Model{
     {       
             
             $data['floorplans'] = $this->db->get('floorplans')->result_array();
+            return $data;
+    } 
+
+    public function get_amenities_data()
+    {       
+            $this->db->where('amenities_page_main_pic', 'Y');
+            $query = $this->db->get('pictures')->result_array();
+        
+            if(count($query) < 1){
+                $this->db->where('pic_order', 1);
+                $query = $this->db->get('pictures')->result_array();
+                $data['pic_id'] = $query[0]['id'];
+                $data['pic_name'] = $query[0]['name'];
+            }else{
+                $data['pic_id'] = $query[0]['id'];
+                $data['pic_name'] = $query[0]['name'];
+            }
+
+            $this->db->where('active', 'Y');
+            $our_list = $this->db->get('our_amenities_list')->result_array();
+            $this->db->where('active', 'Y');
+            $their_list = $this->db->get('their_amenities_list')->result_array();
+            $i = 0;
+            foreach ($our_list as $key => $value) {
+                $all_amenities[$i] = $value;
+                $i = $i + 1;
+            }
+            foreach ($their_list as $key => $value) {
+                $all_amenities[$i] = $value;
+                $i = $i + 1;
+            }
+            usort($all_amenities, function($a, $b){
+                return strnatcmp($a['name'], $b['name']);
+            });
+            $data['amenities'] = $all_amenities;
+
+            $query = $this->db->get('main_info')->result_array();
+            $data['property_name'] = $query[0]['property_name'];
+            $data['property_amenities_text'] = $query[0]['property_amenities_text'];
+
+            $query = $this->db->get('pet_policy')->result_array();
+            if(count($query) > 0){
+                $data['pet_type'] = $query[0]['type'];
+                $data['pet_deposit'] = $query[0]['pet_deposit'];
+                $data['pet_deposit_refundable'] = $query[0]['pet_deposit_refundable'];
+                $data['pet_restrictions'] = $query[0]['restrictions'];
+            }else{
+                $data['pet_type'] = '';
+                $data['pet_deposit'] = '';
+                $data['pet_deposit_refundable'] = '';
+                $data['pet_deposit_refundable'] = '';
+                $data['pet_restrictions'] = '';
+            }
             return $data;
     }    
 

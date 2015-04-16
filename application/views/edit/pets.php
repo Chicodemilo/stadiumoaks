@@ -13,7 +13,7 @@
 				</tr>
 				<tr>
 					<td><select name="type" id="type">
-						<option value="No Pets">No Pets</option>
+						<option value="No Pets Allowed">No Pets Allowed</option>
 						<option value="Pets Allowed">Pets Allowed</option>
 						<option value="Pets Allowed - Restrictions Apply">Pets Allowed - Restrictions Apply</option>
 						<option value="Pets Allowed - With Fees">Pets Allowed - With Fees</option>

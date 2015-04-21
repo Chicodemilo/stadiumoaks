@@ -218,7 +218,34 @@ class Edit extends CI_Controller {
         $data['close_min'] = $_POST['close_min'];
         $data['close_am_pm'] = $_POST['close_am_pm'];
         $data['day_condition'] = $_POST['day_condition'];
-        // print_r($data);
+
+        if($data['day_type'] == "Monday - Friday"){
+            $data['hours_order'] = 1;
+        }
+        if($data['day_type'] == "Monday - Thursday"){
+            $data['hours_order'] = 2;
+        }
+        if($data['day_type'] == "Monday"){
+            $data['hours_order'] = 3;
+        }
+        if($data['day_type'] == "Tuesday"){
+            $data['hours_order'] = 4;
+        }
+        if($data['day_type'] == "Wednesday"){
+            $data['hours_order'] = 5;
+        }
+        if($data['day_type'] == "Thursday"){
+            $data['hours_order'] = 6;
+        }
+        if($data['day_type'] == "Friday"){
+            $data['hours_order'] = 7;
+        }
+        if($data['day_type'] == "Saturday"){
+            $data['hours_order'] = 8;
+        }
+        if($data['day_type'] == "Sunday"){
+            $data['hours_order'] = 9;
+        }
         $this->db->insert('office_hours', $data);
         redirect(base_url().'edit/hours');
     }

@@ -70,6 +70,15 @@ class View_model extends CI_Model{
             }
 
         return $data;
+    }
+
+    public function get_hours_data(){
+        $this->db->order_by('hours_order', 'asc');
+        $hours = $this->db->get('office_hours')->result_array();
+        if(count($hours) > 0){
+            return $hours;
+        }
+        
     }     
     
     public function get_pic_data()

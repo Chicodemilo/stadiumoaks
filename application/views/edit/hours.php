@@ -49,8 +49,8 @@
 					</select></td>
 					<td><select name="open_am_pm" id="open_am_pm">
 						<option value="">None</option>
-						<option value="AM" selected="selected">AM</option>
-						<option value="PM">PM</option>
+						<option value="am" selected="selected">am</option>
+						<option value="pm">pm</option>
 					</select></td>
 					<td><select name="close_hour" id="close_hour">
 						<option value="">None</option>
@@ -74,8 +74,8 @@
 					</select></td>
 					<td><select name="close_am_pm" id="close_am_pm">
 						<option value="">None</option>
-						<option value="AM">AM</option>
-						<option value="PM" selected="selected">PM</option>
+						<option value="am">am</option>
+						<option value="pm" selected="selected">pm</option>
 					</select></td>
 					<td><select name="day_condition" id="day_condition">
 						<option value="">No Conditions</option>

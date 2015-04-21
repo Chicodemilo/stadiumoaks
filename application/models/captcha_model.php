@@ -15,8 +15,8 @@ class Captcha_model extends CI_Model{
                 'img_path' => './captcha/',
                 'img_url' => base_url().'captcha/',
                 'font_path' => './fonts/impact.ttf',
-                'img_width' => '200',
-                'img_height' => '50',
+                'img_width' => '150',
+                'img_height' => '35',
                 //exp in seconds...  3600 = one hour
                 'expiration' => '3600',
                 'time' => time()

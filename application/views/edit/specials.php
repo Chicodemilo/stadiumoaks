@@ -14,10 +14,10 @@
 
 				<tr>
 					<td>
-						<input type="text" name="title" id="title" maxlength="40">
+						<input type="text" name="title" id="title" maxlength="30">
 					</td>
 					<td>
-						<textarea name="description" id="description" cols="40" rows="4" placeholder="Enter details of this special" maxlength="300"></textarea>
+						<textarea name="description" id="description" cols="40" rows="4" placeholder="Enter details of this special" maxlength="150"></textarea>
 					</td>
 
 					<td>
@@ -61,7 +61,7 @@
 						</select>
 					</td>
 					<td colspan="2">
-						<textarea name="condition_4" id="condition_4" cols="40" rows="4" placeholder="Enter any custom conditions" maxlength="300"></textarea>
+						<textarea name="condition_4" id="condition_4" cols="40" rows="4" placeholder="Enter any custom conditions" maxlength="100"></textarea>
 					</td>
 				</tr>
 			</table>

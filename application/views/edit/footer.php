@@ -2,9 +2,12 @@
 </div>
 <footer>
         <div id="footer_info">
-	        &COPY; PHP Name<br>
-	        PHP Address
-	        <div>easyapartmentsites.com :: for help call 866-800-4727</div>
+        	<?php echo $this->session->userdata('property_name'); ?>
+        	<br>
+	        &COPY; <?php echo date('Y') ?> Bayrum Media
+	        <br>
+	        For Help Call 1-866-800-4727
+	        
         </div>
         
 </footer>

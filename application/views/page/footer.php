@@ -40,7 +40,7 @@
 	        	}
 	         ?>
          	<br><br>
-	        &copy;
+	        &copy;<?php echo " ".date('Y'); ?>
 	        <?php 
 	        	if($property_management_name != ''){
 	        		if($property_management_url != 'N'){

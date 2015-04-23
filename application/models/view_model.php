@@ -33,6 +33,29 @@ class View_model extends CI_Model{
         return $data;
     }
 
+        public function get_special_data()
+    {
+        $query = $this->db->get('special')->result_array();
+        if(count($query) > 0){
+            $data['title'] = $query[0]['title'];
+            $data['description'] = $query[0]['description'];
+            $data['start'] = $query[0]['start'];
+            $data['end'] = $query[0]['end'];
+            $data['conditions'] = $query[0]['condition_1']." ".$query[0]['condition_2']." ".$query[0]['condition_3']." ".$query[0]['condition_4'];
+            
+
+            $end = date('Y-m-d', strtotime($query[0]['end']));
+            $now = date('Y-m-d');
+            if($now > $end){
+                return 'N';
+            }else{
+                return $data;
+            }
+        }else{
+            return 'N';
+        }
+    }
+
 
     public function get_nav_data($value='')
     {

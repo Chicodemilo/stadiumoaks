@@ -135,7 +135,8 @@ class Edit extends CI_Controller {
         
         $data['our_amenities_list'] = $our_amenities_list;
         $data['their_amenities_list'] = $their_amenities_list;
-
+        
+        // print_r($data);
         $this->load->view('edit/header.php');
         $this->load->view('edit/edit_amenities.php', $data);
         $this->load->view('edit/footer.php');

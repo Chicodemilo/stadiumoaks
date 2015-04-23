@@ -23,14 +23,14 @@ class Home extends CI_Controller {
 		$this->load->model('view_model', 'page_data');
 		$background_data = $this->page_data->get_bg_data();
 		$header_data = $this->page_data->get_header_data();
+		$special_data = $this->page_data->get_special_data();
 		$body_data = $this->page_data->get_body_data();
 		$nav_data = $this->page_data->get_nav_data();
 		$footer_data = $this->page_data->get_footer_data();
 
 		$this->load->view('page/header.php', $header_data);
-
 		$this->load->view('page/background.php', $background_data);
-
+		if($special_data != 'N'){$this->load->view('page/special.php', $special_data);};
 		$this->load->view('page/body.php', $body_data);
 		$this->load->view('page/nav_bar.php', $nav_data);
 		$this->load->view('page/footer.php', $footer_data);	
@@ -55,7 +55,7 @@ class Home extends CI_Controller {
 	}
 
 
-// FLOORPLAN PAGE *********************************************************************************
+// AMENITIES PAGE *********************************************************************************
 
 	public function amenities()
 	{	
@@ -72,7 +72,7 @@ class Home extends CI_Controller {
 		$this->load->view('page/nav_bar.php', $nav_data);
 		$this->load->view('page/footer.php', $footer_data);	
 	}
-// AMENITIES PAGE *********************************************************************************
+// FLOORPLAN PAGE *********************************************************************************
 
 	public function floorplans()
 	{	
@@ -102,11 +102,11 @@ class Home extends CI_Controller {
 
 
 			$this->load->helper('captcha');
-            $this->form_validation->set_rules('first_name', 'first_name','trim|strip_tags|xss_clean|required');
-            $this->form_validation->set_rules('last_name', 'last_name','trim|strip_tags|xss_clean|required');
-            $this->form_validation->set_rules('email', 'email','trim|strip_tags|xss_clean|required|valid_email');
-            $this->form_validation->set_rules('phone', 'phone','trim|strip_tags|xss_clean|required');
-            $this->form_validation->set_rules('message', 'message','trim|strip_tags|xss_clean|required');
+            $this->form_validation->set_rules('first_name', 'First Name','trim|strip_tags|xss_clean|required');
+            $this->form_validation->set_rules('last_name', 'Last Name','trim|strip_tags|xss_clean|required');
+            $this->form_validation->set_rules('email', 'Email','trim|strip_tags|xss_clean|required|valid_email');
+            $this->form_validation->set_rules('phone', 'Phone','trim|strip_tags|xss_clean|required');
+            $this->form_validation->set_rules('message', 'Message','trim|strip_tags|xss_clean|required');
             $this->form_validation->set_rules('captcha', 'captcha','trim|strip_tags|xss_clean|callback_captcha_check');
             
             if ($this->form_validation->run() === false){
@@ -138,6 +138,67 @@ class Home extends CI_Controller {
                     $sent = $this->db->insert('contact', $comment);
                     $this->load->model('email_model', 'email_model');
                     $this->email_model->send($email, $first_name, $last_name, $phone, $message, $time);
+                    
+                    if ($sent == true){
+                        $this->load->view('page/header.php', $header_data);
+		                $this->load->view('page/background.php', $background_data);
+                        $this->load->view('email/sucess.php');
+                        $this->load->view('page/nav_bar.php', $nav_data);
+		                $this->load->view('page/footer.php', $footer_data);
+                    }
+                }
+            }
+        }
+        
+       
+	public function contact_maint(){
+			$this->load->model('view_model', 'page_data');
+			$background_data = $this->page_data->get_bg_data();
+			$header_data = $this->page_data->get_header_data();
+			$hours_data = $this->page_data->get_hours_data();
+			$nav_data = $this->page_data->get_nav_data();
+			$footer_data = $this->page_data->get_footer_data();
+
+
+			$this->load->helper('captcha');
+            $this->form_validation->set_rules('first_name', 'First Name','trim|strip_tags|xss_clean|required');
+            $this->form_validation->set_rules('last_name', 'Last Name','trim|strip_tags|xss_clean|required');
+            $this->form_validation->set_rules('email', 'email','trim|strip_tags|xss_clean|required|valid_email');
+            $this->form_validation->set_rules('phone', 'Phone','trim|strip_tags|xss_clean|required');
+            $this->form_validation->set_rules('message', 'Message','trim|strip_tags|xss_clean|required');
+            $this->form_validation->set_rules('unit_number', 'Unit Number','trim|strip_tags|xss_clean|required');
+            $this->form_validation->set_rules('captcha', 'captcha','trim|strip_tags|xss_clean|callback_captcha_check');
+            
+            if ($this->form_validation->run() === false){
+                $data['image'] = $this->captcha_model->create_image();
+                $data['hours'] = $hours_data;
+                $this->load->view('page/header.php', $header_data);
+                $this->load->view('page/background.php', $background_data);
+                $this->load->view('email/message_maint.php', $data);
+                $this->load->view('page/nav_bar.php', $nav_data);
+                $this->load->view('page/footer.php', $footer_data);
+                }else{
+                if ($this->input->post('message')){
+                    $first_name = $this->input->post('first_name');
+                    $last_name = $this->input->post('last_name');
+                    $email = $this->input->post('email');
+                    $phone = $this->input->post('phone');
+                    $message = $this->input->post('message');
+                    $unit_number = $this->input->post('unit_number');
+                    date_default_timezone_set('US/Central');
+                    $time = date("Y-m-d H:i:s");
+                    $comment = array(
+                        'first_name' => $first_name, 
+                        'last_name' => $last_name, 
+                        'email' => $email,
+                        'phone' => $phone,
+                        'message' => $message,
+                        'time' => $time,
+                        'unit_number' => $unit_number);
+                    
+                    $sent = $this->db->insert('maint_request', $comment);
+                    $this->load->model('email_model', 'email_model');
+                    $this->email_model->send_maint($email, $first_name, $last_name, $phone, $message, $time, $unit_number);
                     
                     if ($sent == true){
                         $this->load->view('page/header.php', $header_data);

@@ -28,6 +28,9 @@ hr {border: 0;
 
 .center    {text-align: center;}
 
+.center_light    {text-align: center;
+                    font-size: .7em;}
+
 .bold   {font-weight: bolder}
 
 .smaller    {font-size: .7em;}
@@ -42,14 +45,20 @@ hr {border: 0;
 a {text-decoration: none;
     cursor: pointer;}
 
+.body_link_xsmall   {font-size: .6em;
+                    font-family: 'Josefin Slab', Arial, sans-serif;}
+.body_link_xsmall a:link {color:#4F94CD;}
+.body_link_xsmall a:hover   {color:#0000EE;}
+.body_link_xsmall a:visited {}
+.body_link_xsmall a:active  {color:#9FB6CD;}
 
-/*a:link {display: inline;}
 
-a:hover   {color:white;
-            background: #A2B5CD;}
-a:visited {}
-a:active  {color:#DEDEDE; 
-          background: #6E7B8B;}*/
+.body_link  {font-size: .9em;
+            font-family: 'Josefin Slab', Arial, sans-serif;}
+.body_link a:link {color:#4F94CD;}
+.body_link a:hover   {color:#0000EE;}
+.body_link a:visited {}
+.body_link a:active  {color:#9FB6CD;}
 
 
 /******************************** NAVBAR  ***************************/
@@ -115,7 +124,6 @@ a:active  {color:#DEDEDE;
                     color:white;
                     letter-spacing: .1em;
                     font-family: 'Oswald', sans-serif;
-                    /*z-index: 5;*/
                     margin:auto;}   
 
 .nav_bar_links  {display: block;
@@ -299,7 +307,7 @@ footer {padding: 5px;
                         margin: 10px;
                         padding: 10px;
                         float:left;
-                        box-shadow: 6px 6px 15px #555555;}
+                        box-shadow: 2px 2px 5px #555555;}
 
 .small_pic_box img  {width: 100%;}
 
@@ -501,6 +509,46 @@ footer {padding: 5px;
 
 .hours_list {font-size: .8em;
             line-height:1.6em;}
+
+
+/********************************   SPECIAL   ***************************/
+
+.special_box    {z-index: 7;
+                height: 44px;
+                width: 580px;
+                box-shadow: 1px 1px 6px #888888;
+                background-color: rgba(255,255,255, .7); 
+                position: fixed;
+                display: block;
+                font-family: 'Oswald', sans-serif;
+                padding: 5px;
+                color:#8B7355;
+                top:-110px;
+                right:0px;}
+
+.special_title   {z-index: 8;
+                font-family: 'Oswald', sans-serif;
+                font-size: 1.3em;
+                height: 35px;
+                max-width: 225px;
+                margin-right: 10px;
+                float: left;
+                overflow: hidden;}
+
+.special_description   {z-index: 8;
+                        height: 35px;
+                        min-width: 250px;
+                        font-size: .8em;
+                        overflow: hidden;
+                        line-height: 1.1em;}
+
+                
+.special_conditions   {z-index: 8;
+                        min-width: 250px;
+                        font-size: .6em;
+                        overflow: hidden;
+                        color:black;
+                        border-top: 1px dotted gray;}
 
 
 

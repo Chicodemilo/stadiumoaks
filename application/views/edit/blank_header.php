@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
     <title>
-      PHP main_name here
+      Login
     </title>
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url();?>images/favicon.ico">
     <meta charset="utf-8" />
@@ -28,11 +28,10 @@
     
 
     <header>
-    
+    <div style="margin-bottom:30px;">
         
-        <h1>PHP main_name here</h1>
-        <p class="small1">PHP slogan here</p>
-        
+    </div>
+
     </header>
 
 

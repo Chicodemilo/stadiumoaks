@@ -16,6 +16,7 @@
 			</div>
 			<div class="amenities_table">
 				<table>
+					<tr><td colspan="3" style="height:25px;"></td></tr>
 					<?php 
 
 						foreach ($our_amenities_list as $value) {

@@ -28,6 +28,8 @@ foreach ($logo as $key => $value) {
 	echo "<img src='".base_url()."images/logos/property/".$value['name']."' alt='".$value['caption']."'>";
 	echo "<hr>";
 	echo "<a href='".base_url()."edit/logo_delete/".$value['id']."' class='not_fancy_dark'>DELETE</a>";
+	echo "<hr>";
+	echo "The best file format to use for a logo is a PNG.<br><br>To look the best it needs to be high resolution - at least 300dpi. It should also have a transparent background - which you can have with a PNG but not a JPG.<br><br>If you need help please contact us.";
 	echo "</div>";
 }
 
@@ -38,6 +40,8 @@ foreach ($man_logo as $key => $value) {
 	echo "<img src='".base_url()."images/logos/management/".$value['name']."' alt='".$value['caption']."'>";
 	echo "<hr>";
 	echo "<a href='".base_url()."edit/man_logo_delete/".$value['id']."' class='not_fancy_dark'>DELETE</a>";
+	echo "<hr>";
+	echo "The best file format to use for a logo is a PNG.<br><br>To look the best it needs to be high resolution - at least 300dpi. It should also have a transparent background - which you can have with a PNG but not a JPG.<br><br>If you need help please contact us.";
 	echo "</div>";
 }
  ?>

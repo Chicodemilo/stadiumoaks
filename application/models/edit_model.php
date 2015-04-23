@@ -640,7 +640,7 @@ class Edit_model extends CI_Model{
 											'type' => 'DATETIME',
 											),
 							'unit_number' => array(
-											'type' => 'INT',
+											'type' => 'VARCHAR',
 											'constraint' => 10,
 											),
 
@@ -710,11 +710,11 @@ class Edit_model extends CI_Model{
 											 ),
 							'title' => array(
 											'type' => 'VARCHAR',
-											'constraint' => 40,
+											'constraint' => 30,
 											),
 							'description' => array(
 											'type' => 'VARCHAR',
-											'constraint' => 400,
+											'constraint' => 150,
 											),
 							'start' => array(
 											'type' => 'DATETIME',
@@ -736,7 +736,7 @@ class Edit_model extends CI_Model{
 											),
 							'condition_4' => array(
 											'type' => 'VARCHAR',
-											'constraint' => 300,
+											'constraint' => 100,
 											),
 
 				);
@@ -973,12 +973,14 @@ class Edit_model extends CI_Model{
 			$made = $this->dbforge->create_table('pre_application', TRUE);
 
 			$amenities = array(
+				'55+ Community',
+				'65+ Community',
 				'Accepts Credit Card Payments',
 				'Accepts Electronic Payments',
 				'Affordable Housing',
 				'All Bills Paid',
 				'Balcony',
-				'Basketball Court(s)',
+				'Basketball Court',
 				'Business Center',
 				'Cable Ready',
 				'Cable Included',
@@ -987,6 +989,7 @@ class Edit_model extends CI_Model{
 				'Covered Parking',
 				'Disability Access',
 				'Dishwasher',
+				'Dog Park',
 				'Enclosed Yards',
 				'Extra Storage',
 				'Fireplace',
@@ -1007,12 +1010,15 @@ class Edit_model extends CI_Model{
 				'Playground',
 				'Se Habla Espanol',
 				'Security Systems',
+				'Seniors Community',
 				'Short Term Leases Available',
 				'Smoke Free',
 				'Some Paid Utilities',
 				'Stainless Steel Appliances',
 				'Swimming Pool',
-				'Tennis Court(s)',
+				'Swimming Pools',
+				'Tennis Court',
+				'Tennis Courts',
 				'Vaulted Ceilings',
 				'Washer & Dryer Connections',
 				'Washer & Dryer In Unit',

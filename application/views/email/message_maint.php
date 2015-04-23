@@ -1,5 +1,7 @@
 <div class="contact_box">
   <div class="contact_box_inner">
+            <span class="amenities_title">Maintenance Request</span>
+            <hr>
             <?php
             echo form_open(); 
             ?>
@@ -15,6 +17,11 @@
                            placeholder="<?php if (form_error('last_name') != ''){echo form_error('last_name');}else{echo '';}?>"
                            value="<?php if (set_value('last_name') != ''){echo set_value('last_name');}else{echo '';}?>"
                            /></td></tr>
+                <tr><td class="righter">Apartment #:</td><td>
+                        <input type="text" maxlength="10" id="unit_number" size="45" name="unit_number" 
+                               placeholder="<?php if (form_error('unit_number') != ''){echo form_error('unit_number');}else{echo '';}?>"
+                               value="<?php if (form_error('unit_number') != ''){echo '';}else{echo set_value('unit_number');}?>"
+                               /></td></tr>
                 <tr><td class="righter">Email:</td><td>
                         <input type="text" maxlength="50" id="email" size="45" name="email" 
                                placeholder="<?php if (form_error('email') != ''){echo form_error('email');}else{echo '';}?>"
@@ -25,7 +32,7 @@
                                placeholder="<?php if (form_error('phone') != ''){echo form_error('phone');}else{echo '';}?>"
                                value="<?php if (set_value('phone') != ''){echo set_value('phone');}else{echo '';}?>"
                                /></td></tr>
-                <tr><td class="righter">Message:</td><td>
+                <tr><td class="righter">Maintenance<br>Issue:</td><td>
                         <textarea maxlength="350" id="message" rows="4" cols="42" name="message"
                                placeholder="<?php if (form_error('message') != ''){echo form_error('message');}else{echo '';}?>"
                                ><?php if (set_value('message') != ''){echo set_value('message');}else{echo '';}?></textarea></td></tr>
@@ -35,39 +42,17 @@
                 <tr><td></td><td class='body_link_xsmall'>
                         <input type="text" maxlength="50" size="45" name="captcha" 
                                placeholder="<?php if (form_error('captcha') != ''){echo form_error('captcha');}else{echo '';}?>"
-                               /><br><a href="<?php echo base_url();?>home/contact">Click Here if you need new random letters</a></td></tr>
+                               /><br><a href="<?php echo base_url();?>home/contact_maint">Click Here if you need new random letters</a></td></tr>
                 
-                <tr><td></td><td><input class="button_style" id="button" type="submit" value="Send Message"></td></tr>
+                <tr><td></td><td><input class="button_style" id="button" type="submit" value="Send Request"></td></tr>
             </table>
             <?php
             echo form_close();
-
             ?>
+            <hr>
+            <span class="center_light">*For Maintenance Emergencies Please Call Us</span>
+
   </div>
-  <div class="contact_box_inner">
-    Office Hours:
-    <ul class="hours_list">
-    <?php
-      foreach ($hours as $value) {
-         echo "<li>";
-         echo $value['day_type'];
-         
-         if($value['day_condition'] == "Closed" || $value['open_hour'] == 0 || $value['close_hour'] == 0 || $value['day_condition'] == "By Appointment"){
-          echo "";
-         }else{
-            if($value['open_min'] == 0){$value['open_min'] = "00";}
-            if($value['close_min'] == 0){$value['close_min'] = "00";}
-            echo "&nbsp;&nbsp;&nbsp;";
-            echo $value['open_hour'].":".$value['open_min'].$value['open_am_pm']." to ".$value['close_hour'].":".$value['close_min'].$value['close_am_pm']."";
-         }
-         echo " - ".$value['day_condition'];
-       } 
-    ?>
-    </ul>
-    <hr>
-    <p class='body_link'><a href="<?php echo base_url();?>home/contact_maint">Click Here to Send a Maintenance Request</a></p>
-  </div>
-</div>
 
 <script type="text/javascript" >
     $('#button').mouseover(function(){
@@ -76,4 +61,3 @@
         $(this).animate({color:'#8B7355'}, 400);
     }); 
 </script>
-

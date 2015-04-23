@@ -44,9 +44,9 @@
 		<?php
 			foreach ($pictures as $value) {
 				echo "$('#small_pic_box".$value['id']."').hover(function() {
-							$(this).addClass('small_pic_box_shadow');
+							$(this).css({position:'relative'}).animate({top: '-=3'}, 100).addClass('small_pic_box_shadow');
 						}, function() {
-							$(this).removeClass('small_pic_box_shadow');
+							$(this).animate({top: '+=3'}, 100).removeClass('small_pic_box_shadow');
 						});
 
 						$('#small_pic_box".$value['id']."').click(function(){

@@ -37,7 +37,7 @@
 					</tr>";
 						
 		echo			"<tr>
-							<td colspan='3' class='floorplan_text_small'><a href='".base_url()."home/contact'>Contact Us About This Unit</a></td>
+							<td colspan='3' class='body_link'><a href='".base_url()."home/contact' class='body_link'>Contact Us About This Unit</a></td>
 						</tr>
 					</table>
 				</div>

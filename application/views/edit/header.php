@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
     <title>
-      <?php echo $this->session->userdata('username') ?>
+      <?php echo $this->session->userdata('username')." : ".$this->session->userdata('property_name'); ?>
     </title>
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url();?>images/favicon.ico">
     <meta charset="utf-8" />

@@ -8,7 +8,7 @@ class Login extends CI_Controller
 	{	
 		$this->load->view('edit/blank_header.php');
 		$this->load->view('membership/login_form.php');
-		$this->load->view('page/footer.php');
+		$this->load->view('edit/footer.php');
 	}
 
 
@@ -27,7 +27,8 @@ class Login extends CI_Controller
 				'is_logged_in' => true,
 				'first_name' => $more_userdata[0]['first_name'],
 				'last_login' => $more_userdata[0]['last_login'],
-				'role' => $more_userdata[0]['role'],);
+				'role' => $more_userdata[0]['role'],
+				'property_name' => $more_userdata[0]['property_name']);
 
 			$this->session->set_userdata($data);
 			
@@ -50,7 +51,7 @@ class Login extends CI_Controller
 	function signup(){
 		$this->load->view('edit/blank_header.php');
 		$this->load->view('membership/signup_form.php');
-		$this->load->view('page/footer.php');
+		$this->load->view('edit/footer.php');
 	}
 
 
@@ -58,7 +59,7 @@ class Login extends CI_Controller
 	function forgot_password(){       
         $this->load->view('edit/blank_header.php');
         $this->load->view('membership/forgot_password.php');
-        $this->load->view('page/footer.php');
+        $this->load->view('edit/footer.php');
 
 	}
 
@@ -82,7 +83,7 @@ class Login extends CI_Controller
 
                         $this->load->view('membership/forgot_password_sent.php');
 
-                        $this->load->view('page/footer.php');
+                        $this->load->view('edit/footer.php');
                     
 //                      header('Refresh: 2; URL='.base_url().'welcome/search');
                     }else{
@@ -90,7 +91,7 @@ class Login extends CI_Controller
 
                         $this->load->view('membership/forgot_password_not_this.php');
 
-                        $this->load->view('page/footer.php');
+                        $this->load->view('edit/footer.php');
                     }
 	}
 
@@ -114,7 +115,7 @@ class Login extends CI_Controller
 			if($query = $this->membership_model->create_member()){
 				$this->load->view('edit/blank_header.php');
 				$this->load->view('membership/signup_successful.php');
-				$this->load->view('page/footer.php');
+				$this->load->view('edit/footer.php');
 				$is_logged_in = $this->session->userdata('is_logged_in');
 				if($is_logged_in == true){
 					sleep(2);
@@ -123,7 +124,7 @@ class Login extends CI_Controller
 			}else{
 				$this->load->view('edit/blank_header.php');
 				$this->load->view('membership/problem_member.php');
-				$this->load->view('page/footer.php');
+				$this->load->view('edit/footer.php');
 			}
 		}
 

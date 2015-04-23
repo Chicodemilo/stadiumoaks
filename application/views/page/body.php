@@ -1,6 +1,10 @@
 
 <div class="logo_box">
-	<img id="logo" src="<?php echo base_url() ?>images/logos/property/<?php echo $logo_name ?>" alt="<?php echo $logo_name; ?>">
+	<?php 
+		if($logo_name != 'N'){
+			echo "<img id='logo' src='".base_url()."images/logos/property/".$logo_name."' alt='".$logo_name."'>";
+		}
+	 ?>
 </div>
 <div id="outer_description" class="outer_description" >	
 	<div id="inner_description" class="inner_description" >	

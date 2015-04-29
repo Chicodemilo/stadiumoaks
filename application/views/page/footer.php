@@ -23,10 +23,10 @@
 				S80.01,31.861,86.643,31.861L86.643,31.861z"/>
 			</svg>
         </div>
-	        <?php echo $property_name; ?><br>
+	        <?php echo "<span class='footer_address'>".$property_name; ?><br>
 	        <?php echo $property_phone; ?><br>
 	        <?php echo $property_address; ?><br>
-	        <?php echo $property_city.", ".$property_state." ".$property_zip; ?>
+	        <?php echo $property_city.", ".$property_state." ".$property_zip."</span>"; ?>
         </div>
       
         <div id="footer_info_left" style="color:#<?php echo $property_color_1 ?>;">
@@ -39,7 +39,7 @@
 	        		echo "<div id='property_management_logo_box' class='property_management_logo_box'></div>";
 	        	}
 	         ?>
-         	<br><br>
+         	
 	        &copy;<?php echo " ".date('Y'); ?>
 	        <?php 
 	        	if($property_management_name != ''){

@@ -31,8 +31,8 @@
                                ><?php if (set_value('message') != ''){echo set_value('message');}else{echo '';}?></textarea></td></tr>
                 
                 <tr><td></td><td><?php echo $image;?></td></tr>
-                <tr><td></td><td class="amenities_pet_xsmall">Please type the text from the box above:</td></tr>
-                <tr><td></td><td class='body_link_xsmall'>
+                <tr><td></td><td class="amenities_pet_small">Please type the text from the box above:</td></tr>
+                <tr><td></td><td class='body_link_small'>
                         <input type="text" maxlength="50" size="45" name="captcha" 
                                placeholder="<?php if (form_error('captcha') != ''){echo form_error('captcha');}else{echo '';}?>"
                                /><br><a href="<?php echo base_url();?>home/contact">Click Here if you need new random letters</a></td></tr>
@@ -66,7 +66,8 @@
     </ul>
     <hr>
     <p class='body_link'><a href="<?php echo base_url();?>home/contact_maint">Click Here to Send a Maintenance Request</a></p>
-  </div>
+</div>
+<div class="below_hours"></div>
 </div>
 
 <script type="text/javascript" >

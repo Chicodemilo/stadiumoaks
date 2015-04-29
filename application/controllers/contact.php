@@ -60,7 +60,7 @@ class Contact extends CI_Controller{
 
 	public function delete_maintenance($id){
 		$this->db->where('id', $id);
-		$this->db->delete('contact');
+		$this->db->delete('maint_request');
 		redirect(base_url().'contact/maintenance');
 	}
 

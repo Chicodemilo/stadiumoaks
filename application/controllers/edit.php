@@ -47,29 +47,23 @@ class Edit extends CI_Controller {
 
     public function db_maker(){
         $role = $this->session->userdata('role');
-
         if($role == 'master'){
             $this->load->view('edit/header.php');
             $this->load->view('edit/db_maker.php');
             $this->load->view('page/footer.php');
-
         }else{
             $this->load->view('edit/header.php');
             $this->load->view('edit/no_permission.php');
             $this->load->view('page/footer.php');
-            
             }
-
     }
 
 
     public function make_databases(){
         $role = $this->session->userdata('role');
-
         if($role == 'master'){
             $this->load->model('edit_model', 'make_databases');
             $maker = $this->make_databases->make_databases();
-
             if($maker){
                 redirect(base_url().'edit');
             }else{            
@@ -77,28 +71,23 @@ class Edit extends CI_Controller {
                 $this->load->view('edit/db_problem.php');
                 $this->load->view('page/footer.php');
             }
-
         }else{
             $this->load->view('edit/header.php');
             $this->load->view('edit/no_permission.php');
             $this->load->view('page/footer.php');
-            
             }
-
     }
 
 // MAIN INFO *********************************************************************************
 
     public function submit_main_edits(){
         $data = array();
-
         foreach ($_POST as $key => $value) {
             if($key == 'property_color_1' || $key == 'property_color_2' || $key == 'property_color_3'){
                 $value = substr($value, 1);
             }
             $data[$key] = $value;
         }
-        // print_r($data);
         $id = $data['id'];
         $this->db->where('id', $id);
         $this->db->update('main_info', $data);
@@ -111,11 +100,8 @@ class Edit extends CI_Controller {
     public function amenities(){
         $this->load->model('edit_model', 'our_amenities');
         $our_amenities_list = $this->our_amenities->get_our_amenities()->result_array();
-
-
         $this->load->model('edit_model', 'their_amenities');
         $their_amenities_list = $this->their_amenities->get_thier_amenities()->result_array();
-
         foreach($our_amenities_list as $k=>$v){
             $active[$k] = $v['active'];
             $name[$k] = $v['name'];
@@ -358,11 +344,8 @@ class Edit extends CI_Controller {
             $this->db->where('id', $id);
             $this->db->update('floorplans', $data_b);     
             redirect('edit/floorplans/');
-
         }
     }
-
-
 
     function delete_this_diagram($id = 0){
         $data['floorplan_pic'] = '';

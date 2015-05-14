@@ -32,6 +32,13 @@
                 &bull;&nbsp;&nbsp;<a href="<?php echo base_url() ?>home/contact">Contact</a>
                 <!-- &nbsp;&nbsp;&bull;&nbsp;&nbsp;<a href="<?php echo base_url() ?>home/contact">Residents</a> -->
             </span>
+            <div class="mobile_nav_bar_closer">
+                <svg version="1.1" id="mobile_x" class="mobile_x" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         width="35px" height="35px" viewBox="0 0 198 198" enable-background="new 0 0 198 198" xml:space="preserve">
+                    <polygon fill="#890E0E" points="171.25,19.941 100.535,90.655 29.82,19.941 20.111,29.651 90.825,100.365 20.112,171.078 29.822,180.789 
+                        100.535,110.075 171.248,180.787 180.957,171.078 110.244,100.365 180.957,29.651 "/>
+                </svg>
+            </div>
     </div>
     
     <div id="nav_bar_links" class="nav_bar_links" style="color:#<?php echo $property_color_3; ?>">
@@ -49,10 +56,11 @@
 
 </div>
 <style>
-    a:link {color: #<?php echo $property_color_3; ?>;}
-    a:visited {color: #<?php echo $property_color_3; ?>;}
-    a:hover   {color: #<?php echo $property_color_3; ?>;}
-    a:active  {color:#DEDEDE; }
+
+    .nav_bar_links a:link {color: #<?php echo $property_color_3; ?>;}
+    .nav_bar_links a:visited {color: #<?php echo $property_color_3; ?>;}
+    .nav_bar_links a:hover   {color: #<?php echo $property_color_3; ?>;}
+    .nav_bar_links a:active  {color:#DEDEDE; }
 </style>
 <script type="text/javascript" >
     $('#nav_bar_links a').mouseover(function(){
@@ -68,8 +76,11 @@
     });
     $(document).ready(function() {
         $('#nav_bar_links_button').click(function(event) {
-
             $('#nav_bar_links_mobile').animate({top: '+=330'}, 300);
+        });
+
+        $('#mobile_x').click(function(){
+            $('#nav_bar_links_mobile').animate({top: '-=330'}, 150);
         });
     });
 </script>

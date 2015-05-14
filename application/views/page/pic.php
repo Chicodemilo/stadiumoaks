@@ -13,9 +13,11 @@
 				echo "<img src='".base_url()."images/pictures/".$value['id']."/".$value['name']."' alt'".$value['caption']."'>";
 				echo "</div>";
 				echo "</div>";
+
 				
 			}
 ?>
+
 <?php 
 	if($property_pictures_text != ''){
 		echo "<div class='pic_main_text' id='pic_main_text' style='color:#".$property_color_2.";'>
@@ -35,12 +37,15 @@
 				echo "</div>";
 				echo "</div>";
 
+
 			}
 		 ?>
+<div class='mobile_pic_bottom'>&nbsp;</div>
 </div>
+
+
 <script type="text/javascript">
 	$(document).ready(function(){
-
 		<?php
 			foreach ($pictures as $value) {
 				echo "$('#small_pic_box".$value['id']."').hover(function() {
@@ -63,18 +68,14 @@
 						$('#big_pic_box').fadeIn(600);
 						$('#pic_main_text').fadeIn(600);
 						
-
 					});";
 				}
 		 ?>
-
-
-		 
-		
 	});
 </script>
 <style type="text/css">
 .red_x polygon {transition: 0.5s;}
 .red_x:hover polygon {fill:#FC6060;}
 </style>
+
 

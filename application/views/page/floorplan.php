@@ -44,6 +44,9 @@
 			</div>";
 	}
  ?>
+ <div class="mobile_floorplan_bottom">
+ 	&nbsp;
+ </div>
 
 </div>
 

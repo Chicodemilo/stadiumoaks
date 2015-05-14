@@ -498,6 +498,10 @@ footer {padding: 5px;
                 top:165px;
                 margin-bottom: 100px;}
 
+.contact_box_mobile {visibility: hidden;
+                    height: 0px;
+                    margin: 0px;}
+
 .contact_box_inner  {box-shadow: 3px 3px 6px #888888;
                     background-color: rgba(255,255,255, .85);
                     border: 1px solid #ccc;
@@ -507,7 +511,7 @@ footer {padding: 5px;
                     margin-bottom: 20px;
                     overflow: auto;
                     font-family: 'Josefin Slab', Arial, sans-serif;
-                    font-size: 1.2em;;
+                    font-size: 1.1em;;
                     color:black; }
 
 .contact_box_inner input, textarea {

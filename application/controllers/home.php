@@ -155,7 +155,7 @@ class Home extends CI_Controller {
 			$this->load->model('view_model', 'page_data');
 			$background_data = $this->page_data->get_bg_data();
 			$header_data = $this->page_data->get_header_data();
-			$hours_data = $this->page_data->get_hours_data();
+			$emergency_data = $this->page_data->get_emergency_data();
 			$nav_data = $this->page_data->get_nav_data();
 			$footer_data = $this->page_data->get_footer_data();
 
@@ -171,7 +171,7 @@ class Home extends CI_Controller {
             
             if ($this->form_validation->run() === false){
                 $data['image'] = $this->captcha_model->create_image();
-                $data['hours'] = $hours_data;
+                $data['property_emergency_phone'] = $emergency_data;
                 $this->load->view('page/header.php', $header_data);
                 $this->load->view('page/background.php', $background_data);
                 $this->load->view('email/message_maint.php', $data);

@@ -4,7 +4,7 @@
     <title>
       <?php echo $property_name." : ".$property_city." : ".$property_state ?>
     </title>
-    <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url();?>images/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url();?>images/favicon/<?php echo $first_letter; ?>/favicon.ico">
     <meta charset="utf-8" />
     <meta name="description" content="<?php echo $property_slogan; ?>   <?php echo $property_description ?>">
     <meta name="keywords" content="<?php echo $property_name; ?>, apartments, <?php echo $property_city; ?>, <?php echo $property_state ?>">

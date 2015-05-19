@@ -512,43 +512,50 @@ public function picture_upload(){
 public function do_upload_picture(){
     $this->load->model('edit_model', 'id');
     $new_pic_data = $this->id->get_new_picture_data();
-    $id = $new_pic_data['id'];
+    if($new_pic_data == 'N'){
+        $this->load->view('edit/header.php');
+        $this->load->view('edit/too_many_pics');
+        $this->load->view('edit/footer.php');
+    }else{
+        $id = $new_pic_data['id'];
 
-    if(!is_dir('./images/pictures/'.$id)){
-            mkdir('./images/pictures/'.$id, 0777, true);
-        }
-                
-        $config['upload_path'] = './images/pictures/'.$id;
-        $config['allowed_types'] = 'gif|jpg|png';
-        $config['max_size'] = '6048';
-        $config['max_width']  = '6024';
-        $config['max_height']  = '2868';
-        $config['min_width'] = '12000';
-        $config['min_height'] = '5000';
-        $this->load->library('upload', $config);
+        if(!is_dir('./images/pictures/'.$id)){
+                mkdir('./images/pictures/'.$id, 0777, true);
+            }
+                    
+            $config['upload_path'] = './images/pictures/'.$id;
+            $config['allowed_types'] = 'gif|jpg|png';
+            $config['max_size'] = '6048';
+            $config['max_width']  = '6024';
+            $config['max_height']  = '2868';
+            $config['min_width'] = '12000';
+            $config['min_height'] = '5000';
+            $this->load->library('upload', $config);
 
-        if ( ! $this->upload->do_upload())
-        {
-            $data['error'] = $this->upload->display_errors();
-            $data['id'] = $id;
-            $this->load->view('edit/header.php');
-            $this->load->view('edit/upload_picture', $data);
-            $this->load->view('edit/footer.php');
-        }
-        else
-        {
-            $this->db->where('id', $id);
-            $this->db->insert('pictures', $new_pic_data);
+            if ( ! $this->upload->do_upload())
+            {
+                $data['error'] = $this->upload->display_errors();
+                $data['id'] = $id;
+                $this->load->view('edit/header.php');
+                $this->load->view('edit/upload_picture', $data);
+                $this->load->view('edit/footer.php');
+            }
+            else
+            {
+                $this->db->where('id', $id);
+                $this->db->insert('pictures', $new_pic_data);
 
-            $data = array('upload_data' => $this->upload->data());
+                $data = array('upload_data' => $this->upload->data());
 
-            $file_name = $data['upload_data']['file_name'];
-            $data_b['name'] = $file_name;
+                $file_name = $data['upload_data']['file_name'];
+                $data_b['name'] = $file_name;
 
-            $this->db->where('id', $id);
-            $this->db->update('pictures', $data_b);     
-            redirect(base_url().'edit/picture_edit/'.$id);
-        }
+                $this->db->where('id', $id);
+                $this->db->update('pictures', $data_b);     
+                redirect(base_url().'edit/picture_edit/'.$id);
+            }
+    }
+
 }
 
 

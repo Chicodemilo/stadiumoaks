@@ -37,6 +37,13 @@
 				<td colspan="2"><input type="text" style="width:90%" name="property_website" id="property_website" placeholder="www.example.com" value="<?php echo $main_info[0]['property_website'] ?>"></td>
 			</tr>
 			<tr>
+				<td class="righter">Property Afterhours<br>Emergency Number:</td>
+				<td colspan="2"><input type="text" style="width:90%" name="property_emergency_phone" id="property_emergency_phone" placeholder="After Hours Emergency Number" value="<?php echo $main_info[0]['property_emergency_phone'] ?>"></td>
+			
+				<td class="righter"></td>
+				<td colspan="2"></td>
+			</tr>
+			<tr>
 				<td class="righter">Slogan:</td>
 				<td colspan="2"> <textarea name="property_slogan" cols="60" rows="4" id="property_slogan" maxlength='125' placeholder="Enter A Short Slogan For Your Property. 125 Characters Max."><?php echo $main_info[0]['property_slogan'] ?></textarea></td>
 			

@@ -18,10 +18,18 @@
 						<td colspan='3' class='floorplan_text'>".$value['description']."</td>
 					</tr>";
 		}
+		$value['bathroom'] = number_format($value['bathroom'], 1);
+		for ($i=1; $i <= $value['bathroom']; $i++) { 
+			$tester = $value['bathroom'] - $i;
+			if($tester < 0.5){
+				$value['bathroom'] = number_format($value['bathroom']);
+			}
+		}
+
 
 		echo "		<tr>
 						<td class='floorplan_text'>Bedrooms: ".$value['bedroom']."</td>
-						<td class='floorplan_text'>Baththroom: ".$value['bedroom']."</td>
+						<td class='floorplan_text'>Baththroom: ".$value['bathroom']."</td>
 						<td class='floorplan_text'>Square Feet: ".$value['square_footage']."</td>
 					</tr>
 					<tr>

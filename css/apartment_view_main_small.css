@@ -99,10 +99,11 @@ a {text-decoration: none;
 
 #name_text  {
             height: 70px;
-            width: 95%;
+            width: 90%;
             margin-left: 10px;
             margin-right: 10px;
-            overflow: hidden;}
+            overflow: hidden;
+            }
 
 #name_text p    {display: table-cell; 
                 
@@ -112,8 +113,7 @@ a {text-decoration: none;
 .name   {font-family: 'Josefin Slab', Arial, sans-serif;
         letter-spacing: .05em;
         text-align: center;
-        font-size: 1.9em;
-        font-size: 7vw;
+        font-size: 2em;
         line-height: 90%;}
 
 
@@ -239,9 +239,10 @@ footer {padding: 5px;
                     position: fixed;
                     top: 0px;
                     left: 0px;
-                    z-index: -3;}
+                    z-index: -4;}
 
-#background_image img   {width: 100%;}
+#background_image img   {width: 100%;
+                        z-index: -6;}
 
 .background_fade    {width: 100%;
                     display: block;
@@ -251,6 +252,17 @@ footer {padding: 5px;
                     height: 1000vh;
                     background-color: rgba(255,255,255,.6);
                     z-index: -2;}
+
+.background_gradient    {width: 100%;
+                        margin: auto;
+                        height: 120px;
+                        z-index: 0;
+                        position: relative;
+                        top: -119px;
+                        background: -webkit-linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1)); /* For Safari 5.1 to 6.0 */
+                        background: -o-linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1)); /* For Opera 11.1 to 12.0 */
+                        background: -moz-linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1)); /* For Firefox 3.6 to 15 */
+                        background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1)); /* Standard syntax (must be last) */}
 
 /********************************   BODY   ***************************/
 

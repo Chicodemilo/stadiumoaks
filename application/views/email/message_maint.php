@@ -50,8 +50,16 @@
             echo form_close();
             ?>
             <hr>
-            <span class="center_light">*For Maintenance Emergencies Please Call Us</span>
+            <span class="center_light">*For Maintenance Emergencies Please Call Us
+            <?php 
+              
+              if ($property_emergency_phone['property_emergency_phone'] != "") {
+                echo "<br>*For Afterhours Maintenance Emergencies Please Call ".$property_emergency_phone['property_emergency_phone'];
+              }
 
+             ?>
+             <br>*For Police or Fire Emergencies Please Call 911
+            </span>
   </div>
 </div>
 <div class="contact_box_mobile">

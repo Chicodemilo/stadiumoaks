@@ -25,12 +25,31 @@ class View_model extends CI_Model{
     public function get_header_data()
     {
         $query = $this->db->get('main_info')->result_array();
+        $is_the = substr($query[0]['property_name'], 0, 4);
+        $is_the = strtoupper($is_the);
+        if($is_the != "THE "){
+            $data['first_letter'] = $query[0]['property_name'][0];
+        }else{
+            $data['first_letter'] = $query[0]['property_name'][4];
+        }
+        $alpha = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $tester = 'N';
+        for ($i=0; $i < strlen($alpha); $i++) { 
+            if($data['first_letter'] == $alpha[$i]){
+                $tester = 'Y';
+            }
+        }
+        if($tester == 'N'){
+            $data['first_letter'] = 'other';
+        }
+        $data['first_letter'] = strtolower($data['first_letter']);
         $data['property_name'] = $query[0]['property_name'];
         $data['property_city'] = $query[0]['property_city'];
         $data['property_state'] = $query[0]['property_state'];
         $data['property_slogan'] = $query[0]['property_slogan'];
         $data['property_description'] = $query[0]['property_description'];
         return $data;
+        
     }
 
         public function get_special_data()
@@ -91,7 +110,6 @@ class View_model extends CI_Model{
                 $data['logo_id'] = 'N';
                 $data['logo_name'] = 'N';
             }
-
         return $data;
     }
 
@@ -101,8 +119,15 @@ class View_model extends CI_Model{
         if(count($hours) > 0){
             return $hours;
         }
-        
-    }     
+    } 
+     
+   
+    public function get_emergency_data(){
+        $query = $this->db->get('main_info')->result_array();
+        $data['property_emergency_phone'] = $query[0]['property_emergency_phone'];
+        return $data;
+    } 
+     
     
     public function get_pic_data()
     {       
@@ -132,12 +157,13 @@ class View_model extends CI_Model{
             return $data;
     }
 
+
     public function get_floorplan_data()
     {       
-            
             $data['floorplans'] = $this->db->get('floorplans')->result_array();
             return $data;
     } 
+
 
     public function get_amenities_data()
     {       

@@ -8,5 +8,6 @@
         }else{
             echo '';
         }?>
-        
+    <div class="background_gradient"></div>    
     </div>
+    

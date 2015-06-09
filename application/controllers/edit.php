@@ -35,7 +35,6 @@ class Edit extends CI_Controller {
         $this->load->model('edit_model');
         $main_info = $this->edit_model->get_main_info();
         $data = array('main_info' => $main_info);
-        // print_r($data);
         $this->load->view('edit/header.php');
         $this->load->view('edit/edit_page.php', $data);
         $this->load->view('edit/footer.php');
@@ -88,6 +87,9 @@ class Edit extends CI_Controller {
             }
             $data[$key] = $value;
         }
+        $data['keyword_one'] = $data['property_name'];
+        $data['keyword_two'] = $data['property_city'];
+        $data['keyword_three'] = $data['property_state'];
         $id = $data['id'];
         $this->db->where('id', $id);
         $this->db->update('main_info', $data);
@@ -579,6 +581,7 @@ public function submit_picture_edits($id){
     $pic_order = $this->input->post('pic_order');
     $active = $this->input->post('active');
 
+
     if($cover_pic == 'Y'){
         $this->load->model('edit_model', 'cover_pic');
         $this->cover_pic->make_cover_pic($id);
@@ -735,8 +738,26 @@ public function man_logo_delete($id){
     redirect(base_url().'edit/pictures', 'refresh');
 }
 
+// METADATA *********************************************************************************
 
 
+    public function metadata(){
+        $this->load->model('edit_model');
+        $main_info = $this->edit_model->get_main_info();
+        $data = array('main_info' => $main_info);
+
+        $this->load->view('edit/header.php');
+        $this->load->view('edit/edit_metadata.php', $data);
+        $this->load->view('edit/footer.php');
+    }
+
+    public function submit_metadata_edits($id){
+        $data = $_POST;
+        $this->db->where('id', $id);
+        $this->db->update('main_info', $data);
+        redirect(base_url().'edit/metadata');
+
+    }
 
 
 

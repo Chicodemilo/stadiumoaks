@@ -1,7 +1,4 @@
 $(document).ready(function() {
-
-
-
     $('#contact_drop').mouseenter(function(event) {
         $('#contact_menu').fadeToggle('fast')
     });
@@ -11,7 +8,6 @@ $(document).ready(function() {
     });
      
  });
-
 
     var hide = 2;
     var left_position = -20;
@@ -45,8 +41,6 @@ $(document).ready(function() {
         document.getElementById("links").style.zIndex = 1;
         document.getElementById('big_pic_wrapper').style.visibility = "hidden";
     }
-    
-    
     
     function show_links(){
         if(hide == 1){

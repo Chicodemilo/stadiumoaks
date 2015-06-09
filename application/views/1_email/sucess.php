@@ -1,6 +1,4 @@
-<div class="background_fade">
 
-</div>
 <div class="contact_box">
       <div class="contact_box_inner">
         <hr/>

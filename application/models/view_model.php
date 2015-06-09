@@ -48,6 +48,14 @@ class View_model extends CI_Model{
         $data['property_state'] = $query[0]['property_state'];
         $data['property_slogan'] = $query[0]['property_slogan'];
         $data['property_description'] = $query[0]['property_description'];
+        $data['keyword_one'] = $query[0]['keyword_one'];
+        $data['keyword_two'] = $query[0]['keyword_two'];
+        $data['keyword_three'] = $query[0]['keyword_three'];
+        $data['keyword_four'] = $query[0]['keyword_four'];
+        $data['keyword_five'] = $query[0]['keyword_five'];
+        $data['keyword_six'] = $query[0]['keyword_six'];
+        $data['keyword_seven'] = $query[0]['keyword_seven'];
+        $data['template'] = $query[0]['template'];
         return $data;
         
     }

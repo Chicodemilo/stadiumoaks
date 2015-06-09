@@ -62,6 +62,7 @@ class Edit_model extends CI_Model{
 	public function get_pictures(){
 		$this->db->where('logo', 'N');
 		$this->db->where('management_logo', 'N');
+		// $this->db->where('active', 'Y');
 		$this->db->order_by('pic_order', 'asc');
 		$data = $this->db->get('pictures');
 		return $data;
@@ -155,39 +156,41 @@ class Edit_model extends CI_Model{
 	}
 
 	public function insert_pic_in_order($id, $pic_order, $old_order){
-		if($pic_order < $old_order){
-			$this->db->where('logo', 'N');
-			$this->db->where('management_logo', 'N');
-			$this->db->where('pic_order >= ', $pic_order);
-			$this->db->where('pic_order <', $old_order);
-			$data = $this->db->get('pictures')->result_array();
-			$start = $pic_order + 1;
-			foreach ($data as $key => $value) {
-				$insert_data['pic_order'] = $start;
-				$this->db->where('id', $value['id']);
-				$this->db->update('pictures', $insert_data);
-				$start = $start + 1;
+		if($pic_order != NULL){
+			if($pic_order < $old_order){
+				$this->db->where('logo', 'N');
+				$this->db->where('management_logo', 'N');
+				$this->db->where('pic_order >= ', $pic_order);
+				$this->db->where('pic_order <', $old_order);
+				$data = $this->db->get('pictures')->result_array();
+				$start = $pic_order + 1;
+				foreach ($data as $key => $value) {
+					$insert_data['pic_order'] = $start;
+					$this->db->where('id', $value['id']);
+					$this->db->update('pictures', $insert_data);
+					$start = $start + 1;
+				}
+				$data_b['pic_order'] = $pic_order;
+				$this->db->where('id', $id);
+				$this->db->update('pictures', $data_b);
+			}else{
+				$this->db->where('logo', 'N');
+				$this->db->where('management_logo', 'N');
+				$this->db->where('pic_order > ', $old_order);
+				$this->db->where('pic_order <=', $pic_order);
+				$data = $this->db->get('pictures')->result_array();
+				// print_r($data);
+				$start = $old_order;
+				foreach ($data as $key => $value) {
+					$insert_data['pic_order'] = $start;
+					$this->db->where('id', $value['id']);
+					$this->db->update('pictures', $insert_data);
+					$start = $start + 1;
+				}
+				$data_b['pic_order'] = $pic_order;
+				$this->db->where('id', $id);
+				$this->db->update('pictures', $data_b);
 			}
-			$data_b['pic_order'] = $pic_order;
-			$this->db->where('id', $id);
-			$this->db->update('pictures', $data_b);
-		}else{
-			$this->db->where('logo', 'N');
-			$this->db->where('management_logo', 'N');
-			$this->db->where('pic_order > ', $old_order);
-			$this->db->where('pic_order <=', $pic_order);
-			$data = $this->db->get('pictures')->result_array();
-			// print_r($data);
-			$start = $old_order;
-			foreach ($data as $key => $value) {
-				$insert_data['pic_order'] = $start;
-				$this->db->where('id', $value['id']);
-				$this->db->update('pictures', $insert_data);
-				$start = $start + 1;
-			}
-			$data_b['pic_order'] = $pic_order;
-			$this->db->where('id', $id);
-			$this->db->update('pictures', $data_b);
 		}
 	}
 
@@ -375,6 +378,45 @@ class Edit_model extends CI_Model{
 											'constraint' => 20,
 											),
 
+							'keyword_one' => array(
+											'type' => 'VARCHAR',
+											'constraint' => 25,
+											),
+
+							'keyword_two' => array(
+											'type' => 'VARCHAR',
+											'constraint' => 25,
+											),
+
+							'keyword_three' => array(
+											'type' => 'VARCHAR',
+											'constraint' => 25,
+											),
+
+							'keyword_four' => array(
+											'type' => 'VARCHAR',
+											'constraint' => 25,
+											),
+
+							'keyword_five' => array(
+											'type' => 'VARCHAR',
+											'constraint' => 25,
+											),
+
+							'keyword_six' => array(
+											'type' => 'VARCHAR',
+											'constraint' => 25,
+											),
+
+							'keyword_seven' => array(
+											'type' => 'VARCHAR',
+											'constraint' => 25,
+											),
+
+							'template' => array(
+											'type' => 'INT',
+											'constraint' => 4,
+											),
 				);
 
 			$this->dbforge->add_field($main_info);
@@ -1101,10 +1143,32 @@ class Edit_model extends CI_Model{
 			$this->dbforge->add_key('id', TRUE);
 			$made = $this->dbforge->create_table('membership', TRUE);
 
+			$template = array('id' => array(
+										'type' => 'INT',
+										'constraint' => '4',
+										'unsigned' => TRUE,
+										'auto_increment' => TRUE),
+							'name' => array(
+										'type' => 'VARCHAR',
+										'constraint' => 25),
+							'description' => array(
+										'type' => 'VARCHAR',
+										'constraint' => 500),
+							'example_link' => array(
+										'type' => 'VARCHAR',
+										'constraint' => 60),
+							'image' => array(
+										'type' => 'VARCHAR',
+										'constraint' => 50),
+			);
+
 
 			$password = md5('bayrum42');
 			$data = array('first_name' => 'Bay', 'last_name' => 'Rum', 'username' => 'bayrummedia', 'password' => $password, 'email' => 'master@bayrummedia.com', 'role' => 'master', 'verified' => 'Y');
 			$this->db->insert('membership', $data);
+
+			$data = array('keyword_four' => 'apartments', 'template' => 1);
+			$this->db->insert('main_info', $data);
 
 
 			if($made){return TRUE;}else{return FALSE;}

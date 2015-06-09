@@ -372,6 +372,16 @@ footer {padding: 5px;
             display: block;
             float: left;}
 
+.right_arrow    {position: relative;
+            display: block;
+            float: right;
+            padding: 3px;}
+
+.left_arrow    {position: relative;
+            display: block;
+            float: right;
+            padding: 3px;}
+
 .pic_caption {color: white;
             font-family: 'Josefin Slab', Arial, sans-serif;
             text-align: center;

@@ -27,13 +27,14 @@ class Home extends CI_Controller {
 		$body_data = $this->page_data->get_body_data();
 		$nav_data = $this->page_data->get_nav_data();
 		$footer_data = $this->page_data->get_footer_data();
+        $template = $header_data['template'];
 
-		$this->load->view('page/header.php', $header_data);
-		$this->load->view('page/background.php', $background_data);
-		if($special_data != 'N'){$this->load->view('page/special.php', $special_data);};
-		$this->load->view('page/body.php', $body_data);
-		$this->load->view('page/nav_bar.php', $nav_data);
-		$this->load->view('page/footer.php', $footer_data);	
+		$this->load->view($template.'_page/header.php', $header_data);
+		$this->load->view($template.'_page/background.php', $background_data);
+		if($special_data != 'N'){$this->load->view($template.'_page/special.php', $special_data);};
+		$this->load->view($template.'_page/body.php', $body_data);
+		$this->load->view($template.'_page/nav_bar.php', $nav_data);
+		$this->load->view($template.'_page/footer.php', $footer_data);	
 	}
 
 // PICTURE PAGE *********************************************************************************
@@ -46,12 +47,13 @@ class Home extends CI_Controller {
 		$pic_data = $this->page_data->get_pic_data();
 		$nav_data = $this->page_data->get_nav_data();
 		$footer_data = $this->page_data->get_footer_data();
+        $template = $header_data['template'];
 
-		$this->load->view('page/header.php', $header_data);
-		$this->load->view('page/background.php', $background_data);
-		$this->load->view('page/pic.php', $pic_data);
-		$this->load->view('page/nav_bar.php', $nav_data);
-		$this->load->view('page/footer.php', $footer_data);	
+		$this->load->view($template.'_page/header.php', $header_data);
+		$this->load->view($template.'_page/background.php', $background_data);
+		$this->load->view($template.'_page/pic.php', $pic_data);
+		$this->load->view($template.'_page/nav_bar.php', $nav_data);
+		$this->load->view($template.'_page/footer.php', $footer_data);	
 	}
 
 
@@ -65,12 +67,13 @@ class Home extends CI_Controller {
 		$amenities_data = $this->page_data->get_amenities_data();
 		$nav_data = $this->page_data->get_nav_data();
 		$footer_data = $this->page_data->get_footer_data();
+        $template = $header_data['template'];
 
-		$this->load->view('page/header.php', $header_data);
-		$this->load->view('page/background.php', $background_data);
-		$this->load->view('page/amenities.php', $amenities_data);
-		$this->load->view('page/nav_bar.php', $nav_data);
-		$this->load->view('page/footer.php', $footer_data);	
+		$this->load->view($template.'_page/header.php', $header_data);
+		$this->load->view($template.'_page/background.php', $background_data);
+		$this->load->view($template.'_page/amenities.php', $amenities_data);
+		$this->load->view($template.'_page/nav_bar.php', $nav_data);
+		$this->load->view($template.'_page/footer.php', $footer_data);	
 	}
 // FLOORPLAN PAGE *********************************************************************************
 
@@ -82,12 +85,13 @@ class Home extends CI_Controller {
 		$floorplan_data = $this->page_data->get_floorplan_data();
 		$nav_data = $this->page_data->get_nav_data();
 		$footer_data = $this->page_data->get_footer_data();
+        $template = $header_data['template'];
 
-		$this->load->view('page/header.php', $header_data);
-		$this->load->view('page/background.php', $background_data);
-		$this->load->view('page/floorplan.php', $floorplan_data);
-		$this->load->view('page/nav_bar.php', $nav_data);
-		$this->load->view('page/footer.php', $footer_data);	
+		$this->load->view($template.'_page/header.php', $header_data);
+		$this->load->view($template.'_page/background.php', $background_data);
+		$this->load->view($template.'_page/floorplan.php', $floorplan_data);
+		$this->load->view($template.'_page/nav_bar.php', $nav_data);
+		$this->load->view($template.'_page/footer.php', $footer_data);	
 	}
 
 // MESSAGE PAGES *********************************************************************************
@@ -99,6 +103,7 @@ class Home extends CI_Controller {
 			$hours_data = $this->page_data->get_hours_data();
 			$nav_data = $this->page_data->get_nav_data();
 			$footer_data = $this->page_data->get_footer_data();
+            $template = $header_data['template'];
 
 
 			$this->load->helper('captcha');
@@ -112,11 +117,12 @@ class Home extends CI_Controller {
             if ($this->form_validation->run() === false){
                 $data['image'] = $this->captcha_model->create_image();
                 $data['hours'] = $hours_data;
-                $this->load->view('page/header.php', $header_data);
-                $this->load->view('page/background.php', $background_data);
-                $this->load->view('email/message.php', $data);
-                $this->load->view('page/nav_bar.php', $nav_data);
-                $this->load->view('page/footer.php', $footer_data);
+                $data['main'] = $nav_data;
+                $this->load->view($template.'_page/header.php', $header_data);
+                $this->load->view($template.'_page/background.php', $background_data);
+                $this->load->view($template.'_email/message.php', $data);
+                $this->load->view($template.'_page/nav_bar.php', $nav_data);
+                $this->load->view($template.'_page/footer.php', $footer_data);
                 }else{
                 if ($this->input->post('message')){
                     $first_name = $this->input->post('first_name');
@@ -140,11 +146,11 @@ class Home extends CI_Controller {
                     $this->email_model->send($email, $first_name, $last_name, $phone, $message, $time);
                     
                     if ($sent == true){
-                        $this->load->view('page/header.php', $header_data);
-		                $this->load->view('page/background.php', $background_data);
-                        $this->load->view('email/sucess.php');
-                        $this->load->view('page/nav_bar.php', $nav_data);
-		                $this->load->view('page/footer.php', $footer_data);
+                        $this->load->view($template.'_page/header.php', $header_data);
+		                $this->load->view($template.'_page/background.php', $background_data);
+                        $this->load->view($template.'_email/sucess.php');
+                        $this->load->view($template.'_page/nav_bar.php', $nav_data);
+		                $this->load->view($template.'_page/footer.php', $footer_data);
                     }
                 }
             }
@@ -158,6 +164,7 @@ class Home extends CI_Controller {
 			$emergency_data = $this->page_data->get_emergency_data();
 			$nav_data = $this->page_data->get_nav_data();
 			$footer_data = $this->page_data->get_footer_data();
+            $template = $header_data['template'];
 
 
 			$this->load->helper('captcha');
@@ -172,11 +179,11 @@ class Home extends CI_Controller {
             if ($this->form_validation->run() === false){
                 $data['image'] = $this->captcha_model->create_image();
                 $data['property_emergency_phone'] = $emergency_data;
-                $this->load->view('page/header.php', $header_data);
-                $this->load->view('page/background.php', $background_data);
-                $this->load->view('email/message_maint.php', $data);
-                $this->load->view('page/nav_bar.php', $nav_data);
-                $this->load->view('page/footer.php', $footer_data);
+                $this->load->view($template.'_page/header.php', $header_data);
+                $this->load->view($template.'_page/background.php', $background_data);
+                $this->load->view($template.'_email/message_maint.php', $data);
+                $this->load->view($template.'_page/nav_bar.php', $nav_data);
+                $this->load->view($template.'_page/footer.php', $footer_data);
                 }else{
                 if ($this->input->post('message')){
                     $first_name = $this->input->post('first_name');
@@ -201,11 +208,11 @@ class Home extends CI_Controller {
                     $this->email_model->send_maint($email, $first_name, $last_name, $phone, $message, $time, $unit_number);
                     
                     if ($sent == true){
-                        $this->load->view('page/header.php', $header_data);
-		                $this->load->view('page/background.php', $background_data);
-                        $this->load->view('email/sucess.php');
-                        $this->load->view('page/nav_bar.php', $nav_data);
-		                $this->load->view('page/footer.php', $footer_data);
+                        $this->load->view($template.'_page/header.php', $header_data);
+		                $this->load->view($template.'_page/background.php', $background_data);
+                        $this->load->view($template.'_email/sucess.php');
+                        $this->load->view($template.'_page/nav_bar.php', $nav_data);
+		                $this->load->view($template.'_page/footer.php', $footer_data);
                     }
                 }
             }

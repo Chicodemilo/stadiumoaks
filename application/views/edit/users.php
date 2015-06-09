@@ -2,13 +2,12 @@
 		<div class="hours_head">
 			USERS
 		</div>
-		
 			<div class="users_table">
 			<table>
 				<tr>
 					<th>Username</th>
-					<th>Last<br>Name</th>
 					<th>First<br>Name</th>
+					<th>Last<br>Name</th>
 					<th>Email</th>
 					<th>Role</th>
 					<th>Verified</th>
@@ -23,10 +22,6 @@
 						$last_login = $value['last_login']; 
 						$phpdate = strtotime( $last_login);
 						$last_login = date( 'n/j/y, g:i a', $phpdate );
-						
-						
-						
-						
 
 						echo "<tr>";
 						echo "<td>".$value['username']."</td>";
@@ -50,8 +45,4 @@
 			</tr>
 			</table>
 			</div>
-			
-		
-
-
 	</div>

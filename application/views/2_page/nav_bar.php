@@ -1,12 +1,20 @@
-
-
-<div id="nav_bar" style="background-color: #<?php echo $property_color_1; ?>;">
+<div id="nav_bar">
     <div id="nav_bar_inner">
         <div id="name_box">
         <?php 
-                echo "<div id='name_text'><p><a href='".base_url()."' class='name' style='color:#".$property_color_2.";'>".$property_name."</a></p</div>";
+                echo "<div id='name_text'><p><a href='".base_url()."' class='name' style='color:#".$property_color_2.";'>".$property_name."</a><span class='name' style='color:#".$property_color_2.";'>&nbsp;&nbsp;&nbsp;&nbsp;".$property_phone."</span></p</div>";
          ?>
+
         </div>
+        <div id="nav_bar_links" class="nav_bar_links" style="color:#<?php echo $property_color_3; ?>">
+            <span>
+                <a href="<?php echo base_url() ?>home/floorplans">FLOORPLANS &amp; PRICES</a>
+                <a href="<?php echo base_url() ?>home/pictures">PICTURES</a>
+                <a href="<?php echo base_url() ?>home/amenities">AMENITIES</a>
+                <a href="<?php echo base_url() ?>home/contact">CONTACT</a>
+                <!-- &nbsp;&nbsp;&bull;&nbsp;&nbsp;<a href="<?php echo base_url() ?>home/contact">Residents</a> -->
+            </span>
+    </div>
     </div>
     <div class="nav_bar_links_button" id="nav_bar_links_button">
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -23,13 +31,13 @@
             <span>
                 &bull;&nbsp;&nbsp;<a href="<?php echo base_url() ?>home/">Home</a>
                 <br>
-                &bull;&nbsp;&nbsp;<a href="<?php echo base_url() ?>home/floorplans">Floorplans &amp; Prices</a>
+                &bull;&nbsp;&nbsp;<a href="<?php echo base_url() ?>home/floorplans">FLOORPLANS &amp; PRICES</a>
                 <br>
-                &bull;&nbsp;&nbsp;<a href="<?php echo base_url() ?>home/pictures">Pictures</a>
+                &bull;&nbsp;&nbsp;<a href="<?php echo base_url() ?>home/pictures">PICTURES</a>
                 <br>
-                &bull;&nbsp;&nbsp;<a href="<?php echo base_url() ?>home/amenities">Amenities</a>
+                &bull;&nbsp;&nbsp;<a href="<?php echo base_url() ?>home/amenities">AMENITIES</a>
                 <br>
-                &bull;&nbsp;&nbsp;<a href="<?php echo base_url() ?>home/contact">Contact</a>
+                &bull;&nbsp;&nbsp;<a href="<?php echo base_url() ?>home/contact">CONTACT</a>
                 <!-- &nbsp;&nbsp;&bull;&nbsp;&nbsp;<a href="<?php echo base_url() ?>home/contact">Residents</a> -->
             </span>
             <div class="mobile_nav_bar_closer">
@@ -41,26 +49,21 @@
             </div>
     </div>
     
-    <div id="nav_bar_links" class="nav_bar_links" style="color:#<?php echo $property_color_3; ?>">
-            <span>
-                <a href="<?php echo base_url() ?>home/floorplans">Floorplans &amp; Prices</a>
-                &nbsp;&nbsp;&bull;&nbsp;&nbsp;<a href="<?php echo base_url() ?>home/pictures">Pictures</a>
-                &nbsp;&nbsp;&bull;&nbsp;&nbsp;<a href="<?php echo base_url() ?>home/amenities">Amenities</a>
-                &nbsp;&nbsp;&bull;&nbsp;&nbsp;<a href="<?php echo base_url() ?>home/contact">Contact</a>
-                <!-- &nbsp;&nbsp;&bull;&nbsp;&nbsp;<a href="<?php echo base_url() ?>home/contact">Residents</a> -->
-            </span>
-    </div>
+    
 </div>
-<div class="address_bar" id="address_bar" style="background-color: #<?php echo $property_color_3 ?>;">
-    <p style="color:#<?php echo $property_color_1; ?>"><?php echo $property_address."&nbsp;&nbsp;&bull;&nbsp;&nbsp;<span class='address_city'>".$property_city.", ".$property_state."&nbsp;&nbsp;&bull;&nbsp;&nbsp;</span>".$property_phone ?></p>
 
-</div>
 <style>
-
     .nav_bar_links a:link {color: #<?php echo $property_color_3; ?>;}
     .nav_bar_links a:visited {color: #<?php echo $property_color_3; ?>;}
     .nav_bar_links a:hover   {color: #<?php echo $property_color_3; ?>;}
     .nav_bar_links a:active  {color:#DEDEDE; }
+    .mobile_x polygon {transition: 0.5s;}
+    .mobile_x:hover polygon {fill:#FC6060;}
+    .nav_bar_links span a {transition: 1.7s;}
+    .nav_bar_links span a:hover {background-color: #F0F8FF;}
+    #name_text p a {transition: 1.7s;}
+    #name_text p a:hover {background-color: #F0F8FF;}
+
 </style>
 <script type="text/javascript" >
     $('#nav_bar_links a').mouseover(function(){

@@ -518,16 +518,20 @@ footer {padding: 5px;
                 display: block;
                 position: relative;
                 top:165px;
-                margin-bottom: 100px;}
+                margin-bottom: 100px;
+                width: 100%;
+                min-width: 800px;}
 
 .contact_box_mobile {visibility: hidden;
                     height: 0px;
                     margin: 0px;}
 
-.contact_box_inner  {box-shadow: 3px 3px 6px #888888;
+.contact_box_form  {position: absolute;
+                    top:0px;
+                    left: 51%;
+                    box-shadow: 3px 3px 6px #888888;
                     background-color: rgba(255,255,255, .85);
                     border: 1px solid #ccc;
-                    margin: auto;
                     width: 475px; 
                     padding: 15px;
                     margin-bottom: 20px;
@@ -536,7 +540,21 @@ footer {padding: 5px;
                     font-size: 1.1em;;
                     color:black; }
 
-.contact_box_inner input, textarea {
+.contact_box_hours  {position: absolute;
+                    top:430px;
+                    left: 51%;
+                    box-shadow: 3px 3px 6px #888888;
+                    background-color: rgba(255,255,255, .85);
+                    border: 1px solid #ccc;
+                    width: 475px; 
+                    padding: 15px;
+                    margin-bottom: 20px;
+                    overflow: auto;
+                    font-family: 'Josefin Slab', Arial, sans-serif;
+                    font-size: 1.1em;;
+                    color:black; }
+
+.contact_box_form input, textarea {
                             border: 3px solid white; 
                             -webkit-box-shadow: 
                               inset 0 0 4px  rgba(0,0,0,0.2),
@@ -557,8 +575,31 @@ footer {padding: 5px;
 
 .hours_list {font-size: .8em;
             line-height:1.6em;}
-.below_hours    {height: 100px;}
+.below_hours    {height: 300px;}
 
+#map-canvas {padding: 10px;
+            box-shadow: 3px 3px 6px #888888;
+            background-color: rgba(255,255,255, .85);
+            border: 1px solid #ccc;
+            height: 400px;
+            width: 400px;}
+
+.address_box {padding: 5px;
+            padding-left: 15px;
+            box-shadow: 3px 3px 6px #888888;
+            background-color: rgba(255,255,255, .85);
+            border: 1px solid #ccc;
+            height: 135px;
+            width: 400px;
+            background-color:rgba(255,255,255, .8);
+            color:black;
+            font-family: 'Oswald', Arial, sans-serif;
+            font-size: 1.4em;
+            margin-bottom: 15px;}
+
+.map-box    {position: absolute;
+            top:0px;
+            right:51%;}
 
 /********************************   SPECIAL   ***************************/
 

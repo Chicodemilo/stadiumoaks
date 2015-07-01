@@ -56,6 +56,7 @@
                         <li><a href="<?php echo base_url() ?>edit/specials" class="">SPECIALS</a></li>
                         <li><a href="<?php echo base_url() ?>edit/users" class="">USERS</a></li>
                         <li><a href="<?php echo base_url() ?>edit/metadata" class="">METADATA</a></li>
+                        <li><a href="<?php echo base_url() ?>edit/template" class="">TEMPLATE</a></li>
                         <li class="contact_drop" id="contact_drop"><a href="#" class="">CONTACT</a>
                             <ul class="contact_menu" id="contact_menu">
                                 <li><a href="<?php echo base_url() ?>contact/messages" class="small_links">Messages</a></li>

@@ -583,6 +583,27 @@ footer {padding: 5px;
 
 .below_hours    {height: 100px;}
 
+#map-canvas-mobile {margin: auto;
+            padding: 10px;
+            box-shadow: 3px 3px 6px #888888;
+            background-color: rgba(255,255,255, .85);
+            border: 1px solid #ccc;
+            height: 400px;
+            width: 100%;
+            margin-bottom: 20px;}
+
+.address_box {margin: auto;
+            padding: 5px;
+            padding-left: 15px;
+            box-shadow: 3px 3px 6px #888888;
+            background-color: rgba(255,255,255, .85);
+            border: 1px solid #ccc;
+            height: 70px;
+            width: 100%;
+            background-color:rgba(255,255,255, .8);
+            color:black;
+            font-family: 'Oswald', Arial, sans-serif;
+            font-size: 1.4em }
 
 /********************************   SPECIAL   ***************************/
 

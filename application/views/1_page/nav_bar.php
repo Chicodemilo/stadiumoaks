@@ -21,15 +21,15 @@
     </div>
      <div id="nav_bar_links_mobile" class="nav_bar_links_mobile">
             <span>
-                &bull;&nbsp;&nbsp;<a href="<?php echo base_url() ?>home/">Home</a>
+                &bull;&nbsp;&nbsp;<a href="<?php echo base_url() ?>home/">HOME</a>
                 <br>
-                &bull;&nbsp;&nbsp;<a href="<?php echo base_url() ?>home/floorplans">Floorplans &amp; Prices</a>
+                &bull;&nbsp;&nbsp;<a href="<?php echo base_url() ?>home/floorplans">FLOORPLANS &amp; PRICES</a>
                 <br>
-                &bull;&nbsp;&nbsp;<a href="<?php echo base_url() ?>home/pictures">Pictures</a>
+                &bull;&nbsp;&nbsp;<a href="<?php echo base_url() ?>home/pictures">PICTURES</a>
                 <br>
-                &bull;&nbsp;&nbsp;<a href="<?php echo base_url() ?>home/amenities">Amenities</a>
+                &bull;&nbsp;&nbsp;<a href="<?php echo base_url() ?>home/amenities">AMENITIES</a>
                 <br>
-                &bull;&nbsp;&nbsp;<a href="<?php echo base_url() ?>home/contact">Contact</a>
+                &bull;&nbsp;&nbsp;<a href="<?php echo base_url() ?>home/contact">CONTACT &amp; LOCATION</a>
                 <!-- &nbsp;&nbsp;&bull;&nbsp;&nbsp;<a href="<?php echo base_url() ?>home/contact">Residents</a> -->
             </span>
             <div class="mobile_nav_bar_closer">

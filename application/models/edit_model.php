@@ -232,7 +232,10 @@ class Edit_model extends CI_Model{
 	}
 
 
-
+	public function get_template_info(){
+		$data = $this->db->get('template')->result_array();
+		return $data;
+	}
 
 
 

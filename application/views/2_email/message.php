@@ -1,24 +1,36 @@
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-    <script>
-        var geocoder;
-        var map;
+<script>
+        
         function initialize() {
-          geocoder = new google.maps.Geocoder();
+          var geocoder = new google.maps.Geocoder();
 
           var latlng = new google.maps.LatLng(31.4500, -100.4500);
           var mapOptions = {
-            zoom: 13,
+            zoom: 14,
             center: latlng
           }
-          map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+          var mapOptions_mobile = {
+            zoom: 15,
+            center: latlng,
+            scrollwheel: false,
+            draggable: false
+          }
+          var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+          var map_mobile = new google.maps.Map(document.getElementById('map-canvas-mobile'), mapOptions_mobile);
 
-            var address = "<?php echo $main['property_address'] ?>"+" "+"<?php echo $main['property_city'] ?>"+" "+"<?php echo $main['property_state'] ?>";
+          var address = "<?php echo $main['property_address'] ?>"+" "+"<?php echo $main['property_city'] ?>"+" "+"<?php echo $main['property_state'] ?>";
 
             geocoder.geocode( { 'address': address}, function(results, status) {
               if (status == google.maps.GeocoderStatus.OK) {
                 map.setCenter(results[0].geometry.location);
+                map_mobile.setCenter(results[0].geometry.location);
                 var marker = new google.maps.Marker({
                     map: map,
+                    position: results[0].geometry.location,
+                    title: "<?php echo $main['property_name'] ?>"
+                });
+                var marker_mobile = new google.maps.Marker({
+                    map: map_mobile,
                     position: results[0].geometry.location,
                     title: "<?php echo $main['property_name'] ?>"
                 });
@@ -32,44 +44,15 @@
                   infowindow.open(map,marker);
                 });
 
-
+                google.maps.event.addListener(marker_mobile, 'click', function() {
+                  infowindow.open(map_mobile,marker);
+                });
               } else {
               }
             });
-
-              var contentString = '<div id="content">'+
-              '<div id="siteNotice">'+
-              '</div>'+
-              '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
-              '<div id="bodyContent">'+
-              '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
-              'sandstone rock formation in the southern part of the '+
-              'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
-              'south west of the nearest large town, Alice Springs; 450&#160;km '+
-              '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
-              'features of the Uluru - Kata Tjuta National Park. Uluru is '+
-              'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
-              'Aboriginal people of the area. It has many springs, waterholes, '+
-              'rock caves and ancient paintings. Uluru is listed as a World '+
-              'Heritage Site.</p>'+
-              '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
-              'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
-              '(last visited June 22, 2009).</p>'+
-              '</div>'+
-              '</div>';
-
-              var infowindow = new google.maps.InfoWindow({
-                  content: contentString
-              });
-
-              google.maps.event.addListener(marker, 'click', function() {
-                infowindow.open(map,marker);
-              });
-
         }
-
-
         google.maps.event.addDomListener(window, 'load', initialize);
+        google.maps.event.addDomListener(window, 'resize', initialize);
 </script>
 <div class="background_fade"></div>
 <div class="contact_box">
@@ -79,8 +62,6 @@
 
   </div>
   <div class="contact_box_inner">
-
-
             <?php
             echo form_open(); 
             ?>
@@ -197,6 +178,10 @@
 
             ?>
   </div>
+   <div class="address_box">
+    <?php echo $main['property_name']."<br>".$main['property_address']." ".$main['property_city'].", ".$main['property_state']." ".$main['property_zip']; ?>
+  </div>
+  <div id="map-canvas-mobile"></div>
   <div class="contact_box_inner">
     Office Hours:
     <ul class="hours_list">

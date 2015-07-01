@@ -306,11 +306,10 @@ footer {padding: 3px;
 
 
 .big_pic_box   {margin-left: auto;
-                margin-right: 0px;
-                width:50%;
-                margin-bottom: 80px;
-                max-width: 1500px; 
-                padding:20px;}
+                margin-right: 3%;
+                width: 42%;
+                margin-bottom: 20px;
+                max-width: 1500px;}
 
 
 .pic_main_text  {margin-left: auto;
@@ -336,21 +335,21 @@ footer {padding: 3px;
 
 
 
-.not_seen_pic_box  {width: 150px;
+.not_seen_pic_box  {width: 130px;
                     padding: 0px;
-                    min-height: 350px;
-                    margin: 0px 0% 0px 5%;
+                    min-height: 250px;
+                    margin: 0px 0px 0px 30px;
                     float: left;}
 
 
-.small_pic_box  {width: 150px;
+.small_pic_box  {width: 130px;
                 display: block;
                 background-color: rgba(255,255,255, .7);
                 padding: 7px;
                 float:left;
                 cursor: pointer;}
 
-.small_pic_box_shadow  {width: 150px;
+.small_pic_box_shadow  {width: 130px;
                         display: block;
                         background-color: white;
                         padding: 7px;

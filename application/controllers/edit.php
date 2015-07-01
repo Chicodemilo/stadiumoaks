@@ -740,7 +740,6 @@ public function man_logo_delete($id){
 
 // METADATA *********************************************************************************
 
-
     public function metadata(){
         $this->load->model('edit_model');
         $main_info = $this->edit_model->get_main_info();
@@ -759,13 +758,25 @@ public function man_logo_delete($id){
 
     }
 
+// TEMPLATE PICKER *********************************************************************************
 
+    public function template(){
+        $this->load->model('edit_model');
+        $main_info = $this->edit_model->get_main_info();
+        $template_info = $this->edit_model->get_template_info();
+        $data = array('main_info' => $main_info, 'template_info' => $template_info);
 
+        $this->load->view('edit/header.php');
+        $this->load->view('edit/edit_template.php', $data);
+        $this->load->view('edit/footer.php');
+    }
 
-
-
-
-
+    public function submit_template($id){
+        $data = $_POST;
+        $this->db->where('id', $id);
+        $this->db->update('main_info', $data);
+        redirect(base_url().'edit/template');
+    }
 
 
 

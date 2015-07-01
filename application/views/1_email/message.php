@@ -1,5 +1,65 @@
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<script>
+        
+        function initialize() {
+          var geocoder = new google.maps.Geocoder();
+
+          var address = "<?php echo $main['property_address'] ?>"+" "+"<?php echo $main['property_city'] ?>"+" "+"<?php echo $main['property_state'] ?>";
+
+          geocoder.geocode( { 'address': address}, function(results, status) {
+              if (status == google.maps.GeocoderStatus.OK) {
+                var mapOptions = {
+                  zoom: 14,
+                  scrollwheel: false,
+                }
+                var mapOptions_mobile = {
+                  zoom: 15,
+                  scrollwheel: false,
+                  draggable: false
+                }
+                var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+                var map_mobile = new google.maps.Map(document.getElementById('map-canvas-mobile'), mapOptions_mobile);
+                map.setCenter(results[0].geometry.location);
+                map_mobile.setCenter(results[0].geometry.location);
+                var marker = new google.maps.Marker({
+                    map: map,
+                    position: results[0].geometry.location,
+                    title: "<?php echo $main['property_name'] ?>"
+                });
+                var marker_mobile = new google.maps.Marker({
+                    map: map_mobile,
+                    position: results[0].geometry.location,
+                    title: "<?php echo $main['property_name'] ?>"
+                });
+                var contentString = "<h3><?php echo $main['property_name'] ?></h3>"+"<p>"+"<?php echo $main['property_address'] ?>"+" "+"<?php echo $main['property_city'] ?>"+", "+"<?php echo $main['property_state'] ?>"+"</p>"+"<h3>"+"<?php echo $main['property_phone'] ?>"+"</h3>";
+
+                var infowindow = new google.maps.InfoWindow({
+                    content: contentString
+                });
+
+                google.maps.event.addListener(marker, 'click', function() {
+                  infowindow.open(map,marker);
+                });
+
+                google.maps.event.addListener(marker_mobile, 'click', function() {
+                  infowindow.open(map_mobile,marker);
+                });
+              } else {
+              }
+            });
+        }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+        google.maps.event.addDomListener(window, 'resize', initialize);
+</script>
 <div class="contact_box">
-  <div class="contact_box_inner">
+  <div class="map-box">
+  <div class="address_box"><?php echo $main['property_name']."<br>".$main['property_address']."<br>".$main['property_city'].", ".$main['property_state']." ".$main['property_zip']."<br>".$main['property_phone']; ?></div>
+  <div id="map-canvas"></div>
+  </div>
+  
+  <div class="contact_box_form">
+  
             <?php
             echo form_open(); 
             ?>
@@ -41,10 +101,9 @@
             </table>
             <?php
             echo form_close();
-
             ?>
   </div>
-  <div class="contact_box_inner">
+  <div class="contact_box_hours">
     Office Hours:
     <ul class="hours_list">
     <?php
@@ -113,9 +172,12 @@
             </table>
             <?php
             echo form_close();
-
             ?>
   </div>
+  <div class="address_box">
+    <?php echo $main['property_name']."<br>".$main['property_address']." ".$main['property_city'].", ".$main['property_state']." ".$main['property_zip']; ?>
+  </div>
+  <div id="map-canvas-mobile"></div>
   <div class="contact_box_inner">
     Office Hours:
     <ul class="hours_list">
@@ -149,4 +211,3 @@
         $(this).animate({color:'#8B7355'}, 400);
     }); 
 </script>
-

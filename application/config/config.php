@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://www.autumnwillow.bayrummedia.com';
+$config['base_url']	= 'http://www.bayrummedia.com/autumnwillow';
 
 $config['server_root'] = $_SERVER['DOCUMENT_ROOT'];
 

@@ -1,2 +1,1 @@
-Test
-<?php echo $new_password; ?>
+Your new password is: <?php echo $new_password; ?>

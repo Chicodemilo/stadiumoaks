@@ -25,7 +25,7 @@ class Email_model extends CI_Model{
             $this->load->library('email');
             $this->email->set_newline("\r\n");
 
-            $this->email->from('do_not_reply@stadiumoaks.com', 'Do No Reply');
+            $this->email->from('do_not_reply@bayrummedia.com', 'Do No Reply');
             $this->email->to($email);
             $this->email->subject('Password Reset');
             $this->email->message($this->load->view('email/email_contact_test',$data, true));

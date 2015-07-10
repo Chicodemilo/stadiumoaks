@@ -1,5 +1,5 @@
 <div class="contact_box">
-  <div class="contact_box_inner">
+  <div class="contact_box_form_maint">
             <span class="amenities_title">Maintenance Request</span>
             <hr>
             <?php

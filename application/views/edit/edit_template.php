@@ -22,7 +22,7 @@
 	<br>
 	<table style="width:600px; margin:auto;">
 		<tr>
-			<td class="lefter_light"><span class="bold">Have Fun Here!</span><br>Submit a new template then have a<span class="bold"><a href="http:/<?php echo $main_info[0]['property_website'] ?> " target="_blank" class="not_fancy_dark">look at your page</a></span>.  You can always go back to another template if you don't like it.</td>
+			<td class="lefter_light"><span class="bold">Have Fun Here!</span><br>Submit a new template then have a<span class="bold"><a href="<?php echo base_url(); ?> " target="_blank" class="not_fancy_dark">look at your page</a></span>.  You can always go back to another template if you don't like it.</td>
 		</tr>
 	</table>
 <script type="text/javascript">

@@ -105,7 +105,6 @@
 						$('#view_small_pic_box".$next."').fadeIn(800);
 						
 					});
-
 					$('#left_arrow".$x."').click(function(){
 						$('#view_small_pic_box".$x."').fadeOut(150);
 						$('#view_small_pic_box".$prev."').fadeIn(800);

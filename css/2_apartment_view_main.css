@@ -587,9 +587,9 @@ footer {padding: 3px;
 
 /********************************   SPECIAL   ***************************/
 
-.special_box    {z-index: 7;
-                height: 50px;
-                width: 500px;
+.special_box    {z-index: 3;
+                height: 115px;
+                width: 350px;
                 box-shadow: 1px 1px 6px #888888;
                 background-color: rgba(255,255,255, .7); 
                 position: fixed;
@@ -598,31 +598,43 @@ footer {padding: 3px;
                 padding: 5px;
                 color:#8B7355;
                 top:-110px;
-                right:0px;}
+                left:15px;}
 
 .special_title   {z-index: 8;
                 font-family: 'Oswald', sans-serif;
-                font-size: 1.3em;
+                font-size: 1.7em;
                 height: 40px;
-                max-width: 225px;
+                max-width: 330px;
                 margin-right: 10px;
                 float: left;
                 overflow: hidden;}
 
 .special_description   {z-index: 8;
                         height: 40px;
-                        min-width: 250px;
-                        font-size: .75em;
+                        min-width: 330px;
+                        font-size: .9em;
                         overflow: hidden;
                         line-height: 1.1em;}
 
                 
 .special_conditions   {z-index: 8;
                         min-width: 250px;
-                        font-size: .6em;
+                        font-size: .7em;
                         overflow: hidden;
                         color:black;
                         border-top: 1px dotted gray;}
+
+                
+.show_spec      {z-index: 8;
+                display: none;
+                float: right;
+                width: 65px;
+                font-family: arial;
+                font-size: .7em;
+                color:black;
+                position: fixed;
+                left: 5px;
+                top: 42px;}
 
 
 

@@ -88,7 +88,6 @@
 								var closer = '#view_small_pic_box'+i;
 								$(closer).fadeOut(200);
 							}
-
 		 					$('#view_pic_box').fadeIn(400);
 		 					$('#view_small_pic_box".$x."').fadeIn(300);
 		 					window.scrollTo(0,0);

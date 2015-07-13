@@ -133,7 +133,6 @@ class Home extends CI_Controller {
                     date_default_timezone_set('US/Central');
                     $time = date("Y-m-d H:i:s");
                     $comment = array(
-                        
                         'first_name' => $first_name, 
                         'last_name' => $last_name, 
                         'email' => $email,

@@ -1,6 +1,4 @@
 <?php 
-
-
 class Login extends CI_Controller
 {
 	
@@ -16,7 +14,6 @@ class Login extends CI_Controller
 	{
 		$this->load->model('membership_model');
 		$query = $this->membership_model->validate();
-
 		if($query){
 			$this->load->model('user_model');
 			$more_userdata = $this->user_model->info_for_session($this->input->post('username'));
@@ -29,7 +26,6 @@ class Login extends CI_Controller
 				'last_login' => $more_userdata[0]['last_login'],
 				'role' => $more_userdata[0]['role'],
 				'property_name' => $more_userdata[0]['property_name']);
-
 			$this->session->set_userdata($data);
 			
 			date_default_timezone_set('America/Chicago');
@@ -39,7 +35,6 @@ class Login extends CI_Controller
 			// echo $name.' '.$time;
 			$this->db->where('username', $name);
 			$this->db->update('membership', $data);
-			
 			redirect('edit/');
 		}else{
 			$this->index();
@@ -60,37 +55,26 @@ class Login extends CI_Controller
         $this->load->view('edit/blank_header.php');
         $this->load->view('membership/forgot_password.php');
         $this->load->view('edit/footer.php');
-
 	}
+
+
 
 	function email_password(){
 		            $email = $this->input->post('email');
                     date_default_timezone_set('US/Central');
                     $time = date("m/d/Y H:i:s");
-
                     $comment = array(
                         'email' => $email,
                         'time' => $time,);
-
                     $this->load->model('email_model', 'email_model');
-                    
                     $sent = $this->email_model->send_password($email, $time);
-                    
-                    
-                    if ($sent == true){
-                                            
+                    if ($sent == true){               
                         $this->load->view('edit/blank_header.php');
-
                         $this->load->view('membership/forgot_password_sent.php');
-
                         $this->load->view('edit/footer.php');
-                    
-//                      header('Refresh: 2; URL='.base_url().'welcome/search');
                     }else{
                     	$this->load->view('edit/blank_header.php');
-
                         $this->load->view('membership/forgot_password_not_this.php');
-
                         $this->load->view('edit/footer.php');
                     }
 	}
@@ -99,15 +83,12 @@ class Login extends CI_Controller
 
 	function create_member(){
 		$this->load->library('form_validation');
-
-		//field name, error message, validation rules
 		$this->form_validation->set_rules('first_name', 'First Name', 'trim|required');
 		$this->form_validation->set_rules('last_name', 'Last Name', 'trim|required');
 		$this->form_validation->set_rules('email', 'Email Address', 'trim|required|valid_email');
 		$this->form_validation->set_rules('username', 'Username', 'trim|required|min_length[4]');
 		$this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[6]|max_length[32]');
 		$this->form_validation->set_rules('password2', 'Password Confirmation', 'trim|required|matches[password]');
-
 		if($this->form_validation->run() == FALSE){
 			$this->signup();
 		}else{
@@ -127,13 +108,11 @@ class Login extends CI_Controller
 				$this->load->view('edit/footer.php');
 			}
 		}
-
 	}
 
-	function logout()
-		{	
-			date_default_timezone_set('America/Chicago');
 
+	function logout()
+		{	date_default_timezone_set('America/Chicago');
 			$time = date("Y-m-d H:i:s");
 			$data = array('last_login' => $time);
 			$name = $this->session->userdata('username');

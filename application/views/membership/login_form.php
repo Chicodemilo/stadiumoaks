@@ -8,8 +8,6 @@
 			$opts = 'placeholder="Password"';
 			echo form_password('password', '', $opts);
 			echo form_submit('submit', 'Login');
-			// $opts = 'style="display:inline; font-weight:bold;"';
-			// echo anchor('login/signup', 'Create Account', $opts);
 		 ?>
 		 <a href="<?php echo base_url() ?>login/forgot_password" class="not_fancy">I Forgot My Password</a>
 	 </div>

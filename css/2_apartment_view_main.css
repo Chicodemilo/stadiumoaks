@@ -174,6 +174,8 @@ a {text-decoration: none;
 
 .nav_bar_links  span a {padding: 7px;}
 
+.name_text_mobile   {display: none;}
+
                    
 
 
@@ -232,7 +234,17 @@ footer {padding: 3px;
             width: 70px;
             bottom: 0px;
             height: 30px;
-            margin: 0px;}               
+            margin: 0px;} 
+
+
+.social_box {display: block;
+            position: fixed;
+            width: 35px;
+            bottom: 70px;
+            left:0px;
+            padding: 5px 1px 5px 5px;
+            box-shadow: 1px 1px 6px #888888;
+            background-color: rgba(255,255,255, .6);}              
 
 /******************************** BACKGROUND  ***************************/
 
@@ -396,7 +408,7 @@ footer {padding: 3px;
             padding: 3px;}
 
 .pic_caption {color: white;
-            font-family: 'Josefin Slab', Arial, sans-serif;
+            font-family: 'Julius Sans One', Arial, sans-serif;
             text-align: center;
             padding:10px;
             display: block;
@@ -446,10 +458,10 @@ footer {padding: 3px;
                 font-size: 1.6em;}
 
 .floorplan_text {color:black;
-                font-family: 'Oswald', Arial, sans-serif;
-                font-size: 1em;}
+                font-family: 'Julius Sans One', Arial, sans-serif;
+                font-size: .9em;}
 
-.floorplan_text_small   {font-family: 'Oswald', Arial, sans-serif;
+.floorplan_text_small   {font-family: 'Julius Sans One', Arial, sans-serif;
                         font-size: .9em}
 
 /********************************   AMENITIES   ***************************/
@@ -589,7 +601,7 @@ footer {padding: 3px;
 
 .special_box    {z-index: 3;
                 height: 115px;
-                width: 350px;
+                width: 430px;
                 box-shadow: 1px 1px 6px #888888;
                 background-color: rgba(255,255,255, .7); 
                 position: fixed;
@@ -598,28 +610,28 @@ footer {padding: 3px;
                 padding: 5px;
                 color:#8B7355;
                 top:-110px;
-                left:15px;}
+                left:100px;}
 
 .special_title   {z-index: 8;
                 font-family: 'Oswald', sans-serif;
-                font-size: 1.7em;
+                font-size: 1.9em;
                 height: 40px;
-                max-width: 330px;
+                max-width: 410px;
                 margin-right: 10px;
                 float: left;
                 overflow: hidden;}
 
 .special_description   {z-index: 8;
                         height: 40px;
-                        min-width: 330px;
-                        font-size: .9em;
+                        min-width: 410px;
+                        font-size: 1.1em;
                         overflow: hidden;
                         line-height: 1.1em;}
 
                 
 .special_conditions   {z-index: 8;
                         min-width: 250px;
-                        font-size: .7em;
+                        font-size: .65em;
                         overflow: hidden;
                         color:black;
                         border-top: 1px dotted gray;}
@@ -627,14 +639,29 @@ footer {padding: 3px;
                 
 .show_spec      {z-index: 8;
                 display: none;
+                padding: 5px;
+                background-color: rgba(255,255,255, .3);
+                color: rgba(0,0,0, .3);
                 float: right;
                 width: 65px;
                 font-family: arial;
                 font-size: .7em;
-                color:black;
                 position: fixed;
-                left: 5px;
-                top: 42px;}
+                left: 0px;
+                top: 40px;}
+                
+.show_spec_over {z-index: 8;
+                display: none;
+                padding: 5px;
+                background-color: rgba(255,255,255, .5);
+                color: rgba(204,85,0 .7);
+                float: right;
+                width: 65px;
+                font-family: arial;
+                font-size: .7em;
+                position: fixed;
+                left: 0px;
+                top: 40px;}
 
 
 

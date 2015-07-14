@@ -46,7 +46,7 @@ a {text-decoration: none;
     cursor: pointer;}
 
 .body_link_xsmall   {font-size: .6em;
-                    font-family: 'Josefin Slab', Arial, sans-serif;}
+                    font-family: 'Oswald', sans-serif;}}
 .body_link_xsmall a:link {color:#4F94CD;}
 .body_link_xsmall a:hover   {color:#0000EE;}
 .body_link_xsmall a:visited {}
@@ -54,14 +54,14 @@ a {text-decoration: none;
 
 
 .body_link  {font-size: 1em;
-            font-family: 'Josefin Slab', Arial, sans-serif;}
+            font-family: 'Oswald', sans-serif;}
 .body_link a:link {color:#4F94CD;}
 .body_link a:hover   {color:#0000EE;}
 .body_link a:visited {}
 .body_link a:active  {color:#9FB6CD;}
 
 .body_link_small   {font-size: .8em;
-                    font-family: 'Josefin Slab', Arial, sans-serif;}
+                    font-family: 'Oswald', sans-serif;}
 .body_link_small a:link {color:#4F94CD;}
 .body_link_small a:hover   {color:#0000EE;}
 .body_link_small a:visited {}
@@ -71,19 +71,20 @@ a {text-decoration: none;
 /******************************** NAVBAR  ***************************/
             
 #nav_bar    {
-            background-color: rgb(61, 89, 171);
+            background-color: white;
             margin-left: 0px;
             position: fixed;
-            top: 0px;
+            top: 9px;
             border: none;
             width: 100%;
-            height: 70px;
+            height: 35px;
             z-index: 5;
             margin-bottom: 0px;
+            box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);         
             }
 
 #nav_bar_inner {width: 100%;
-                height: 70px;
+                height: 35px;
 
                 
                 margin: auto;
@@ -94,60 +95,34 @@ a {text-decoration: none;
 #name_box   {margin: 0px;
             padding: 0px;
             margin: auto;
-            height: 70px;}
+            height: 35px;}
 
 
 #name_text  {
-            height: 70px;
-            width: 90%;
+            height: 35px;
+            width: 100%;
             margin-left: 10px;
             margin-right: 10px;
             overflow: hidden;
             }
 
 #name_text p    {display: table-cell; 
-                
-                height: 70px; 
+                height: 35px; 
                 vertical-align: middle;}
 
-.name   {font-family: 'Josefin Slab', Arial, sans-serif;
-        letter-spacing: .05em;
-        text-align: center;
-        font-size: 2em;
-        line-height: 90%;}
+.name   {font-family: 'Julius Sans One', sans-serif;
+        font-size: 3.9vw;}
 
 
 .nav_bar_links_button   {z-index: 8;
                         position: fixed;
-                        top:17px;
-                        right: 8px;
+                        top:50px;
+                        left: -5px;
                         cursor: pointer; }
 
 
-.address_bar    {height: 40px;
-                padding: 0px;
-                width: 100%;
-                opacity: .85;
-                background-color:#CAE1FF;
-                z-index: 0;}
 
-
-
-.address_bar p      {width: 99%;
-                    padding: 0px;
-                    font-size: 3.5vw;
-                    overflow: scroll;
-                    text-align: center;
-                    color:white;
-                    letter-spacing: .1em;
-                    font-family: 'Oswald', sans-serif;
-                    margin:auto;}   
-
-.address_city       {}
-
-.nav_bar_links  {display: block;
-                margin-left: 300px;
-                visibility: hidden;} 
+.nav_bar_links  {visibility: hidden;} 
 
 .nav_bar_links_mobile {position: fixed;
                     font-family: 'Oswald', sans-serif;
@@ -188,15 +163,18 @@ a {text-decoration: none;
 
 /********************************  FOOTER ***************************/           
                         
-footer {padding: 5px;
-        height: 50px;
+footer {padding: 3px;
+        height: 25px;
         position: fixed;
         bottom:0%;
         width: 100%;
         margin-left: 0px;
         margin-right: 0px;
         margin-top: 10px;
-        background-color: #7face3;}      
+        background-color: white;
+        min-width: 700px;
+        box-shadow: -2px -2px 2px 1px rgba(0, 0, 0, 0.2);
+        }      
 
 #footer_info_right   {text-align: right;
                     color: white;
@@ -206,7 +184,7 @@ footer {padding: 5px;
                     height: 50px;}   
 
 #footer_info_left   {
-                    height: 40px;
+                    height: 25px;
                     color:white;
                     padding-left:10px;
                     padding-bottom: 50px;
@@ -214,19 +192,35 @@ footer {padding: 5px;
                     font-size: .6em;
                     text-align: left;
                     }
-.property_management_logo_box   {height:30px;
-                                padding: 0px;
+.property_management_logo_box   {height:24px;
+                                float: left;
+                                padding-right: 10px;
                                 margin: 0px;}
 
-.property_management_logo_box img {height: 30px;}
+.property_management_logo_box img {height: 24px;}
 
-.social_box {position: absolute;
-            bottom:10px;
-            right: 100px;}
+.property_management_name   {position: relative;
+                            top:20;
+                            height: 25px;
+                            display: table-cell; 
+                            vertical-align: bottom;}
 
-.badges_box {position: absolute;
-            bottom: 10px;
-            right:20px;}
+.social_box {display: block;
+            position: fixed;
+            width: 35px;
+            bottom: 40px;
+            right:0px;
+            padding: 5px 1px 5px 5px;
+            box-shadow: 1px 1px 6px #888888;
+            background-color: rgba(255,255,255, .6);}
+
+.badges_box {display: block;
+            position: fixed;
+            bottom:5px;
+            right: 15px;
+            width: 70px;
+            height: 25px;
+            margin: 0px;}
 
 .footer_address {visibility: hidden;}
 
@@ -268,8 +262,8 @@ footer {padding: 5px;
 
 
 .logo_box   {margin: auto;
-            width:95%;
-            margin-top: 130px;
+            width:97%;
+            margin-top: 50px;
             max-width: 1100px; }
 
 #logo           {
@@ -279,30 +273,27 @@ footer {padding: 5px;
                 max-width: 1100px;
                 min-width: 300px;}
 
-.outer_description  {
-                    width: 100%;
-                    background-color: rgba(255,255,255, .7);
-                    padding: 0px;
-                    margin: 0px;
-                    margin-top: 10px;
-                    margin-bottom: 40px;
-                    }
 
-.inner_description  {text-align: center;
-                    width: 70%;
-                    max-width: 700px;
-                    margin: auto;
-                    padding: 10px;
-                    }
-
-.slogan {font-family: 'Josefin Slab', Arial, sans-serif;
+.slogan {font-family: 'Playball', cursive;
         letter-spacing: .05em;
-        font-size: 2.3em;
-        line-height: 90%;
-        text-align: center;}
+        font-size: 7vw;
+        text-align: center;
+        width: 90%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background-color: rgba(220,220,220, .5);
+        box-shadow: 0 0 5px 10px rgba(220,220,220, .5);
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-shadow: 1px 1px 8px #222;}
 
-.description    {font-size: 1.1em;
-                letter-spacing: .05em;}
+.description    {margin: auto;
+                text-align: center;
+                width: 80%;
+                font-family: 'Oswald', sans-serif;
+                font-size: 4.3vw;
+                padding-bottom: 100px;}
 
 
 /********************************   PICTURES   ***************************/
@@ -316,22 +307,22 @@ footer {padding: 5px;
 
 
 .pic_main_text  {margin: auto;
-                margin-top: 100px;
+                margin-top: 55px;
                 text-align: center;
                 background-color: rgba(255, 255, 255, .6);
                 box-shadow: 3px 3px 6px #888888;
                 padding: 20px;
                 width: 100%;
-                font-size: 1.1em;
+                font-size: 1.2em;
                 letter-spacing: .05em;
                 color: #adadad;
-                font-family: 'Josefin Slab', Arial, sans-serif;}
+                font-family: 'Oswald', Arial, sans-serif;}
 
 .pic_main_text_none  {margin: auto;
-                    margin-top: 100px;
+                    margin-top: 55px;
                     width: 100%;}
 
-.pic_main_text p    {width: 80%;
+.pic_main_text p    {width: 85%;
                     max-width: 1000px;
                     margin: auto;
                     display: block;}
@@ -342,20 +333,20 @@ footer {padding: 5px;
                     margin: auto;}
 
 
-.small_pic_box  {width: 80%;
+.small_pic_box  {width: 85%;
                 display: block;
                 background-color: rgba(255,255,255, .7);
                 margin: 10px;
-                margin-bottom: 60px;
+                margin-bottom: 30px;
                 padding: 10px;
                 float:left;
                 cursor: pointer;}
 
-.small_pic_box_shadow  {width: 80%;
+.small_pic_box_shadow  {width: 85%;
                         display: block;
                         background-color: white;
                         margin: 10px;
-                        margin-bottom: 60px;
+                        margin-bottom: 30px;
                         padding: 10px;
                         float:left;
                         box-shadow: 2px 2px 5px #555555;}
@@ -411,11 +402,10 @@ footer {padding: 5px;
 /********************************   FLOORPLANS   ***************************/
 
 .floorplan_big_box  {margin: auto;
-                    
                     display: block;
                     position: relative;
                     width: 100%;
-                    top:90px;
+                    top:55px;
                     margin-bottom: 50px;}
 
 .inner_floorplan_box {box-shadow: 3px 3px 6px #888888;
@@ -451,14 +441,14 @@ footer {padding: 5px;
 .floorplan_info table tr td {padding:5px;}
 
 .floorplan_name {color:black;
-                font-family: 'Josefin Slab', Arial, sans-serif;
+                font-family: 'Julius Sans One', Arial, sans-serif;
                 font-size: 1.5em}
 
 .floorplan_text {color:black;
-                font-family: 'Josefin Slab', Arial, sans-serif;
+                font-family: 'Julius Sans One', Arial, sans-serif;
                 font-size: 1.1em}
 
-.floorplan_text_small   {font-family: 'Josefin Slab', Arial, sans-serif;
+.floorplan_text_small   {font-family: 'Julius Sans One', Arial, sans-serif;
                         font-size: 1em}
 .mobile_floorplan_bottom    {height: 60px;}
 
@@ -467,13 +457,13 @@ footer {padding: 5px;
 .amenities_big_box  {margin: auto;
                     display: block;
                     position: relative;
-                    top:0px;
+                    top:-45px;
                     width: 100%;
                     margin: auto;
                     margin-bottom: 250px;}
 
 .inner_amenities_box {
-                    /*background-color: rgba(255,255,255, .6);*/
+                    
                     position: relative;
                     display: block;
                     margin: auto;
@@ -498,8 +488,8 @@ footer {padding: 5px;
                 box-shadow: 3px 3px 6px #888888;
                 color:black;
                 margin-bottom: 0px;
-                font-family: 'Josefin Slab', Arial, sans-serif;
-                font-size: 1.2em }
+                font-family: 'Oswald', sans-serif;;
+                font-size: 1.4em }
 
 .amenities_pet {width: 100%;
                 padding: 15px;
@@ -508,8 +498,8 @@ footer {padding: 5px;
                 box-shadow: 3px 3px 6px #888888;
                 color:black;
                 margin-top: 20px;
-                font-family: 'Josefin Slab', Arial, sans-serif;
-                font-size: 1.2em }
+                font-family: 'Oswald', sans-serif;
+                font-size: 1.4em }
 
 .amenities_pet_small    {font-size: .9em;}
 .amenities_pet_xsmall    {font-size: .9em;}
@@ -522,12 +512,13 @@ footer {padding: 5px;
                 box-shadow: 3px 3px 6px #888888;
                 color:black;
                 margin-bottom: 20px;
-                font-family: 'Josefin Slab', Arial, sans-serif;
+                font-family: 'Oswald', sans-serif;
                 font-size: 1.4em}
 
 .amenities_list ul li {line-height: 1.5em;}
 
-.amenities_title    {font-size: 1.4em;
+.amenities_title    {font-size: 5vw;
+                    font-family: 'Julius Sans One', Arial, sans-serif;
                     display: block;
                     text-align: center;}
 
@@ -544,7 +535,7 @@ footer {padding: 5px;
 .contact_box_mobile {margin: auto;
                     display: block;
                     position: relative;
-                    top:120px;
+                    top:85px;
                     margin-bottom: 50px;}
 
 .contact_box_inner  {box-shadow: 3px 3px 6px #888888;
@@ -555,7 +546,7 @@ footer {padding: 5px;
                     padding: 15px;
                     margin-bottom: 20px;
                     overflow: auto;
-                    font-family: 'Josefin Slab', Arial, sans-serif;
+                    font-family: 'Oswald', sans-serif;
                     font-size: 1.4em;
                     color:black; }
 
@@ -646,7 +637,7 @@ footer {padding: 5px;
                         border-top: 1px dotted gray;}
 
 
-
+.show_spec  {visibility: hidden;}
 
 
 

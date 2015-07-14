@@ -2,7 +2,7 @@
     <div id="nav_bar_inner">
         <div id="name_box">
         <?php 
-                echo "<div id='name_text'><p><a href='".base_url()."' class='name' style='color:#".$property_color_2.";'>".$property_name."</a><span class='name' style='color:#".$property_color_2.";'>&nbsp;&nbsp;&nbsp;&nbsp;".$property_phone."</span></p</div>";
+                echo "<div id='name_text'><p><a href='".base_url()."' class='name' id='name_link' style='color:#".$property_color_2.";'>".$property_name."</a><span class='name' style='color:#".$property_color_2.";'>&nbsp;&nbsp;&nbsp;&nbsp;".$property_phone."</span></p</div>";
          ?>
 
         </div>
@@ -18,18 +18,17 @@
     </div>
     <div class="nav_bar_links_button" id="nav_bar_links_button">
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                     width="35px" height="35px" viewBox="0 0 198 198" enable-background="new 0 0 198 198" xml:space="preserve">
-                <path fill="<?php echo "#".$property_color_3; ?>" d="M190.347,32.599c0,8.067-7.021,14.608-15.684,14.608H25.983c-8.662,0-15.684-6.541-15.684-14.608l0,0
-                    c0-8.068,7.022-14.608,15.684-14.608h148.68C183.326,17.99,190.347,24.531,190.347,32.599L190.347,32.599z"/>
-                <path fill="<?php echo "#".$property_color_3; ?>" d="M190.347,96.494c0,8.067-7.021,14.608-15.684,14.608H25.983c-8.662,0-15.684-6.541-15.684-14.608l0,0
-                    c0-8.068,7.022-14.608,15.684-14.608h148.68C183.326,81.885,190.347,88.426,190.347,96.494L190.347,96.494z"/>
-                <path fill="<?php echo "#".$property_color_3; ?>" d="M190.347,160.389c0,8.067-7.021,14.607-15.684,14.607H25.983c-8.662,0-15.684-6.54-15.684-14.607l0,0
-                    c0-8.068,7.022-14.608,15.684-14.608h148.68C183.326,145.78,190.347,152.32,190.347,160.389L190.347,160.389z"/>
+                 width="40px" height="60px" viewBox="0 0 140.069 380.217" enable-background="new 0 0 140.069 380.217"
+                 xml:space="preserve">
+            <rect fill="<?php echo "#".$property_color_3; ?>" y="52.525" width="190.069" height="15.54"/>
+            <rect fill="<?php echo "#".$property_color_3; ?>" width="190.069" height="15.54"/>
+            <rect fill="<?php echo "#".$property_color_3; ?>" y="157.576" width="190.069" height="15.54"/>
+            <rect fill="<?php echo "#".$property_color_3; ?>" y="105.051" width="190.069" height="15.54"/>
             </svg>
     </div>
      <div id="nav_bar_links_mobile" class="nav_bar_links_mobile">
             <span>
-                &bull;&nbsp;&nbsp;<a href="<?php echo base_url() ?>home/">Home</a>
+                &bull;&nbsp;&nbsp;<a href="<?php echo base_url() ?>home/">HOME</a>
                 <br>
                 &bull;&nbsp;&nbsp;<a href="<?php echo base_url() ?>home/floorplans">FLOORPLANS &amp; PRICES</a>
                 <br>
@@ -37,7 +36,7 @@
                 <br>
                 &bull;&nbsp;&nbsp;<a href="<?php echo base_url() ?>home/amenities">AMENITIES</a>
                 <br>
-                &bull;&nbsp;&nbsp;<a href="<?php echo base_url() ?>home/contact">CONTACT</a>
+                &bull;&nbsp;&nbsp;<a href="<?php echo base_url() ?>home/contact">CONTACT &amp; LOCATION</a>
                 <!-- &nbsp;&nbsp;&bull;&nbsp;&nbsp;<a href="<?php echo base_url() ?>home/contact">Residents</a> -->
             </span>
             <div class="mobile_nav_bar_closer">

@@ -549,7 +549,7 @@ footer {padding: 5px;
                     margin-bottom: 50px;}
 
 .contact_box_inner  {box-shadow: 3px 3px 6px #888888;
-                    background-color: rgba(255,255,255, .85);
+                    background-color: rgba(255,255,255, .7);
                     border: 1px solid #ccc;
                     margin: auto;
                     width: 100%; 
@@ -561,7 +561,7 @@ footer {padding: 5px;
                     color:black; }
 
 .contact_box_inner input, textarea {
-                            border: 3px solid white; 
+                            border: 3px solid #E5E5E5; 
                             -webkit-box-shadow: 
                               inset 0 0 4px  rgba(0,0,0,0.2),
                                     0 0 8px rgba(0,0,0,0.2); 
@@ -572,7 +572,7 @@ footer {padding: 5px;
                               inset 0 0 4px  rgba(0,0,0,0.2),
                                     0 0 8px rgba(0,0,0,0.2); 
                             padding: 5px;
-                            background: rgba(255,255,255,0.5);
+                            background: white;
                             margin: 0 0 5px 0;
                         }
 

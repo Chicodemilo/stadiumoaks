@@ -4,9 +4,7 @@
     <div id="nav_bar_inner">
         <div id="name_box">
 
-        <?php 
-                echo "<div id='name_text' class='name_text' ><p><a href='".base_url()."' class='name' style='color:#".$property_color_2.";'>".$property_name."</a></p></div>";
-         ?>
+        <?php echo "<div id='name_text' class='name_text' ><p><a href='".base_url()."' class='name'>".$property_name."</a></p></div>"; ?>
 
         </div>
         <div id="nav_bar_links" class="nav_bar_links" style="color:#<?php echo $property_color_3; ?>">
@@ -52,18 +50,13 @@
             </div>
     </div>
     
-
 </div>
 <div class="address_bar" id="address_bar" style="background-color: #<?php echo $property_color_3 ?>;">
     <p style="color:#<?php echo $property_color_1; ?>"><?php echo $property_address."&nbsp;&nbsp;&bull;&nbsp;&nbsp;<span class='address_city'>".$property_city.", ".$property_state."&nbsp;&nbsp;&bull;&nbsp;&nbsp;</span>".$property_phone ?></p>
-
 </div>
 
 <script type="text/javascript" >
-
     $(document).ready(function() {
-        
-
         $('#nav_bar_links_button').click(function(event) {
             $('#nav_bar_links_mobile').animate({top: '+=330'}, 300);
         });

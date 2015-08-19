@@ -21,11 +21,11 @@
         // google analytics
     </script>
     <style>
-    .name_text p a {transition:0.5s;}
-    .nav_text span a:link {color: #<?php echo $property_color_2; ?>;}
-    .nav_text span a:visited {color: #<?php echo $property_color_2; ?>;}
-    .nav_text span a:hover   {color: #<?php echo $property_color_3; ?>;}
-    .nav_text span a:active  {color:#<?php echo $property_color_3; ?>; }
+    .name {transition:0.5s;}
+    .name:link {color: #<?php echo $property_color_2; ?>;}
+    .name:visited {color: #<?php echo $property_color_2; ?>;}
+    .name:hover   {color: #<?php echo $property_color_3; ?>;}
+    .name:active  {color:#<?php echo $property_color_3; ?>; }
 
     .nav_bar_links span a {transition:0.5s;}
     .nav_bar_links span a:link {color: #<?php echo $property_color_3; ?>;}

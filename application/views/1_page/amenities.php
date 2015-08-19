@@ -4,6 +4,8 @@
 		if(count($amenities) > 1){
 			echo "<div class='amenities_list'>";
 			echo "<span class='amenities_title'>Amenities At<br>".$property_name."</span><hr>";
+			
+
 			echo "<ul>";
 			$show_select = 'N';
 			foreach ($amenities as $value) {
@@ -19,7 +21,6 @@
 				echo "</li>";
 			}
 			echo "</ul>";
-			echo "</span>";
 			if($show_select == 'Y'){
 					echo "<hr>";
 					echo "* <span class='amenities_pet_small'>In Select Units<br>&#8225; Additional Fees May Apply<span>";

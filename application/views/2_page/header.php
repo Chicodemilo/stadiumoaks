@@ -16,7 +16,6 @@
    
     <link rel='stylesheet' media='only screen and (min-width: 821px)' href='<?php echo base_url();?>css/<?php echo $template ?>_apartment_view_main.css' />
     <link rel='stylesheet' media='only screen and (max-width: 820px)' href='<?php echo base_url();?>css/<?php echo $template ?>_apartment_view_main_small.css' />
-    <link rel='stylesheet' media='handheld' href='<?php echo base_url();?>css/<?php echo $template ?>_apartment_view_main_small.css' />
     
     <link href='http://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Julius+Sans+One' rel='stylesheet' type='text/css'>

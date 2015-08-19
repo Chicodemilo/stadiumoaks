@@ -64,7 +64,7 @@
 		        if ($property_facebook != 'N') {
 		        			$property_facebook = prep_url($property_facebook);
 		        			echo '<a href="'.$property_facebook.'">';
-			        		echo '<svg version="1.1" id="Layer_1" class="facebook_logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+			        		echo '<svg version="1.1" id="facebook_logo" class="facebook_logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 									 width="30px" height="30px" viewBox="0 0 198 198" enable-background="new 0 0 198 198" xml:space="preserve">
 								<path fill="#CFCFCF" d="M148.492,0h-99C22.155,0,0,22.155,0,49.5v99C0,175.836,22.155,198,49.492,198h99
 									C175.836,198,198,175.836,198,148.5v-99C198,22.155,175.836,0,148.492,0z M125.619,99H107.25c0,27.712,0,61.875,0,61.875H82.5
@@ -79,7 +79,7 @@
 				if ($property_twitter != 'N') {
 					$property_twitter = prep_url($property_twitter);
 				        	echo '<a href="'.$property_twitter.'">';
-							echo '<svg version="1.1" id="Layer_1" class="twitter_logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+							echo '<svg version="1.1" id="twitter_logo" class="twitter_logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 										 width="30px" height="30px" viewBox="0 0 198 198" enable-background="new 0 0 198 198" xml:space="preserve">
 									<path fill="#CFCFCF" d="M148.574,0h-99C22.226,0,0,22.3,0,49.645v99C0,175.98,22.226,198,49.574,198h99
 										C175.91,198,198,175.98,198,148.645v-99C198,22.3,175.91,0,148.574,0z M148.294,74.299c0.05,1.068,0.065,2.153,0.065,3.234
@@ -100,7 +100,7 @@
 				if ($property_instagram != 'N') {
 					$property_instagram = prep_url($property_instagram);
 				        	echo '<a href="'.$property_instagram.'">';
-							echo '<svg version="1.1" id="Layer_1" class="instagram_logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+							echo '<svg version="1.1" id="instagram_logo" class="instagram_logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 										 width="30px" height="30px" viewBox="0 0 198 198" enable-background="new 0 0 198 198" xml:space="preserve">
 									<g>
 										<polygon fill="#CFCFCF" points="146.549,72.349 146.549,54.107 146.549,51.377 143.818,51.394 125.577,51.447 125.652,72.418 	"/>
@@ -124,7 +124,7 @@
 					if ($property_google_plus != 'N') {
 					$property_google_plus = prep_url($property_google_plus);
 				        	echo '<a href="'.$property_google_plus.'">';
-							echo '<svg version="1.1" id="Layer_1" class="google_logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+							echo '<svg version="1.1" id="google_logo" class="google_logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 										 width="30px" height="30px" viewBox="0 0 198 198" enable-background="new 0 0 198 198" xml:space="preserve">
 									<g>
 										<path fill="#CFCFCF" d="M84.674,117.332c-0.718-0.487-1.456-0.994-2.223-1.519c-2.24-0.685-4.608-1.048-7.042-1.072l-0.297-0.009
@@ -156,25 +156,6 @@
 		         ?>
         </div>
         
-   
 </footer>
-<style type="text/css">
-#footer_info_left a:link {color: #<?php echo $property_color_1; ?>;}
-#footer_info_left a:hover {color: #<?php echo $property_color_1; ?>;}
-#footer_info_left a:visited {color: #<?php echo $property_color_1; ?>;}
-#footer_info_left a:active {color: #dedede;}
-
-.facebook_logo path {transition: 0.5s;}
-.facebook_logo:hover path {fill:#3C5B9B;}
-.twitter_logo path {transition: 0.5s;}
-.twitter_logo:hover path {fill:#2DAAE1;}
-.instagram_logo path {transition: 0.5s;}
-.instagram_logo:hover path {fill:#517FA4;}
-.instagram_logo polygon {transition: 0.5s;}
-.instagram_logo:hover polygon {fill:#517FA4;}
-.google_logo path {transition: 0.5s;}
-.google_logo:hover path {fill:#F63D27;}
-
-</style>
 </body>
 </html>

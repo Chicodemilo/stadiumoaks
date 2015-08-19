@@ -35,6 +35,22 @@
 
     .mobile_x polygon {transition: 0.5s;}
     .mobile_x:hover polygon {fill:#FC6060;}
+
+    #footer_info_left a:link {color: #<?php echo $property_color_1; ?>;}
+    #footer_info_left a:hover {color: #<?php echo $property_color_1; ?>;}
+    #footer_info_left a:visited {color: #<?php echo $property_color_1; ?>;}
+    #footer_info_left a:active {color: #dedede;}
+
+    .facebook_logo path {transition: 0.5s;}
+    .facebook_logo:hover path {fill:#3C5B9B;}
+    .twitter_logo path {transition: 0.5s;}
+    .twitter_logo:hover path {fill:#2DAAE1;}
+    .instagram_logo path {transition: 0.5s;}
+    .instagram_logo:hover path {fill:#517FA4;}
+    .instagram_logo polygon {transition: 0.5s;}
+    .instagram_logo:hover polygon {fill:#517FA4;}
+    .google_logo path {transition: 0.5s;}
+    .google_logo:hover path {fill:#F63D27;}
     </style>
 
 

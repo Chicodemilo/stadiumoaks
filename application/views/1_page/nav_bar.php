@@ -5,9 +5,18 @@
         <div id="name_box">
 
         <?php 
-                echo "<div id='name_text'><a href='".base_url()."' class='name' style='color:#".$property_color_2.";'>".$property_name."</a></div>";
+                echo "<div id='name_text'><p><a href='".base_url()."' class='name' style='color:#".$property_color_2.";'>".$property_name."</a></p></div>";
          ?>
 
+        </div>
+        <div id="nav_bar_links" class="nav_bar_links" style="color:#<?php echo $property_color_3; ?>">
+            <span>
+                <a href="<?php echo base_url() ?>home/floorplans">Floorplans &amp; Prices</a>
+                &nbsp;&nbsp;&bull;&nbsp;&nbsp;<a href="<?php echo base_url() ?>home/pictures">Pictures</a>
+                &nbsp;&nbsp;&bull;&nbsp;&nbsp;<a href="<?php echo base_url() ?>home/amenities">Amenities</a>
+                &nbsp;&nbsp;&bull;&nbsp;&nbsp;<a href="<?php echo base_url() ?>home/contact">Contact</a>
+                <!-- &nbsp;&nbsp;&bull;&nbsp;&nbsp;<a href="<?php echo base_url() ?>home/contact">Residents</a> -->
+            </span>
         </div>
     </div>
     <div class="nav_bar_links_button" id="nav_bar_links_button">
@@ -43,15 +52,7 @@
             </div>
     </div>
     
-    <div id="nav_bar_links" class="nav_bar_links" style="color:#<?php echo $property_color_3; ?>">
-            <span>
-                <a href="<?php echo base_url() ?>home/floorplans">Floorplans &amp; Prices</a>
-                &nbsp;&nbsp;&bull;&nbsp;&nbsp;<a href="<?php echo base_url() ?>home/pictures">Pictures</a>
-                &nbsp;&nbsp;&bull;&nbsp;&nbsp;<a href="<?php echo base_url() ?>home/amenities">Amenities</a>
-                &nbsp;&nbsp;&bull;&nbsp;&nbsp;<a href="<?php echo base_url() ?>home/contact">Contact</a>
-                <!-- &nbsp;&nbsp;&bull;&nbsp;&nbsp;<a href="<?php echo base_url() ?>home/contact">Residents</a> -->
-            </span>
-    </div>
+
 </div>
 <div class="address_bar" id="address_bar" style="background-color: #<?php echo $property_color_3 ?>;">
     <p style="color:#<?php echo $property_color_1; ?>"><?php echo $property_address."&nbsp;&nbsp;&bull;&nbsp;&nbsp;<span class='address_city'>".$property_city.", ".$property_state."&nbsp;&nbsp;&bull;&nbsp;&nbsp;</span>".$property_phone ?></p>

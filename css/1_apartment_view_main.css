@@ -91,21 +91,22 @@ a {text-decoration: none;
                 margin-bottom: 0px;}
 
 #name_box   {margin: 0px;
+            margin-top: -10px;
             padding: 0px;
             float: left;
             display: block;
-            height: 110px;}
+            height: 120px;}
 
 
 #name_text  {display: inline-block;
             position: absolute;
-            height: 110px;
+            height: 120px;
             width: 280px;
             margin-left: 20px;
             overflow: hidden;}
 
 #name_text p    {display: table-cell; 
-                height: 110px; 
+                height: 120px; 
                 vertical-align: middle;}
 
 .name   {font-family: 'Josefin Slab', Arial, sans-serif;
@@ -120,15 +121,15 @@ a {text-decoration: none;
                         visibility: hidden;}
 
 
-.address_bar    {
-                min-width: 870px;
+.address_bar    {min-width: 870px;
                 padding: 0px;
                 width: 100%;
                 opacity: .85;
                 background-color:#CAE1FF;
                 position: fixed;
+                top: 110px;
                 height: 45px;
-                z-index: 0;}
+                z-index: 30;}
 
 .address_bar p      {width: 80%;
                     padding: 0px;
@@ -139,13 +140,13 @@ a {text-decoration: none;
                     font-family: 'Oswald', sans-serif;
                     margin:auto;}
 
-.address_text   {}
 
 .address_text_mobile   {visibility: hidden;}
 
-.nav_bar_links  {display: block;
-                margin-left: 300px;
-                } 
+.nav_bar_links  {margin-left: 310px; 
+                min-width: 480px;
+                position: relative;
+                top:65px;} 
 
 
 .nav_bar_links_mobile {position: fixed;
@@ -160,11 +161,7 @@ a {text-decoration: none;
                     visibility: hidden;
                     } 
 
-.nav_bar_links  span {min-width: 570px;
-                    display: table-cell;
-                    vertical-align: bottom;
-                    font-size: 1.5em;
-                    height: 90px;
+.nav_bar_links  span {font-size: 1.5em;
                     font-family: 'Oswald', sans-serif;
                     padding: 10px;}
 

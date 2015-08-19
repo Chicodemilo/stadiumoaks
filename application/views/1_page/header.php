@@ -11,9 +11,7 @@
     <meta name=viewport content="width=device-width, initial-scale=1">
     
     <script type="text/javascript" src="<?php echo base_url();?>javascript/apartment_javascript.js"></script>
-    <link href="<?php echo base_url();?>css/redmond/jquery-ui-1.10.4.custom.css" rel="stylesheet">
     <script src="<?php echo base_url();?>javascript/jquery-1.10.2.js"></script>
-    <script src="<?php echo base_url();?>javascript/jquery-ui-1.10.4.custom.js"></script>
    
     <link rel='stylesheet' media='only screen and (min-width: 821px)' href='<?php echo base_url();?>css/<?php echo $template ?>_apartment_view_main.css' />
     <link rel='stylesheet' media='only screen and (max-width: 820px)' href='<?php echo base_url();?>css/<?php echo $template ?>_apartment_view_main_small.css' />

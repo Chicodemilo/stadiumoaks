@@ -65,7 +65,7 @@
             ?>
             <input type="hidden" name="system_date">
             <table id="contact_table">
-                <tr><td class="righter" width="35%">First Name:</td><td>
+                <tr><td class="righter_width" width="35%">First Name:</td><td>
                     <input type="text" maxlength="20" id="first_name" size="45" name="first_name" 
                            placeholder="<?php if (form_error('first_name') != ''){echo form_error('first_name');}else{echo '';}?>"
                            value="<?php if (set_value('first_name') != ''){echo set_value('first_name');}else{echo '';}?>"
@@ -136,28 +136,28 @@
             ?>
             <input type="hidden" name="system_date">
             <table id="contact_table">
-                <tr><td class="lefter" width="35%">First Name:</td></tr>
-                <tr><td><input type="text" maxlength="20" id="first_name" size="59" name="first_name" 
+                <tr><td class="lefter_width" width="35%">First Name:</td></tr>
+                <tr><td><input type="text" maxlength="20" id="first_name_mobile" size="59" name="first_name" 
                            placeholder="<?php if (form_error('first_name') != ''){echo form_error('first_name');}else{echo '';}?>"
                            value="<?php if (set_value('first_name') != ''){echo set_value('first_name');}else{echo '';}?>"
                            /></td></tr>
                 <tr><td class="lefter">Last Name:</td></tr>
-                <tr><td><input type="text" maxlength="20" id="last_name" size="59" name="last_name" 
+                <tr><td><input type="text" maxlength="20" id="last_name_mobile" size="59" name="last_name" 
                            placeholder="<?php if (form_error('last_name') != ''){echo form_error('last_name');}else{echo '';}?>"
                            value="<?php if (set_value('last_name') != ''){echo set_value('last_name');}else{echo '';}?>"
                            /></td></tr>
                 <tr><td class="lefter">Email:</td></tr>
-                <tr><td><input type="text" maxlength="50" id="email" size="59" name="email" 
+                <tr><td><input type="text" maxlength="50" id="email_mobile" size="59" name="email" 
                                placeholder="<?php if (form_error('email') != ''){echo form_error('email');}else{echo '';}?>"
                                value="<?php if (form_error('email') != ''){echo '';}else{echo set_value('email');}?>"
                                /></td></tr>
                 <tr><td class="lefter">Phone Number:</td></tr>
-                <tr><td><input type="text" maxlength="13" id="phone" size="59" name="phone" 
+                <tr><td><input type="text" maxlength="13" id="phone_mobile" size="59" name="phone" 
                                placeholder="<?php if (form_error('phone') != ''){echo form_error('phone');}else{echo '';}?>"
                                value="<?php if (set_value('phone') != ''){echo set_value('phone');}else{echo '';}?>"
                                /></td></tr>
                 <tr><td class="lefter">Message:</td></tr>
-                <tr><td><textarea maxlength="350" id="message" rows="6" cols="57" name="message"
+                <tr><td><textarea maxlength="350" id="message_mobile" rows="6" cols="57" name="message"
                                placeholder="<?php if (form_error('message') != ''){echo form_error('message');}else{echo '';}?>"
                                ><?php if (set_value('message') != ''){echo set_value('message');}else{echo '';}?></textarea></td></tr>
                 

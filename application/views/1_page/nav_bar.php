@@ -5,7 +5,7 @@
         <div id="name_box">
 
         <?php 
-                echo "<div id='name_text'><p><a href='".base_url()."' class='name' style='color:#".$property_color_2.";'>".$property_name."</a></p></div>";
+                echo "<div id='name_text' class='name_text' ><p><a href='".base_url()."' class='name' style='color:#".$property_color_2.";'>".$property_name."</a></p></div>";
          ?>
 
         </div>
@@ -58,27 +58,12 @@
     <p style="color:#<?php echo $property_color_1; ?>"><?php echo $property_address."&nbsp;&nbsp;&bull;&nbsp;&nbsp;<span class='address_city'>".$property_city.", ".$property_state."&nbsp;&nbsp;&bull;&nbsp;&nbsp;</span>".$property_phone ?></p>
 
 </div>
-<style>
-    .nav_bar_links a:link {color: #<?php echo $property_color_3; ?>;}
-    .nav_bar_links a:visited {color: #<?php echo $property_color_3; ?>;}
-    .nav_bar_links a:hover   {color: #<?php echo $property_color_3; ?>;}
-    .nav_bar_links a:active  {color:#DEDEDE; }
-    .mobile_x polygon {transition: 0.5s;}
-    .mobile_x:hover polygon {fill:#FC6060;}
-</style>
-<script type="text/javascript" >
-    $('#nav_bar_links a').mouseover(function(){
-        $(this).animate({color:'#<?php echo $property_color_2; ?>'}, 200);
-    }).mouseout(function(){
-        $(this).animate({color:'#<?php echo $property_color_3; ?>'}, 400);
-    }); 
 
-    $('#name_text a').mouseover(function(){
-        $(this).animate({color:'#<?php echo $property_color_3; ?>'}, 200);
-    }).mouseout(function(){
-        $(this).animate({color:'#<?php echo $property_color_2; ?>'}, 400);
-    });
+<script type="text/javascript" >
+
     $(document).ready(function() {
+        
+
         $('#nav_bar_links_button').click(function(event) {
             $('#nav_bar_links_mobile').animate({top: '+=330'}, 300);
         });

@@ -56,6 +56,9 @@ class View_model extends CI_Model{
         $data['keyword_six'] = $query[0]['keyword_six'];
         $data['keyword_seven'] = $query[0]['keyword_seven'];
         $data['template'] = $query[0]['template'];
+        $data['property_color_1'] = $query[0]['property_color_1'];
+        $data['property_color_2'] = $query[0]['property_color_2'];
+        $data['property_color_3'] = $query[0]['property_color_3'];
         return $data;
         
     }

@@ -20,6 +20,22 @@
     <script>
         // google analytics
     </script>
+    <style>
+    .name_text p a {transition:0.5s;}
+    .nav_text span a:link {color: #<?php echo $property_color_2; ?>;}
+    .nav_text span a:visited {color: #<?php echo $property_color_2; ?>;}
+    .nav_text span a:hover   {color: #<?php echo $property_color_3; ?>;}
+    .nav_text span a:active  {color:#<?php echo $property_color_3; ?>; }
+
+    .nav_bar_links span a {transition:0.5s;}
+    .nav_bar_links span a:link {color: #<?php echo $property_color_3; ?>;}
+    .nav_bar_links span a:visited {color: #<?php echo $property_color_3; ?>;}
+    .nav_bar_links span a:hover   {color: #<?php echo $property_color_2; ?>;}
+    .nav_bar_links span a:active  {color:#<?php echo $property_color_2; ?>; }
+
+    .mobile_x polygon {transition: 0.5s;}
+    .mobile_x:hover polygon {fill:#FC6060;}
+    </style>
 
 
 </head>

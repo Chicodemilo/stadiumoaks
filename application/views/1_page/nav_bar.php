@@ -1,14 +1,4 @@
 
-<style>
-    .nav_bar_links a:link {color: #<?php echo $property_color_3; ?>;}
-    .nav_bar_links a:visited {color: #<?php echo $property_color_3; ?>;}
-    .nav_bar_links a:hover   {color: #<?php echo $property_color_3; ?>;}
-    .nav_bar_links a:active  {color:#DEDEDE; }
-    .mobile_x polygon {transition: 0.5s;}
-    .mobile_x:hover polygon {fill:#FC6060;}
-</style>
-
-<div id="nav_bar" style="background-color: #<?php echo $property_color_1; ?>;">
     <div id="nav_bar_inner">
         <div id="name_box">
         <?php 
@@ -86,4 +76,11 @@
         });
     });
 </script>
-
+<style>
+    .nav_bar_links a:link {color: #<?php echo $property_color_3; ?>;}
+    .nav_bar_links a:visited {color: #<?php echo $property_color_3; ?>;}
+    .nav_bar_links a:hover   {color: #<?php echo $property_color_3; ?>;}
+    .nav_bar_links a:active  {color:#DEDEDE; }
+    .mobile_x polygon {transition: 0.5s;}
+    .mobile_x:hover polygon {fill:#FC6060;}
+</style>

@@ -4,7 +4,7 @@
     <div id="nav_bar_inner">
         <div id="name_box">
         <?php 
-                echo "<div id='name_text'><p><a href='".base_url()."' class='name' style='color:#".$property_color_2.";'>".$property_name."</a></p</div>";
+                echo "<div id='name_text'><p><a href='".base_url()."' class='name' style='color:#".$property_color_2.";'>".$property_name."</a></p></div>";
          ?>
         </div>
     </div>

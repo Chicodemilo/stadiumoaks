@@ -125,12 +125,7 @@ a {text-decoration: none;
                         cursor: pointer; }
 
 
-.address_bar    {height: 40px;
-                padding: 0px;
-                width: 100%;
-                opacity: .85;
-                background-color:#CAE1FF;
-                z-index: 0;}
+.address_bar    {visibility: hidden;}
 
 
 
@@ -144,7 +139,6 @@ a {text-decoration: none;
                     font-family: 'Oswald', sans-serif;
                     margin:auto;}   
 
-.address_city       {}
 
 .nav_bar_links  {display: block;
                 margin-left: 300px;

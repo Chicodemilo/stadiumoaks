@@ -35,7 +35,7 @@
 					<tr>
 						<td class='floorplan_text'>Rent: $".$value['rent']."</td>
 						<td class='floorplan_text'>Deposit: $".$value['deposit']."</td>
-						
+						<td></td>
 					</tr>
 					";
 						

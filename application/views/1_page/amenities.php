@@ -19,11 +19,12 @@
 				echo "</li>";
 			}
 			echo "</ul>";
+			echo "</span>";
 			if($show_select == 'Y'){
 					echo "<hr>";
 					echo "* <span class='amenities_pet_small'>In Select Units<br>&#8225; Additional Fees May Apply<span>";
 				}
-			echo "</span>";
+			
 			echo "</div>";
 		}
 	 ?>
@@ -47,9 +48,8 @@
 				echo "<br>Possible Refund On Deposit: $".$pet_deposit_refundable."</span>";
 			}
 			if($pet_restrictions != ''){
-			echo "<hr><span class='amenities_pet_xsmall'>".$pet_restrictions;
+			echo "<hr><span class='amenities_pet_xsmall'>".$pet_restrictions."</span>";
 			}
-			echo "</span>";
 			echo "</div>";
 		}
 	 ?>

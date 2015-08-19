@@ -112,13 +112,3 @@
 		 ?>
 	});
 </script>
-<style type="text/css">
-.red_x polygon {transition: 0.5s;}
-.red_x:hover polygon {fill:#FC6060;}
-.right_arrow path {transition: 0.5s;}
-.right_arrow:hover path {fill:#507EFF;}
-.left_arrow path {transition: 0.5s;}
-.left_arrow:hover path {fill:#507EFF;}
-</style>
-
-

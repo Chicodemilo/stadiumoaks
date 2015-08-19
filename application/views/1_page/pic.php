@@ -12,7 +12,7 @@
 					</svg>';
 				echo "</div>";
 				echo "<div class='right_arrow' id='right_arrow".$x."'>";
-				echo '<svg version="1.1" id="right_arrow'.$x.'" class="right_arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+				echo '<svg version="1.1" id="right_arrow_svg'.$x.'" class="right_arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 							 width="30px" height="30px" viewBox="0 0 198 198" enable-background="new 0 0 198 198" xml:space="preserve">
 						<g>
 							<path fill="#3D53A4" d="M16.56,195.471l-7.174-13.345l153.937-82.727L9.385,16.687l7.174-13.345l178.769,96.057L16.56,195.471z"/>
@@ -20,7 +20,7 @@
 						</svg>';
 				echo "</div>";
 				echo "<div class='left_arrow' id='left_arrow".$x."'>";
-				echo '<svg version="1.1" id="left_arrow'.$x.'" class="left_arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+				echo '<svg version="1.1" id="left_arrow_svg'.$x.'" class="left_arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 					width="30px" height="30px" viewBox="0 0 198 198" enable-background="new 0 0 198 198" xml:space="preserve">
 						<g>
 						<path fill="#3D53A4" d="M182.586,3.342l7.174,13.345L35.823,99.414l153.937,82.712l-7.174,13.345L3.817,99.414L182.586,3.342z"/>

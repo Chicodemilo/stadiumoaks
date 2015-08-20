@@ -6,14 +6,14 @@
 				
 				echo "<div class='view_small_pic_box' id='view_small_pic_box".$x."' style='display:none;'>";
 				echo "<div class='close_x' id='close_x".$x."'>";
-				echo '<svg version="1.1" id="red_x" class="red_x" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+				echo '<svg version="1.1" id="red_x_svg'.$x.'" class="red_x" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 						 width="35px" height="35px" viewBox="0 0 198 198" enable-background="new 0 0 198 198" xml:space="preserve">
 					<polygon fill="#890E0E" points="171.25,19.941 100.535,90.655 29.82,19.941 20.111,29.651 90.825,100.365 20.112,171.078 29.822,180.789 
 						100.535,110.075 171.248,180.787 180.957,171.078 110.244,100.365 180.957,29.651 "/>
 					</svg>';
 				echo "</div>";
 				echo "<div class='right_arrow' id='right_arrow".$x."'>";
-				echo '<svg version="1.1" id="right_arrow" class="right_arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+				echo '<svg version="1.1" id="right_arrow_svg'.$x.'" class="right_arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 							 width="30px" height="30px" viewBox="0 0 198 198" enable-background="new 0 0 198 198" xml:space="preserve">
 						<g>
 							<path fill="#3D53A4" d="M16.56,195.471l-7.174-13.345l153.937-82.727L9.385,16.687l7.174-13.345l178.769,96.057L16.56,195.471z"/>
@@ -21,7 +21,7 @@
 						</svg>';
 				echo "</div>";
 				echo "<div class='left_arrow' id='left_arrow".$x."'>";
-				echo '<svg version="1.1" id="left_arrow" class="left_arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+				echo '<svg version="1.1" id="left_arrow_svg'.$x.'" class="left_arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 					width="30px" height="30px" viewBox="0 0 198 198" enable-background="new 0 0 198 198" xml:space="preserve">
 						<g>
 						<path fill="#3D53A4" d="M182.586,3.342l7.174,13.345L35.823,99.414l153.937,82.712l-7.174,13.345L3.817,99.414L182.586,3.342z"/>

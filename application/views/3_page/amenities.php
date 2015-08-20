@@ -33,7 +33,7 @@
 			echo "</ul>";
 			if($show_select == 'Y'){
 					echo "<hr>";
-					echo "* <span class='amenities_pet_small'>In Select Units<br>&#8225; Additional Fees May Apply<span>";
+					echo "* <span class='amenities_pet_small'>In Select Units<br>&#8225; Additional Fees May Apply</span>";
 				}
 			echo "</div>";
 		}

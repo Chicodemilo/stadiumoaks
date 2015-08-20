@@ -33,11 +33,11 @@
         <div id="footer_info_left" style="color:#<?php echo $property_color_3 ?>;">
 	         <?php 
 	        	if($management_logo_name != 'N'){
-	        		echo "<div id='property_management_logo_box' class='property_management_logo_box' alt='".$management_logo_name."'>";
-	        		echo "<img src='".base_url()."images/logos/management/".$management_logo_name."'>";
+	        		echo "<div id='property_management_logo_box' class='property_management_logo_box'>";
+	        		echo "<img src='".base_url()."images/logos/management/".$management_logo_name."' alt='".$management_logo_name."'>";
 	        		echo "</div>";
 	        	}else{
-	        		echo "<div id='property_management_logo_box' class='property_management_logo_box' alt='".$management_logo_name."'></div>";
+	        		echo "<div id='property_management_logo_box' class='property_management_logo_box'></div>";
 	        	}
 	         ?>
          	<div class='property_management_name'>

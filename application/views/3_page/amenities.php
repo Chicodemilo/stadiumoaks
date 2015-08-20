@@ -47,7 +47,7 @@
 				echo "<br>Possible Refund On Deposit: $".$pet_deposit_refundable."</span>";
 			}
 			if($pet_restrictions != ''){
-			echo "<hr><span class='amenities_pet_xsmall'>".$pet_restrictions;
+			echo "<hr><span class='amenities_pet_xsmall'>".$pet_restrictions."</span>";
 			}
 			echo "</div>";
 		}

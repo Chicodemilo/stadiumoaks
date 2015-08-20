@@ -67,7 +67,7 @@
             ?>
             <input type="hidden" name="system_date">
             <table id="contact_table">
-                <tr><td class="righter_width" width="35%">First Name:</td><td>
+                <tr><td class="righter_width">First Name:</td><td>
                     <input type="text" maxlength="20" id="first_name" size="45" name="first_name" 
                            placeholder="<?php if (form_error('first_name') != ''){echo form_error('first_name');}else{echo '';}?>"
                            value="<?php if (set_value('first_name') != ''){echo set_value('first_name');}else{echo '';}?>"
@@ -139,7 +139,7 @@
             ?>
             <input type="hidden" name="system_date">
             <table id="contact_table_mobile">
-                <tr><td class="lefter_width" width="35%">First Name:</td></tr>
+                <tr><td class="lefter_width">First Name:</td></tr>
                 <tr><td><input type="text" maxlength="20" id="first_name_mobile" size="59" name="first_name" 
                            placeholder="<?php if (form_error('first_name') != ''){echo form_error('first_name');}else{echo '';}?>"
                            value="<?php if (set_value('first_name') != ''){echo set_value('first_name');}else{echo '';}?>"

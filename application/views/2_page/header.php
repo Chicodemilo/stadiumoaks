@@ -55,6 +55,13 @@
     .instagram_logo:hover polygon {fill:#517FA4;}
     .google_logo path {transition: 0.5s;}
     .google_logo:hover path {fill:#F63D27;}
+
+    .red_x polygon {transition: 0.5s;}
+    .red_x:hover polygon {fill:#FC6060;}
+    .right_arrow path {transition: 0.5s;}
+    .right_arrow:hover path {fill:#507EFF;}
+    .left_arrow path {transition: 0.5s;}
+    .left_arrow:hover path {fill:#507EFF;}
     </style>
 
 

@@ -33,11 +33,11 @@
         <div id="footer_info_left" style="color:#<?php echo $property_color_3 ?>;">
 	         <?php 
 	        	if($management_logo_name != 'N'){
-	        		echo "<div id='property_management_logo_box' class='property_management_logo_box'>";
+	        		echo "<div id='property_management_logo_box' class='property_management_logo_box' alt='".$management_logo_name."'>";
 	        		echo "<img src='".base_url()."images/logos/management/".$management_logo_name."'>";
 	        		echo "</div>";
 	        	}else{
-	        		echo "<div id='property_management_logo_box' class='property_management_logo_box'></div>";
+	        		echo "<div id='property_management_logo_box' class='property_management_logo_box' alt='".$management_logo_name."'></div>";
 	        	}
 	         ?>
          	<div class='property_management_name'>
@@ -155,23 +155,5 @@
 		         ?>
         </div>
 </footer>
-<style type="text/css">
-#footer_info_left a:link {color: #<?php echo $property_color_3; ?>;}
-#footer_info_left a:hover {color: #<?php echo $property_color_2; ?>;}
-#footer_info_left a:visited {color: #<?php echo $property_color_3; ?>;}
-#footer_info_left a:active {color: #dedede;}
-
-.facebook_logo path {transition: 0.5s;}
-.facebook_logo:hover path {fill:#3C5B9B;}
-.twitter_logo path {transition: 0.5s;}
-.twitter_logo:hover path {fill:#2DAAE1;}
-.instagram_logo path {transition: 0.5s;}
-.instagram_logo:hover path {fill:#517FA4;}
-.instagram_logo polygon {transition: 0.5s;}
-.instagram_logo:hover polygon {fill:#517FA4;}
-.google_logo path {transition: 0.5s;}
-.google_logo:hover path {fill:#F63D27;}
-
-</style>
 </body>
 </html>

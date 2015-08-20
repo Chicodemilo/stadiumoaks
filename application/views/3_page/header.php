@@ -22,7 +22,40 @@
     <script>
         // google analytics
     </script>
+    <style type="text/css">
+    .nav_bar_links a:link {color: #<?php echo $property_color_3; ?>;}
+    .nav_bar_links a:visited {color: #<?php echo $property_color_3; ?>;}
+    .nav_bar_links a:hover   {color: #<?php echo $property_color_3; ?>;}
+    .nav_bar_links a:active  {color:white; }
 
+    .mobile_x polygon {transition: 0.5s;}
+    .mobile_x:hover polygon {fill:#FC6060;}
+
+    .nav_bar_links span a {transition: .8s;}
+    .nav_bar_links span a:hover {background-color: #828282;}
+    
+    #name_text p a {transition: .8s;}
+    #name_text p a:link {color: #<?php echo $property_color_2; ?>;}
+    #name_text p a:visited {color: #<?php echo $property_color_2; ?>;}
+    #name_text p a:hover {background-color: #828282;}
+    #name_text p a:active {color:white; }
+
+    #footer_info_left a:link {color: #<?php echo $property_color_3; ?>;}
+    #footer_info_left a:hover {color: #<?php echo $property_color_2; ?>;}
+    #footer_info_left a:visited {color: #<?php echo $property_color_3; ?>;}
+    #footer_info_left a:active {color: #dedede;}
+
+    .facebook_logo path {transition: 0.5s;}
+    .facebook_logo:hover path {fill:#3C5B9B;}
+    .twitter_logo path {transition: 0.5s;}
+    .twitter_logo:hover path {fill:#2DAAE1;}
+    .instagram_logo path {transition: 0.5s;}
+    .instagram_logo:hover path {fill:#517FA4;}
+    .instagram_logo polygon {transition: 0.5s;}
+    .instagram_logo:hover polygon {fill:#517FA4;}
+    .google_logo path {transition: 0.5s;}
+    .google_logo:hover path {fill:#F63D27;}
+    </style>
 
 </head>
 <body>

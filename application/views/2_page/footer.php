@@ -33,11 +33,11 @@
         <div id="footer_info_left" style="color:#<?php echo $property_color_3 ?>;">
 	         <?php 
 	        	if($management_logo_name != 'N'){
-	        		echo "<div id='property_management_logo_box' class='property_management_logo_box'>";
+	        		echo "<div id='property_management_logo_box' class='property_management_logo_box' alt='".$management_logo_name."'>";
 	        		echo "<img src='".base_url()."images/logos/management/".$management_logo_name."'>";
 	        		echo "</div>";
 	        	}else{
-	        		echo "<div id='property_management_logo_box' class='property_management_logo_box'></div>";
+	        		echo "<div id='property_management_logo_box' class='property_management_logo_box' alt='".$management_logo_name."'></div>";
 	        	}
 	         ?>
          	<div class='property_management_name'>
@@ -65,7 +65,7 @@
 		        			echo '<a href="'.$property_facebook.'">';
 			        		echo '<svg version="1.1" id="Layer_1" class="facebook_logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 									 width="30px" height="30px" viewBox="0 0 198 198" enable-background="new 0 0 198 198" xml:space="preserve">
-								<path fill="#999999" d="M148.492,0h-99C22.155,0,0,22.155,0,49.5v99C0,175.836,22.155,198,49.492,198h99
+								<path fill="#7F7F7F" d="M148.492,0h-99C22.155,0,0,22.155,0,49.5v99C0,175.836,22.155,198,49.492,198h99
 									C175.836,198,198,175.836,198,148.5v-99C198,22.155,175.836,0,148.492,0z M125.619,99H107.25c0,27.712,0,61.875,0,61.875H82.5
 									c0,0,0-33.829,0-61.875H70.125V74.25h12.272V63.063c0-10.123,4.822-25.938,26.044-25.938l19.119,0.078V58.41c0,0-11.627,0-13.885,0
 									c-2.257,0-5.47,1.122-5.47,5.944v9.896h19.668L125.619,99z"/>
@@ -80,7 +80,7 @@
 				        	echo '<a href="'.$property_twitter.'">';
 							echo '<svg version="1.1" id="Layer_1" class="twitter_logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 										 width="30px" height="30px" viewBox="0 0 198 198" enable-background="new 0 0 198 198" xml:space="preserve">
-									<path fill="#999999" d="M148.574,0h-99C22.226,0,0,22.3,0,49.645v99C0,175.98,22.226,198,49.574,198h99
+									<path fill="#7F7F7F" d="M148.574,0h-99C22.226,0,0,22.3,0,49.645v99C0,175.98,22.226,198,49.574,198h99
 										C175.91,198,198,175.98,198,148.645v-99C198,22.3,175.91,0,148.574,0z M148.294,74.299c0.05,1.068,0.065,2.153,0.065,3.234
 										c0,33.029-25.533,71.107-72.237,71.107c-14.334,0-27.683-4.134-38.927-11.225c1.992,0.23,4.005,0.351,6.06,0.351
 										c11.9,0,22.844-3.997,31.536-10.7c-11.109-0.202-20.481-7.434-23.719-17.357c1.555,0.293,3.143,0.449,4.777,0.449
@@ -102,14 +102,14 @@
 							echo '<svg version="1.1" id="Layer_1" class="instagram_logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 										 width="30px" height="30px" viewBox="0 0 198 198" enable-background="new 0 0 198 198" xml:space="preserve">
 									<g>
-										<polygon fill="#999999" points="146.549,72.349 146.549,54.107 146.549,51.377 143.818,51.394 125.577,51.447 125.652,72.418 	"/>
-										<path fill="#999999" d="M132.838,99c0,18.657-15.181,33.838-33.838,33.838S65.163,117.657,65.163,99
+										<polygon fill="#7F7F7F" points="146.549,72.349 146.549,54.107 146.549,51.377 143.818,51.394 125.577,51.447 125.652,72.418 	"/>
+										<path fill="#7F7F7F" d="M132.838,99c0,18.657-15.181,33.838-33.838,33.838S65.163,117.657,65.163,99
 											c0-4.488,0.891-8.774,2.487-12.697H49.178v50.66c0,6.541,5.317,11.859,11.859,11.859h75.917c6.542,0,11.868-5.318,11.868-11.859
 											v-50.66h-18.48C131.934,90.226,132.838,94.512,132.838,99z"/>
-										<path fill="#CFCFCF" d="M99,120.775c12.004,0,21.784-9.771,21.784-21.775c0-4.735-1.547-9.12-4.125-12.697
+										<path fill="#7F7F7F" d="M99,120.775c12.004,0,21.784-9.771,21.784-21.775c0-4.735-1.547-9.12-4.125-12.697
 											c-3.964-5.486-10.392-9.079-17.659-9.079c-7.268,0-13.695,3.593-17.659,9.079C78.763,89.88,77.216,94.265,77.216,99
 											C77.216,111.004,86.988,120.775,99,120.775z"/>
-										<path fill="#999999" d="M148.5,0h-99C22.155,0,0,22.155,0,49.5v98.992C0,175.836,22.155,198,49.5,198h99
+										<path fill="#7F7F7F" d="M148.5,0h-99C22.155,0,0,22.155,0,49.5v98.992C0,175.836,22.155,198,49.5,198h99
 											c27.336,0,49.5-22.164,49.5-49.508V49.5C198,22.155,175.836,0,148.5,0z M160.875,86.303v50.66
 											c0,13.188-10.733,23.912-23.921,23.912H61.038c-13.188,0-23.913-10.725-23.913-23.912v-50.66V61.038
 											c0-13.188,10.725-23.913,23.913-23.913h75.917c13.188,0,23.921,10.725,23.921,23.913V86.303z"/>
@@ -126,10 +126,10 @@
 							echo '<svg version="1.1" id="Layer_1" class="google_logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 										 width="30px" height="30px" viewBox="0 0 198 198" enable-background="new 0 0 198 198" xml:space="preserve">
 									<g>
-										<path fill="#999999" d="M84.674,117.332c-0.718-0.487-1.456-0.994-2.223-1.519c-2.24-0.685-4.608-1.048-7.042-1.072l-0.297-0.009
+										<path fill="#7F7F7F" d="M84.674,117.332c-0.718-0.487-1.456-0.994-2.223-1.519c-2.24-0.685-4.608-1.048-7.042-1.072l-0.297-0.009
 											c-11.175,0-20.98,6.786-20.984,14.521c0,8.411,8.386,14.999,19.111,14.999c14.141,0,21.31-4.885,21.31-14.513
 											c0-0.911-0.112-1.856-0.33-2.792C93.262,123.201,89.847,120.867,84.674,117.332z"/>
-										<path fill="#999999" d="M148.5,0h-99C22.155,0,0,22.164,0,49.5v99C0,175.845,22.155,198,49.5,198h99
+										<path fill="#7F7F7F" d="M148.5,0h-99C22.155,0,0,22.164,0,49.5v99C0,175.845,22.155,198,49.5,198h99
 											c27.336,0,49.5-22.155,49.5-49.5v-99C198,22.164,175.836,0,148.5,0z M86.728,152.855c-4.174,1.209-8.687,1.832-13.423,1.832
 											c-5.268,0-10.345-0.61-15.064-1.814c-9.145-2.311-15.91-6.695-19.07-12.343c-1.353-2.446-2.046-5.045-2.046-7.751
 											c0-2.775,0.66-5.594,1.972-8.373c5.012-10.709,18.224-17.902,32.855-17.902c0.157,0,0.285,0,0.429-0.009
@@ -142,7 +142,7 @@
 											c-1.424,0-2.582-1.155-2.586-2.582V99.033h-18.658c-1.419,0-2.578-1.164-2.578-2.591v-5.321c0-1.427,1.159-2.59,2.578-2.59h18.658
 											V69.836c0-1.419,1.158-2.583,2.586-2.583h5.316c1.428,0,2.578,1.163,2.578,2.583v18.694h18.658c1.419,0,2.578,1.163,2.578,2.59
 											V96.442z"/>
-										<path fill="#999999" d="M76.75,87.966c0.008,0,0.008,0,0.008,0c2.673,0,4.93-1.052,6.679-3.053
+										<path fill="#7F7F7F" d="M76.75,87.966c0.008,0,0.008,0,0.008,0c2.673,0,4.93-1.052,6.679-3.053
 											c2.739-3.135,3.947-8.258,3.229-13.716c-1.283-9.739-8.217-17.836-15.469-18.047L70.9,53.143c-2.565,0-4.851,1.052-6.6,3.052
 											c-2.71,3.09-3.844,7.974-3.135,13.415c1.274,9.727,8.366,18.146,15.473,18.356H76.75z"/>
 									</g>
@@ -155,23 +155,5 @@
 		         ?>
         </div>
 </footer>
-<style type="text/css">
-#footer_info_left a:link {color: #<?php echo $property_color_3; ?>;}
-#footer_info_left a:hover {color: #<?php echo $property_color_2; ?>;}
-#footer_info_left a:visited {color: #<?php echo $property_color_3; ?>;}
-#footer_info_left a:active {color: #dedede;}
-
-.facebook_logo path {transition: 0.5s;}
-.facebook_logo:hover path {fill:#3C5B9B;}
-.twitter_logo path {transition: 0.5s;}
-.twitter_logo:hover path {fill:#2DAAE1;}
-.instagram_logo path {transition: 0.5s;}
-.instagram_logo:hover path {fill:#517FA4;}
-.instagram_logo polygon {transition: 0.5s;}
-.instagram_logo:hover polygon {fill:#517FA4;}
-.google_logo path {transition: 0.5s;}
-.google_logo:hover path {fill:#F63D27;}
-
-</style>
 </body>
 </html>

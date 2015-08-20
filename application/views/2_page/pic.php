@@ -29,7 +29,7 @@
 					</svg>';
 				echo "</div>";
 				echo "<div class='pic_caption'>".$value['caption']."</div>";
-				echo "<img src='".base_url()."images/pictures/".$value['id']."/".$value['name']."' alt'".$value['caption']."'>";
+				echo "<img src='".base_url()."images/pictures/".$value['id']."/".$value['name']."' alt='".$value['caption']."'>";
 				echo "</div>";
 				$x += 1;
 			}

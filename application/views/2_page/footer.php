@@ -62,13 +62,13 @@
 		        if ($property_facebook != 'N') {
 		        			$property_facebook = prep_url($property_facebook);
 		        			echo '<a href="'.$property_facebook.'">';
-			        		echo '<svg version="1.1" id="Layer_1" class="facebook_logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+			        		echo '<svg version="1.1" id="facebook_logo_svg" class="facebook_logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 									 width="30px" height="30px" viewBox="0 0 198 198" enable-background="new 0 0 198 198" xml:space="preserve">
 								<path fill="#7F7F7F" d="M148.492,0h-99C22.155,0,0,22.155,0,49.5v99C0,175.836,22.155,198,49.492,198h99
 									C175.836,198,198,175.836,198,148.5v-99C198,22.155,175.836,0,148.492,0z M125.619,99H107.25c0,27.712,0,61.875,0,61.875H82.5
 									c0,0,0-33.829,0-61.875H70.125V74.25h12.272V63.063c0-10.123,4.822-25.938,26.044-25.938l19.119,0.078V58.41c0,0-11.627,0-13.885,0
 									c-2.257,0-5.47,1.122-5.47,5.944v9.896h19.668L125.619,99z"/>
-								<g id="Layer_1_1_">
+								<g id="Layer_1_1_a">
 								</g>
 								</svg>';
 							echo "</a>";
@@ -77,7 +77,7 @@
 				if ($property_twitter != 'N') {
 					$property_twitter = prep_url($property_twitter);
 				        	echo '<a href="'.$property_twitter.'">';
-							echo '<svg version="1.1" id="Layer_1" class="twitter_logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+							echo '<svg version="1.1" id="twitter_logo_svg" class="twitter_logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 										 width="30px" height="30px" viewBox="0 0 198 198" enable-background="new 0 0 198 198" xml:space="preserve">
 									<path fill="#7F7F7F" d="M148.574,0h-99C22.226,0,0,22.3,0,49.645v99C0,175.98,22.226,198,49.574,198h99
 										C175.91,198,198,175.98,198,148.645v-99C198,22.3,175.91,0,148.574,0z M148.294,74.299c0.05,1.068,0.065,2.153,0.065,3.234
@@ -88,7 +88,7 @@
 										c12.523,15.118,31.23,25.068,52.33,26.111c-0.425-1.832-0.652-3.733-0.652-5.692c0-13.802,11.369-24.993,25.385-24.993
 										c7.307,0,13.906,3.036,18.53,7.895c5.783-1.122,11.224-3.205,16.129-6.072c-1.901,5.841-5.924,10.737-11.163,13.827
 										c5.141-0.606,10.033-1.943,14.582-3.935C157.559,66.375,153.248,70.777,148.294,74.299z"/>
-									<g id="Layer_1_1_">
+									<g id="Layer_1_1_b">
 									</g>
 									</svg>
 									';
@@ -98,7 +98,7 @@
 				if ($property_instagram != 'N') {
 					$property_instagram = prep_url($property_instagram);
 				        	echo '<a href="'.$property_instagram.'">';
-							echo '<svg version="1.1" id="Layer_1" class="instagram_logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+							echo '<svg version="1.1" id="instagram_logo_svg" class="instagram_logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 										 width="30px" height="30px" viewBox="0 0 198 198" enable-background="new 0 0 198 198" xml:space="preserve">
 									<g>
 										<polygon fill="#7F7F7F" points="146.549,72.349 146.549,54.107 146.549,51.377 143.818,51.394 125.577,51.447 125.652,72.418 	"/>
@@ -113,7 +113,7 @@
 											c0,13.188-10.733,23.912-23.921,23.912H61.038c-13.188,0-23.913-10.725-23.913-23.912v-50.66V61.038
 											c0-13.188,10.725-23.913,23.913-23.913h75.917c13.188,0,23.921,10.725,23.921,23.913V86.303z"/>
 									</g>
-									<g id="Layer_1_1_">
+									<g id="Layer_1_1_c">
 									</g>
 									</svg>
 									';
@@ -122,7 +122,7 @@
 					if ($property_google_plus != 'N') {
 					$property_google_plus = prep_url($property_google_plus);
 				        	echo '<a href="'.$property_google_plus.'">';
-							echo '<svg version="1.1" id="Layer_1" class="google_logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+							echo '<svg version="1.1" id="google_logo_svg" class="google_logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 										 width="30px" height="30px" viewBox="0 0 198 198" enable-background="new 0 0 198 198" xml:space="preserve">
 									<g>
 										<path fill="#7F7F7F" d="M84.674,117.332c-0.718-0.487-1.456-0.994-2.223-1.519c-2.24-0.685-4.608-1.048-7.042-1.072l-0.297-0.009
@@ -145,7 +145,7 @@
 											c2.739-3.135,3.947-8.258,3.229-13.716c-1.283-9.739-8.217-17.836-15.469-18.047L70.9,53.143c-2.565,0-4.851,1.052-6.6,3.052
 											c-2.71,3.09-3.844,7.974-3.135,13.415c1.274,9.727,8.366,18.146,15.473,18.356H76.75z"/>
 									</g>
-									<g id="Layer_1_1_">
+									<g id="Layer_1_1_d">
 									</g>
 									</svg>
 									';

@@ -18,7 +18,7 @@
     </div>
     </div>
     <div class="nav_bar_links_button" id="nav_bar_links_button">
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            <svg version="1.1" id="nav_bar_links_button_svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                  width="40px" height="60px" viewBox="0 0 140.069 380.217" enable-background="new 0 0 140.069 380.217"
                  xml:space="preserve">
             <rect fill="<?php echo "#".$property_color_3; ?>" y="52.525" width="190.069" height="15.54"/>

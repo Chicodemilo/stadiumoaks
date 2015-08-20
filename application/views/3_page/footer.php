@@ -56,7 +56,6 @@
 		         ?>
 		    </div>	        
         </div>
-        </div>
         <div class="social_box">
         	<?php 
 

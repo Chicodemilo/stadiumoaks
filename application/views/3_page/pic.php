@@ -52,7 +52,7 @@
 			foreach ($pictures as $value) {
 				echo "<div class='not_seen_pic_box'>";
 				echo "<div class='small_pic_box' id='small_pic_box".$x."'>";
-				echo "<img src='".base_url()."images/pictures/".$value['id']."/".$value['name']."' alt'".$value['caption']."'>";
+				echo "<img src='".base_url()."images/pictures/".$value['id']."/".$value['name']."' alt='".$value['caption']."'>";
 				echo "</div>";
 				echo "</div>";
 				$x += 1;

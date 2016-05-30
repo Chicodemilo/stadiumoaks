@@ -12,9 +12,11 @@
     
     <link href="<?php echo base_url();?>css/redmond/jquery-ui-1.10.4.custom.css" rel="stylesheet">
     <script src="<?php echo base_url();?>javascript/jquery-1.10.2.js"></script>
-    <script src="<?php echo base_url();?>javascript/jquery-ui-1.10.4.custom.js"></script>
     <script type="text/javascript" src="<?php echo base_url();?>javascript/apartment_javascript.js"></script>
     <link type="text/css" rel="stylesheet" href="<?php echo base_url();?>css/apartment_main.css">
+    <link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>css/pikaday.css">
+    <script src="<?php echo base_url() ?>javascript/moment.js"></script>
+    <script src="<?php echo base_url() ?>javascript/pikaday.js"></script>
     <script>
         // google analytics
     </script>

@@ -48,10 +48,13 @@
 $active_group = 'default';
 $active_record = TRUE;
 
+// $this->load->model('new_site_model', 'new_site_model');
+// $new_user_id = $this->new_site_model->get_new_user_id($data['stripe_customer_id']);
+
 $db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'root';
 $db['default']['password'] = 'test';
-$db['default']['database'] = 'apartment_info_2';
+$db['default']['database'] = '';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;

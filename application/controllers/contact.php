@@ -10,6 +10,7 @@ class Contact extends CI_Controller{
 	public function __construct(){
         parent::__construct();
         $this->load->database();
+        include'include.php';
         $this->load->helper('url');
         $this->load->helper('form');
         $this->form_validation->set_error_delimiters('', '');

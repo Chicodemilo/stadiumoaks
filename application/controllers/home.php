@@ -7,6 +7,7 @@ class Home extends CI_Controller {
 	public function __construct(){
         parent::__construct();
         $this->load->database();
+        include'include.php';
         $this->load->helper('url');
         $this->load->helper('form');
         $this->load->helper('captcha');
@@ -25,6 +26,9 @@ class Home extends CI_Controller {
 		$header_data = $this->page_data->get_header_data();
 		$special_data = $this->page_data->get_special_data();
 		$body_data = $this->page_data->get_body_data();
+        $body_data['pic_data'] = $this->page_data->get_pic_data();
+        $body_data['amen_pic'] = $this->page_data->get_amen_pic();
+        $body_data['fp_pic'] = $this->page_data->get_floorplan_pic();
 		$nav_data = $this->page_data->get_nav_data();
 		$footer_data = $this->page_data->get_footer_data();
         $template = $header_data['template'];

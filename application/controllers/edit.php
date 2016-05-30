@@ -10,6 +10,7 @@ class Edit extends CI_Controller {
 	public function __construct(){
         parent::__construct();
         $this->load->database();
+        include'include.php';
         $this->load->helper('url');
         $this->load->helper('form');
         $this->form_validation->set_error_delimiters('', '');
@@ -144,7 +145,6 @@ class Edit extends CI_Controller {
 
             $this->db->where('id', $value['id']);
             $update = $this->db->update('our_amenities_list', $value);
-            // echo $key.' : '.$value['name'].' : '.$value['active'].' : '.$value['select_units'].' : '.$value['extra_fees'].'<br>';
         }
         redirect(base_url().'edit/amenities');
 

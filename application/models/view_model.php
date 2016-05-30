@@ -59,6 +59,15 @@ class View_model extends CI_Model{
         $data['property_color_1'] = $query[0]['property_color_1'];
         $data['property_color_2'] = $query[0]['property_color_2'];
         $data['property_color_3'] = $query[0]['property_color_3'];
+        $this->db->where('logo', 'Y');
+            $query = $this->db->get('pictures')->result_array();
+            if (count($query) > 0) {
+                $data['logo_id'] = $query[0]['id'];
+                $data['logo_name'] = $query[0]['name'];
+            }else{
+                $data['logo_id'] = 'N';
+                $data['logo_name'] = 'N';
+            }
         return $data;
         
     }
@@ -111,6 +120,10 @@ class View_model extends CI_Model{
             $data['property_color_1'] = $query[0]['property_color_1'];
             $data['property_color_2'] = $query[0]['property_color_2'];
             $data['property_color_3'] = $query[0]['property_color_3'];
+            $data['property_address'] = $query[0]['property_address'];
+            $data['property_city'] = $query[0]['property_city'];
+            $data['property_state'] = $query[0]['property_state'];
+            $data['property_zip'] = $query[0]['property_zip'];
 
             $this->db->where('logo', 'Y');
             $query = $this->db->get('pictures')->result_array();
@@ -175,6 +188,43 @@ class View_model extends CI_Model{
             return $data;
     } 
 
+    public function get_amen_pic()
+    {
+            $this->db->where('amenities_page_main_pic', 'Y');
+            $query = $this->db->get('pictures')->result_array();
+
+            if(count($query) < 1){
+                $this->db->where('pic_order', 1);
+                $query = $this->db->get('pictures')->result_array();
+                $data['amen_pic_id'] = $query[0]['id'];
+                $data['amen_pic_name'] = $query[0]['name'];
+            }else{
+                $data['amen_pic_id'] = $query[0]['id'];
+                $data['amen_pic_name'] = $query[0]['name'];
+            }
+            return $data;
+    }
+
+    public function get_floorplan_pic(){
+        $query = $this->db->get('floorplans')->result_array();$data['fp_pic_id'];
+
+        if(count($query) < 1){
+                $this->db->where('pic_order', 1);
+                $query = $this->db->get('pictures')->result_array();
+                $data['fp_pic_id'] = $query[0]['id'];
+                $data['fp_pic_name'] = $query[0]['name'];
+                $data['use_the_main_pic'] = 'Y';
+            }else{
+                $data['fp_pic_id'] = $query[0]['id'];
+                $data['fp_pic_name'] = $query[0]['floorplan_pic'];
+                $data['use_the_main_pic'] = 'N';
+            }
+
+
+
+        return $data;
+
+    }
 
     public function get_amenities_data()
     {       

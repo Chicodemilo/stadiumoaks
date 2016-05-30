@@ -14,7 +14,11 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://localhost/autumnwillow';
+
+// $this->load->model('new_site_model', 'new_site_model');
+// $new_user_id = $this->new_site_model->get_new_user_id($data['stripe_customer_id']);
+
+$config['base_url']	= '';
 
 $config['server_root'] = $_SERVER['DOCUMENT_ROOT'];
 

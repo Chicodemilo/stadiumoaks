@@ -1,6 +1,17 @@
 <?php 
 class Login extends CI_Controller
 {
+
+	public function __construct(){
+        parent::__construct();
+        $this->load->database();
+        include'include.php';
+        $this->load->helper('url');
+        $this->load->helper('form');
+        $this->load->helper('captcha');
+        $this->load->model('captcha_model');
+        $this->form_validation->set_error_delimiters('', '');        
+    }
 	
 	function index()
 	{	

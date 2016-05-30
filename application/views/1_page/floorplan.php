@@ -2,12 +2,19 @@
 
 <?php 
 	foreach ($floorplans as $value) {
-		echo "<div class='inner_floorplan_box'>
-				<div class='floorplan_pic'>
-					<img src='".base_url()."images/floorplans/".$value['id']."/".$value['floorplan_pic']."' alt='".$value['floorplan_pic']."'>
-				</div>
+				echo "<div class='inner_floorplan_box'>
+				<div class='floorplan_pic'>";
+
+		if($value['floorplan_pic'] != ""){
+			echo "<img src='".base_url()."images/floorplans/".$value['id']."/".$value['floorplan_pic']."' alt='".$value['floorplan_pic']."'>";
+		}else{
+			echo "";
+		}
+					
+		echo "</div>
 				<div class='floorplan_info'>
-					<table>";
+			 <table>";
+			 
 		if($value['name'] != ''){
 			echo 	"<tr>
 						<td colspan='3' class='floorplan_name'>".$value['name']."</td>

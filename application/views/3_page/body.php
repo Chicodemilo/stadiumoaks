@@ -5,6 +5,8 @@
 		<?php 
 			if($logo_name != 'N'){
 				echo "<img id='logo' src='".base_url()."images/logos/property/".$logo_name."' alt='".$logo_name."'>";
+			}else{
+				echo "<span class='no_logo_header' style='color:#".$property_color_2."'>".$property_name."</span>";
 			}
 		 ?>
 	</div>

@@ -1135,7 +1135,7 @@ class Edit_model extends CI_Model{
 											'type' => 'VARCHAR',
 											'constraint' => 1,
 											),
-							'get_pre_app' => array(
+							'get_pre_ap' => array(
 											'type' => 'VARCHAR',
 											'constraint' => 1,
 											),

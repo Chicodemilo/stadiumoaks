@@ -6,8 +6,11 @@ $(document).ready(function() {
     $('#contact_drop').mouseleave(function(event) {
         $('#contact_menu').fadeToggle('fast');
     });
+
      
  });
+
+
 
     var hide = 2;
     var left_position = -20;
@@ -86,4 +89,7 @@ $(document).ready(function() {
         source.onerror = "";
         return true;
     }
+
+
+
     

@@ -21,10 +21,10 @@
 					</td>
 
 					<td>
-						<input type="date" name="start" id="start">
+						<input type="text" name="start" class="date-picker" id="start">
 					</td>
 					<td>
-						<input type="date" name="end" id="end">
+						<input type="text" name="end" class="date-picker" id="end">
 					</td>
 			</table>
 			<table id="specials_box_lower">
@@ -112,7 +112,12 @@
 		</div>
 
 	</div>
-
+<script>
+	
+	var start_picker = new Pikaday({ field: document.getElementById('start') });
+	var end_picker = new Pikaday({ field: document.getElementById('end') });
+	
+</script>
 
 
 	</div>

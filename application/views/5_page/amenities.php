@@ -1,7 +1,15 @@
-<div class="center_box" style="background:#<?php echo $property_color_2 ?>">
+<div class="center_box">
 
 	<div id='amenities_big_box' class='amenities_big_box'>
 		<div class='inner_amenities_box'>
+
+			<?php 
+				if($property_amenities_text != ''){
+					echo "<div class='amenities_text'>
+							".$property_amenities_text."
+						</div>";
+				}
+			 ?>
 			<?php 
 				if(count($amenities) > 1){
 					echo "<div class='amenities_list'>";
@@ -31,17 +39,6 @@
 					echo "</div>";
 				}
 			 ?>
-
-			<?php 
-				if($property_amenities_text != ''){
-					echo "<div class='amenities_text'>
-							".$property_amenities_text."
-						</div>";
-				}
-			 ?>
-			<div class='amenities_pic'>
-				<img src='<?php echo base_url(); ?>images/pictures/<?php echo $pic_id; ?>/<?php echo $pic_name; ?>' alt='<?php echo $pic_name; ?>'>
-			</div>
 			<?php 
 				if($pet_type != ''){
 					echo "<div class='amenities_pet'>";
@@ -56,6 +53,10 @@
 					echo "</div>";
 				}
 			 ?>
+			 
+			<div class='amenities_pic'>
+				<img src='<?php echo base_url(); ?>images/pictures/<?php echo $pic_id; ?>/<?php echo $pic_name; ?>' alt='<?php echo $pic_name; ?>'>
+			</div>
 			 
 		</div>
 	</div>

@@ -26,11 +26,12 @@ class Home extends CI_Controller {
 		$header_data = $this->page_data->get_header_data();
 		$special_data = $this->page_data->get_special_data();
 		$body_data = $this->page_data->get_body_data();
-        $body_data['pic_data'] = $this->page_data->get_pic_data();
         $body_data['amen_pic'] = $this->page_data->get_amen_pic();
         $body_data['fp_pic'] = $this->page_data->get_floorplan_pic();
+        $body_data['pic_data'] = $this->page_data->get_pic_data();
 		$nav_data = $this->page_data->get_nav_data();
 		$footer_data = $this->page_data->get_footer_data();
+        $footer_data['pic_data'] = $this->page_data->get_pic_data();
         $template = $header_data['template'];
 
 		$this->load->view($template.'_page/header.php', $header_data);
@@ -52,6 +53,7 @@ class Home extends CI_Controller {
 		$pic_data = $this->page_data->get_pic_data();
 		$nav_data = $this->page_data->get_nav_data();
 		$footer_data = $this->page_data->get_footer_data();
+        $footer_data['pic_data'] = $this->page_data->get_pic_data();
         $template = $header_data['template'];
 
 		$this->load->view($template.'_page/header.php', $header_data);
@@ -73,6 +75,7 @@ class Home extends CI_Controller {
 		$amenities_data = $this->page_data->get_amenities_data();
 		$nav_data = $this->page_data->get_nav_data();
 		$footer_data = $this->page_data->get_footer_data();
+        $footer_data['pic_data'] = $this->page_data->get_pic_data();
         $template = $header_data['template'];
 
 		$this->load->view($template.'_page/header.php', $header_data);
@@ -92,6 +95,7 @@ class Home extends CI_Controller {
 		$floorplan_data = $this->page_data->get_floorplan_data();
 		$nav_data = $this->page_data->get_nav_data();
 		$footer_data = $this->page_data->get_footer_data();
+        $footer_data['pic_data'] = $this->page_data->get_pic_data();
         $template = $header_data['template'];
 
 		$this->load->view($template.'_page/header.php', $header_data);
@@ -111,6 +115,7 @@ class Home extends CI_Controller {
 			$hours_data = $this->page_data->get_hours_data();
 			$nav_data = $this->page_data->get_nav_data();
 			$footer_data = $this->page_data->get_footer_data();
+            $footer_data['pic_data'] = $this->page_data->get_pic_data();
             $template = $header_data['template'];
 
 
@@ -173,6 +178,7 @@ class Home extends CI_Controller {
 			$emergency_data = $this->page_data->get_emergency_data();
 			$nav_data = $this->page_data->get_nav_data();
 			$footer_data = $this->page_data->get_footer_data();
+            $footer_data['pic_data'] = $this->page_data->get_pic_data();
             $template = $header_data['template'];
 
 

@@ -1,5 +1,40 @@
 </div>
-<script type="text/javascript">
+
+
+<div class="background_slider">
+	 <div class="bss-slides">
+	 	<?php 
+				foreach ($pic_data[pictures] as $key => $value) {
+					echo "<figure>";
+					echo "<img src='".base_url()."images/pictures/".$value['id']."/".$value['name']."' alt='".$value['caption']."' width='100%''>";
+					echo "</figure>";
+				}
+				
+
+			?>
+	 </div>
+</div>
+
+
+<script>
+
+	$(document).ready(function() {
+		var opts = {
+            //auto-advancing slides? accepts boolean (true/false) or object
+            auto : { 
+                // speed to advance slides at. accepts number of milliseconds
+                speed : 14000, 
+                // pause advancing on mouseover? accepts boolean
+                pauseOnHover : false 
+            },
+            // show fullscreen toggle? accepts boolean
+            fullScreen : false, 
+            // support swiping on touch devices? accepts boolean, requires hammer.js
+            swipe : false 
+        };
+		makeBSS('.bss-slides', opts);
+	});
+	
 	$(document).ready(function() {
      var $social_box = $('#social_box');
      
@@ -8,6 +43,7 @@
 
 
 </script>
+
 <div class="social_box" id="social_box">
 	<?php 
 

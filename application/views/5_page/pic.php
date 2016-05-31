@@ -34,7 +34,7 @@
 			}
 	echo "</div>";
 ?>
-<div class="center_box" style="background:#<?php echo $property_color_2 ?>">
+<div class="center_box">
 	<?php 
 		if($property_pictures_text != ''){
 			echo "<div class='pic_main_text' id='pic_main_text'>

@@ -1,19 +1,11 @@
-<div class="center_box" style="background:#<?php echo $property_color_2 ?>">
+<div class="center_box">
 	<div id="floorplan_big_box" class="floorplan_big_box">
 
 	<?php 
 		foreach ($floorplans as $value) {
-					echo "<div class='inner_floorplan_box'>
-					<div class='floorplan_pic'>";
+			echo "<div class='inner_floorplan_box'>";
 
-			if($value['floorplan_pic'] != ""){
-				echo "<img src='".base_url()."images/floorplans/".$value['id']."/".$value['floorplan_pic']."' alt='".$value['floorplan_pic']."'>";
-			}else{
-				echo "";
-			}
-						
-			echo "</div>
-					<div class='floorplan_info'>
+			echo "<div class='floorplan_info'>
 				 <table>";
 				 
 			if($value['name'] != ''){
@@ -56,8 +48,20 @@
 								<td colspan='3' class='body_link'><a href='".base_url()."home/contact' class='body_link'>Contact Us About This Unit</a></td>
 							</tr>
 						</table>
-					</div>
-				</div>";
+					</div>";
+
+
+			echo "<div class='floorplan_pic'>";
+
+			if($value['floorplan_pic'] != ""){
+				echo "<img src='".base_url()."images/floorplans/".$value['id']."/".$value['floorplan_pic']."' alt='".$value['floorplan_pic']."'>";
+			}else{
+				echo "";
+			}
+						
+			echo "</div>";
+
+			echo "</div>";
 		}
 	 ?>
 	 <div class="mobile_floorplan_bottom">
@@ -66,3 +70,6 @@
 
 	</div>
 </div>
+
+
+</script>

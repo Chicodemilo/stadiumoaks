@@ -59,12 +59,12 @@
 	$(document).ready(function() {
      var $special_box = $('#special_box');
      
-     $special_box.delay(3500).animate({top: '+=560'}, 200).delay(7000).fadeTo('slow', .3).animate({right: '-=840'}, 200).promise().then(function() {
+     $special_box.delay(3500).animate({top: '+=365'}, 200).delay(7000).fadeTo('slow', .3).animate({left: '-=860'}, 200).promise().then(function() {
         $special_box.mouseenter(function() {
-            $special_box.fadeTo('fast', 1).animate({right: '+=740'}, 200);
+            $special_box.fadeTo('fast', 1).animate({left: '+=860'}, 200);
         });
         $special_box.mouseleave(function(){
-            $special_box.fadeTo('fast', .3).animate({right: '-=740'}, 200);
+            $special_box.fadeTo('fast', .3).animate({left: '-=860'}, 200);
         });
     });
 });

@@ -10,7 +10,7 @@
 					echo "<tr>";
 					echo "<td width='15%'><input type='radio' name='template' value='".$value['id']."'> ".$value['name']."</td>";
 					echo "<td>".$value['description']."</td>";
-					echo "<td><img src='".base_url()."images/templates/".$value['id']."_template.jpg' width='400px'></td>";
+					echo "<td><img src='".base_url()."templates/".$value['id']."_template.jpg' width='400px'></td>";
 					echo "</tr>";
 				}
 			 ?>

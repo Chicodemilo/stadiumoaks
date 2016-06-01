@@ -37,7 +37,7 @@ hr {border: 0;
 .center_light    {text-align: center;
                     font-size: .7em;}
 
-.bold   {font-weight: bolder}
+.bold   {font-weight: bolder;}
 
 .smaller    {font-size: .7em;}
 
@@ -623,44 +623,45 @@ footer {padding: 3px;
             background-color:rgba(255,255,255,  .7);
             color:black;
             font-family: 'Oswald', Arial, sans-serif;
-            font-size: 1.4em }
+            font-size: 1.4em; }
 
 
 /********************************   SPECIAL   ***************************/
 
 .special_box    {z-index: 3;
-                height: 115px;
-                width: 430px;
+                height: 200px;
+                width: 440px;
                 box-shadow: 1px 1px 6px #888888;
                 background-color: rgba(255,255,255, .7); 
                 position: fixed;
                 display: block;
                 font-family: 'Oswald', sans-serif;
                 padding: 5px;
-                color:#8B7355;
-                top:-110px;
+                color:#33291E;
+                top:-250px;
                 left:100px;}
 
 .special_title   {z-index: 8;
                 font-family: 'Oswald', sans-serif;
-                font-size: 1.9em;
-                height: 40px;
-                max-width: 410px;
+                font-size: 3em;
+                height: 70px;
+                width: 430px;
                 margin-right: 10px;
                 float: left;
                 overflow: hidden;}
 
 .special_description   {z-index: 8;
-                        height: 40px;
-                        min-width: 410px;
-                        font-size: 1.1em;
+                        height: 80px;
+                        width: 430px;
+                        font-size: 1.4em;
                         overflow: hidden;
                         line-height: 1.1em;}
 
                 
 .special_conditions   {z-index: 8;
-                        min-width: 250px;
-                        font-size: .65em;
+                        width: 430px;
+                        height:45px;
+                        font-size: .8em;
                         overflow: hidden;
                         color:black;
                         border-top: 1px dotted gray;}

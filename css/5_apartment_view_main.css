@@ -324,10 +324,11 @@ footer {padding: 0px;
             cursor:pointer;
             }
 
-#logo           {
+#logo           {padding:10px;
+                background: rgba(255, 255, 255, .4);
                 display: block;
                 margin: auto;
-                width:100%;}
+                width:95%;}
 
 
 .outer_description  {
@@ -909,7 +910,7 @@ footer {padding: 0px;
 
 .special_description   {z-index: 8;
                         height: 130px;
-                        width: 600px;
+                        width: 500px;
                         float:right;
                         font-size: 1.7em;
                         text-align:right;
@@ -918,17 +919,17 @@ footer {padding: 0px;
 
                 
 .special_conditions   {z-index: 8;
-                        min-width: 250px;
+                        width: 800px;
                         font-size: .8em;
                         overflow: hidden;
-                        margin-right:60px;
                         color:black;
                         text-align:right;}
 
 
 .special_burst  {position:relative;
-                top:-235px;
-                right:-130px;
+                top:-265px;
+                right:-720px;
+                width:150px;
                 opacity:.6;
                 z-index:-1;}
 

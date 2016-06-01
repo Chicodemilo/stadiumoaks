@@ -20,7 +20,7 @@
 	$(document).ready(function() {
      var $special_box = $('#special_box');
      var $show_spec = $('#show_spec');
-     $special_box.delay(1500).animate({top: '+=150'}, 300).delay(8000).fadeTo('slow', 0).promise().then(function() {
+     $special_box.delay(1500).animate({top: '+=290'}, 300).delay(8000).fadeTo('slow', 0).promise().then(function() {
      	$('#show_spec').fadeTo('fast', 1).promise().then(function(){
 	     		$show_spec.mouseenter(function() {
 		        	$('#show_spec').toggleClass('show_spec_over', 500);

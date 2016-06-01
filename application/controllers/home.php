@@ -35,7 +35,7 @@ class Home extends CI_Controller {
         $template = $header_data['template'];
 
 		$this->load->view($template.'_page/header.php', $header_data);
-        $this->load->view('google_analytics.php');
+        // $this->load->view('google_analytics.php');
 		$this->load->view($template.'_page/background.php', $background_data);
 		if($special_data != 'N'){$this->load->view($template.'_page/special.php', $special_data);};
 		$this->load->view($template.'_page/body.php', $body_data);
@@ -57,7 +57,7 @@ class Home extends CI_Controller {
         $template = $header_data['template'];
 
 		$this->load->view($template.'_page/header.php', $header_data);
-        $this->load->view('google_analytics.php');
+        // $this->load->view('google_analytics.php');
 		$this->load->view($template.'_page/background.php', $background_data);
 		$this->load->view($template.'_page/pic.php', $pic_data);
 		$this->load->view($template.'_page/nav_bar.php', $nav_data);
@@ -79,7 +79,7 @@ class Home extends CI_Controller {
         $template = $header_data['template'];
 
 		$this->load->view($template.'_page/header.php', $header_data);
-        $this->load->view('google_analytics.php');
+        // $this->load->view('google_analytics.php');
 		$this->load->view($template.'_page/background.php', $background_data);
 		$this->load->view($template.'_page/amenities.php', $amenities_data);
 		$this->load->view($template.'_page/nav_bar.php', $nav_data);
@@ -99,7 +99,7 @@ class Home extends CI_Controller {
         $template = $header_data['template'];
 
 		$this->load->view($template.'_page/header.php', $header_data);
-        $this->load->view('google_analytics.php');
+        // $this->load->view('google_analytics.php');
 		$this->load->view($template.'_page/background.php', $background_data);
 		$this->load->view($template.'_page/floorplan.php', $floorplan_data);
 		$this->load->view($template.'_page/nav_bar.php', $nav_data);
@@ -132,7 +132,7 @@ class Home extends CI_Controller {
                 $data['hours'] = $hours_data;
                 $data['main'] = $nav_data;
                 $this->load->view($template.'_page/header.php', $header_data);
-                $this->load->view('google_analytics.php');
+                // $this->load->view('google_analytics.php');
                 $this->load->view($template.'_page/background.php', $background_data);
                 $this->load->view($template.'_email/message.php', $data);
                 $this->load->view($template.'_page/nav_bar.php', $nav_data);
@@ -160,7 +160,7 @@ class Home extends CI_Controller {
                     
                     if ($sent == true){
                         $this->load->view($template.'_page/header.php', $header_data);
-                        $this->load->view('google_analytics.php');
+                        // $this->load->view('google_analytics.php');
 		                $this->load->view($template.'_page/background.php', $background_data);
                         $this->load->view($template.'_email/sucess.php');
                         $this->load->view($template.'_page/nav_bar.php', $nav_data);
@@ -195,7 +195,7 @@ class Home extends CI_Controller {
                 $data['image'] = $this->captcha_model->create_image();
                 $data['property_emergency_phone'] = $emergency_data;
                 $this->load->view($template.'_page/header.php', $header_data);
-                $this->load->view('google_analytics.php');
+                // $this->load->view('google_analytics.php');
                 $this->load->view($template.'_page/background.php', $background_data);
                 $this->load->view($template.'_email/message_maint.php', $data);
                 $this->load->view($template.'_page/nav_bar.php', $nav_data);
@@ -225,7 +225,7 @@ class Home extends CI_Controller {
                     
                     if ($sent == true){
                         $this->load->view($template.'_page/header.php', $header_data);
-                        $this->load->view('google_analytics.php');
+                        // $this->load->view('google_analytics.php');
 		                $this->load->view($template.'_page/background.php', $background_data);
                         $this->load->view($template.'_email/sucess.php');
                         $this->load->view($template.'_page/nav_bar.php', $nav_data);

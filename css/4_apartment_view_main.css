@@ -1,5 +1,7 @@
 /******************************** BODY AND UNIVERSAL  ***************************/
 
+/** TEXTASTIC TEST **/
+
 body {font-family: arial;
     margin: 0px;}
 
@@ -124,6 +126,7 @@ a {text-decoration: none;
                         position: fixed;
                         top:5px;
                         right: 5px;}
+                        
 .big_phone  {font-family: 'Oswald', sans-serif;
             position:absolute;
             top:-90px;

@@ -10,11 +10,6 @@ body {font-family: arial;
 textarea {resize: none;}
 
 .shadow{box-shadow: 5px 5px 5px #dddddd;}
-/** LOCAL CHANGE ON COMPUTER 3**/
-
-/** CODE ANYWHERE CHANGE IN BROWSER **/
-
-/** CODEANYWHERRE change on Ipad**/
             
 hr {border: 0;
     height: 1px;
@@ -86,7 +81,6 @@ a {text-decoration: none;
             
 #nav_bar    {
             background-color: rgb(61, 89, 171);
-  			/** Another Test On App **/
             margin-left: 0px;
             position: fixed;
             top: 0px;

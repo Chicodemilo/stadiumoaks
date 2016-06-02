@@ -350,13 +350,11 @@ footer {padding: 0px;
     height: 600px;
 }
 
-#slider .slide img{
-    vertical-align: middle;
-    width:1100px;
-    position: relative;
-    top: 60%;
-    transform: translateY(-60%);
-}
+#slider .slide img {vertical-align: middle;
+                    width:1100px;
+                    position: relative;
+                    top: 60%;
+                    transform: translateY(-60%);}
 
 .outer_description  {
                     width: 100%;
@@ -395,13 +393,11 @@ footer {padding: 0px;
     text-shadow: 2px 2px 5px white;
 }
 
-.main_page_links{
-    width:100%;
-    height:300px;
-    padding-top: 20px;
-    position:relative;
-    top:-100px;
-}
+.main_page_links {width:100%;
+                height:300px;
+                padding-top: 20px;
+                position:relative;
+                top:-100px;}
 
 .main_page_amen, .main_page_pics, .main_page_floorplans{
     display:inline-block;

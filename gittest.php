@@ -7,5 +7,8 @@ echo "Git Test";
 echo "TEST";
 
 echo "TEST 2";
+
+$i = 42;
+
  ?>
 

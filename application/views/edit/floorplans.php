@@ -133,6 +133,10 @@
 		</div>
 </div>
 
+<div class="bottom_room">
+	&nbsp;
+</div>
+
 
 
 

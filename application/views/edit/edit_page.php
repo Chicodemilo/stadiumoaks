@@ -117,7 +117,7 @@
 			</tr>
 		</table>
 	</form>
-<div class"bottom_room">
+<div class="bottom_room">
 	&nbsp;
 </div>
 

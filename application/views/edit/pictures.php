@@ -54,3 +54,7 @@ foreach ($man_logo as $key => $value) {
 		
 	</tr>
 </table>
+
+<div class="bottom_room">
+	&nbsp;
+</div>

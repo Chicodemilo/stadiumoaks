@@ -31,3 +31,8 @@
 			$("input[name=template][value=" + value + "]").prop('checked', true);
 		});
 	</script>
+
+
+<div class="bottom_room">
+	&nbsp;
+</div>

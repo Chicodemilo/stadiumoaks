@@ -41,7 +41,7 @@ hr {border: 0;
 .wrapper    {position: relative;
             top: 50px;
             margin: auto;
-            width: 90%;
+            width: 99%;
             min-width: 900px;
             margin-bottom: 60px;}
 
@@ -66,6 +66,8 @@ hr {border: 0;
         margin: 20px;
         box-shadow: 5px 5px 5px #dddddd;
         width: 96%;}
+
+.bottom_room    {height:100px;}
 
 /******************************** LINKS AND INPUT ***************************/
 a {text-decoration: none;}

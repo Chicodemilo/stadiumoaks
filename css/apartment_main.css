@@ -232,8 +232,8 @@ select{
 
 
 #nav_bar_clear    {
-            background-color: none;
-            margin-left: 0px;
+            background-col	or: none;
+            margin-left: 0px; 
             position: fixed;
             top: 0px;
             border: none;
@@ -244,7 +244,7 @@ select{
             list-style-type: none; display: inline;
             }
 
-#nav_bar_clear table {margin-left: 30px;
+#nav_bar_clear table {margin-left: 0px;
                 color: rgba(255, 255, 255, 0.9);}
 
 #nav_bar_clear a.not_fancy:link  {text-decoration: none; 

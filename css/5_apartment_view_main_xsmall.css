@@ -318,7 +318,7 @@ footer {display:none;}
             display:block;
             width:100%;
             text-align: left;
-            background: rgba(0, 0, 0, .2);
+            background: rgba(0, 0, 0, .4);
             border-bottom:1px dashed #EBEBEB;
             padding:5px;
             padding-left:30px;
@@ -340,7 +340,7 @@ footer {display:none;}
                     margin: auto;
                     position:relative;
                     padding-bottom:10px;
-                    background:rgba(0, 0, 0, .2);
+                    background:rgba(0, 0, 0, .4);
                     border-bottom:1px dashed #EBEBEB;
                     border-top:1px dashed #EBEBEB;
                     top:170px;}
@@ -362,7 +362,7 @@ footer {display:none;}
 
 .description    {font-size: 1.2em;
                 font-family: 'Roboto Slab', cursive;
-                text-shadow:1px 1px 15px #000000;
+                text-shadow:none;
                 position:relative;
                 top:20px;
                 margin:auto;
@@ -383,7 +383,7 @@ footer {display:none;}
     letter-spacing:.05em;
     line-height: 1.2em;
     align-content: left;
-    text-shadow: 3px 3px 9px #000000;
+    text-shadow: none;
 }
 
 .no_logo_header_small_phone {
@@ -392,7 +392,7 @@ footer {display:none;}
     letter-spacing:.05em;
     line-height: 1.2em;
     align-content: left;
-    text-shadow: 3px 3px 9px #000000;
+    text-shadow: none;
 }
 
 .main_page_links{

@@ -628,7 +628,7 @@ footer {padding: 3px;
 
 /********************************   SPECIAL   ***************************/
 
-.special_box    {z-index: 3;
+.special_box    {z-index: 50;
                 height: 200px;
                 width: 440px;
                 box-shadow: 1px 1px 6px #888888;

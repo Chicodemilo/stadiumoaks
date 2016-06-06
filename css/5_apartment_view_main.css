@@ -884,7 +884,7 @@ footer {padding: 0px;
 
 .special_box    {z-index: 10;
                 height: 300px;
-                width: 900px;
+                width: 570px;
                 box-shadow: 7px 7px 30px #000000;
                 background-color: rgba(255,255,255, .9); 
                 position: fixed;
@@ -904,35 +904,35 @@ footer {padding: 0px;
 
 .special_title   {z-index: 8;
                 font-family: 'Bitter', sans-serif;
-                font-size: 3.3em;
-                width: 700px;
+                font-size: 2.4em;
+                width: 470px;
                 text-align:right;
-                margin-top:20px;
-                margin-bottom: 20px;
+                margin-top:15px;
+                margin-bottom: 15px;
                 float: right;
                 overflow: hidden;}
 
 .special_description   {z-index: 8;
                         height: 130px;
-                        width: 500px;
+                        width: 470px;
                         float:right;
-                        font-size: 1.7em;
+                        font-size: 1.4em;
                         text-align:right;
                         overflow: hidden;
                         line-height: 1.1em;}
 
                 
 .special_conditions   {z-index: 8;
-                        width: 800px;
-                        font-size: .8em;
+                        width: 470px;
+                        font-size: .7em;
                         overflow: hidden;
                         color:black;
                         text-align:right;}
 
 
 .special_burst  {position:relative;
-                top:-265px;
-                right:-720px;
+                top:-245px;
+                right:-400px;
                 width:150px;
                 opacity:.6;
                 z-index:-1;}

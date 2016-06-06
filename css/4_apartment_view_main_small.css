@@ -914,7 +914,7 @@ footer {padding: 0px;
 
 .special_title   {z-index: 8;
                 font-family: 'Dancing Script', sans-serif;
-                font-size: 2.2em;
+                font-size: 1.8em;
                 width: 300px;
                 margin-right: 10px;
                 margin-top:10px;
@@ -925,9 +925,9 @@ footer {padding: 0px;
                         height: 100px;
                         margin-top:10px;
                         width: 300px;
-                        font-size: 1.3em;
+                        font-size: 1em;
                         overflow: hidden;
-                        line-height: 1.3em;}
+                        line-height: 1.2em;}
 
                 
 .special_conditions   {z-index: 8;

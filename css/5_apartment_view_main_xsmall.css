@@ -318,10 +318,10 @@ footer {display:none;}
             display:block;
             width:100%;
             text-align: left;
-            background: rgba(0, 0, 0, .4);
+            background: rgba(0, 0, 0, .6);
             border-bottom:1px dashed #EBEBEB;
             padding:5px;
-            padding-left:30px;
+            padding-left:35px;
             z-index: 3;}
 
 .logo_box_mobile a {cursor:pointer;}
@@ -340,10 +340,10 @@ footer {display:none;}
                     margin: auto;
                     position:relative;
                     padding-bottom:10px;
-                    background:rgba(0, 0, 0, .4);
+                    background:rgba(0, 0, 0, .6);
                     border-bottom:1px dashed #EBEBEB;
                     border-top:1px dashed #EBEBEB;
-                    top:170px;}
+                    top:190px;}
 
 .inner_description  {text-align: center;
                     width: 100%;
@@ -379,7 +379,7 @@ footer {display:none;}
 
 .no_logo_header_small {
     font-family: 'Roboto Slab', sans-serif;
-    font-size: 1.2em;
+    font-size: 1.3em;
     letter-spacing:.05em;
     line-height: 1.2em;
     align-content: left;

@@ -67,7 +67,7 @@
               <input type="hidden" name="system_date">
               <table id="contact_table">
                   <tr><td class="righter_width">First Name</td><td>
-                      <input type="text" maxlength="20" id="first_name" size="45" name="first_name" 
+                      <input type="text" maxlength="20" id="first_name" size="45" autofocus name="first_name" 
                              placeholder="<?php if (form_error('first_name') != ''){echo form_error('first_name');}else{echo '';}?>"
                              value="<?php if (set_value('first_name') != ''){echo set_value('first_name');}else{echo '';}?>"
                              /></td></tr>

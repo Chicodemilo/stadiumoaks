@@ -1,6 +1,14 @@
 <!-- TEST -->
-
 <div id="nav_bar">
+    <div class="mobile_hamburger" id="mobile_hamburger">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+         width="25px" height="25px" viewBox="0 0 25 25" enable-background="new 0 0 25 25" xml:space="preserve">
+        <rect x="0.419" y="0.706" fill="#<?php echo $property_color_2; ?>" width="24.12" height="5.486"/>
+        <rect x="0.419" y="9.874" fill="#<?php echo $property_color_2; ?>" width="24.12" height="5.487"/>
+        <rect x="0.419" y="19.041" fill="#<?php echo $property_color_2; ?>" width="24.12" height="5.486"/>
+        </svg>
+    </div>
+
     <div id="nav_bar_inner">
         
         <div class="logo_box">
@@ -265,6 +273,28 @@
 
 
     </div>
+    <div class="logo_box_mobile">
+            <a href="<?php echo base_url() ?>home/">
+                
+
+                
+                    <?php 
+                        echo "<span class='no_logo_header_small' style='color:#".$property_color_2."'>";
+                        echo $property_name;
+                        echo "</span>";
+                    ?>
+                </span>
+                </a>
+                <br>
+                <?php 
+                    echo "<span class='no_logo_header_small_phone' style='color:#".$property_color_1."'>";
+                    echo $property_phone;
+                    echo "</span>";
+                ?>
+
+
+    </div>
+
     <div class="nav_bar_links_button" id="nav_bar_links_button">
             <svg version="1.1" id="nav_bar_links_svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                  width="55px" height="55px" viewBox="0 0 35 35" enable-background="new 0 0 35 35" xml:space="preserve">
@@ -318,12 +348,12 @@
 
 <script type="text/javascript" >
     $(document).ready(function() {
-        $('#nav_bar_links_button').click(function(event) {
-            $('#nav_bar_links_mobile').animate({top: '+=330'}, 300);
+        $('#mobile_hamburger').click(function(event) {
+            $('#nav_bar_links_mobile').animate({right: '+=280'}, 300);
         });
 
         $('#mobile_x').click(function(){
-            $('#nav_bar_links_mobile').animate({top: '-=330'}, 150);
+            $('#nav_bar_links_mobile').animate({right: '-=280'}, 150);
         });
     });
 </script>

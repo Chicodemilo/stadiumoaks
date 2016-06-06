@@ -16,7 +16,7 @@
    
     <link rel='stylesheet' media='only screen and (min-width: 1079px)' href='<?php echo base_url();?>css/<?php echo $template ?>_apartment_view_main.css' />
     <link rel='stylesheet' media='only screen and (max-width: 1078px)' href='<?php echo base_url();?>css/<?php echo $template ?>_apartment_view_main_small.css' />
-    <link rel='stylesheet' media='only screen and (max-width: 730px)' href='<?php echo base_url();?>css/<?php echo $template ?>_apartment_view_main_xsmall.css' />
+    <link rel='stylesheet' media='only screen and (max-width: 766px)' href='<?php echo base_url();?>css/<?php echo $template ?>_apartment_view_main_xsmall.css' />
     <link rel='stylesheet' href='<?php echo base_url();?>slide/css/simple-slideshow-styles.css' />
 
     

@@ -75,7 +75,8 @@ a {text-decoration: none;
 
 
 /******************************** NAVBAR  ***************************/
-            
+.mobile_hamburger{display:none;}
+
 #nav_bar    {
             margin-left: 0px;
             position: fixed;
@@ -320,9 +321,9 @@ footer {padding: 0px;
             text-align: center;
             z-index: 3;}
 
-.logo_box a {
-            cursor:pointer;
-            }
+.logo_box_mobile {display:none;}
+
+.logo_box a {cursor:pointer;}
 
 #logo           {padding:10px;
                 background: rgba(255, 255, 255, .4);
@@ -341,19 +342,19 @@ footer {padding: 0px;
                     }
 
 .inner_description  {text-align: left;
-                    width: 80%;
+                    width: 100%;
                     margin: auto;
-                    margin-left:250px;
+                    margin-left:90px;
                     color:white;
                     }
 
 .slogan {font-family: 'Bitter', cursive;
         letter-spacing: .05em;
-        font-size: 3.5vw;
+        font-size: 3.7vw;
         line-height: 92%;
         text-shadow:3px 3px 9px #000000;}
 
-.description    {font-size: 1.4em;
+.description    {font-size: 1.5em;
                 font-family: 'Roboto Slab', cursive;
                 text-shadow:1px 1px 15px #000000;
                 line-height: 94%;
@@ -541,14 +542,13 @@ footer {padding: 0px;
 
 .pic_main_text  {text-align: center;
                 box-shadow: 3px 3px 10px #000;
-                background-color: rgba(255,255,255, .5);
+                background-color: rgba(255,255,255, .8);
                 margin: auto;
                 padding: 15px;
                 margin-left:415px;
                 margin-right:260px;
                 margin-top:90px;
-                font-size: 1.1em;
-                letter-spacing: .05em;
+                font-size: .9em;
                 color: #575757;
                 font-family: 'Roboto Slab', Arial, sans-serif;}
 
@@ -732,13 +732,17 @@ footer {padding: 0px;
                 color:black;
                 margin-top: 20px;
                 margin-bottom: 20px;
+                text-align: center;
                 font-family: 'Yesteryear', cursive;
                 font-size: 1.8em; }
 
-.amenities_pet_small    {font-size: .7em;
+.amenities_pet_small    {font-size: .6em;
+                        display:block;
+                        text-align:left;
                         font-family: 'Roboto Slab', Arial, sans-serif;}
 
 .amenities_pet_xsmall   {font-size: .6em;
+                        text-align:left;
                         font-family: 'Roboto Slab', Arial, sans-serif;}
 
 .amenities_list {width: 90%;

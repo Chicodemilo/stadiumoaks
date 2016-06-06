@@ -67,7 +67,7 @@
               <input type="hidden" name="system_date">
               <table id="contact_table">
                   <tr><td class="righter_width">First Name</td><td>
-                      <input type="text" maxlength="20" id="first_name" size="30" name="first_name" 
+                      <input type="text" maxlength="20" id="first_name" size="30" autofocus name="first_name" 
                              placeholder="<?php if (form_error('first_name') != ''){echo form_error('first_name');}else{echo '';}?>"
                              value="<?php if (set_value('first_name') != ''){echo set_value('first_name');}else{echo '';}?>"
                              /></td></tr>
@@ -125,7 +125,7 @@
       ?>
       </ul>
       <hr>
-      <p class='body_link'><a href="<?php echo base_url();?>home/contact_maint">Click Here to Send a Maintenance Request</a></p>
+      <p class='body_link_small'><a href="<?php echo base_url();?>home/contact_maint">Click Here to Send a Maintenance Request</a></p>
   </div>
   <div class="below_hours"></div>
   </div>

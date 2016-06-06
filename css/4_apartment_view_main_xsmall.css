@@ -809,7 +809,9 @@ footer {padding: 0px;
                     overflow: auto;
                     font-family: 'Oswald', Arial, sans-serif;
                     font-size: 1.1em;;
-                    color:black; }
+                    color:black; 
+                    position:relative;
+                    top:15px; }
 
 .contact_box_form input {
                         border:none;
@@ -870,7 +872,7 @@ footer {padding: 0px;
             width: 80%;
             margin:auto;
             position:relative;
-            top:520px;}
+            top:530px;}
 
 .address_box {padding: 5px;
             padding-left: 15px;
@@ -886,7 +888,7 @@ footer {padding: 0px;
             font-size: 1.1em;
             margin-bottom: 15px;
             position:relative;
-            top:520px;}
+            top:535px;}
 
 .map-box    {width: 100%; 
              margin:auto;}

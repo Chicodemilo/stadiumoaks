@@ -56,8 +56,10 @@
 		         ?>
 		    </div>	        
         </div>
-        <div class="social_box">
         	<?php 
+	        	if($property_facebook != 'N' || $property_twitter != 'N' || $property_instagram != 'N' || $property_google_plus != 'N'){
+        			echo "<div class='social_box'>";
+        		}
 
 		        if ($property_facebook != 'N') {
 		        			$property_facebook = prep_url($property_facebook);
@@ -151,8 +153,12 @@
 									';
 							echo "</a>";
 							}
+
+					if($property_facebook != 'N' || $property_twitter != 'N' || $property_instagram != 'N' || $property_google_plus != 'N'){
+        			echo "</div>";
+        		}
 		         ?>
-        </div>
+        
 </footer>
 </body>
 </html>

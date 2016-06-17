@@ -295,18 +295,6 @@ footer {padding: 0px;
 
 #background_image img   {width: 100%;}
 
-.background_fade    {display:none;}
-
-.background_gradient    {width: 100%;
-                        margin: auto;
-                        height: 120px;
-                        z-index: 0;
-                        position: relative;
-                        top: -119px;
-                        background: -webkit-linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1)); /* For Safari 5.1 to 6.0 */
-                        background: -o-linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1)); /* For Opera 11.1 to 12.0 */
-                        background: -moz-linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1)); /* For Firefox 3.6 to 15 */
-                        background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1)); /* Standard syntax (must be last) */}
 
 /********************************   BODY   ***************************/
 
@@ -337,28 +325,27 @@ footer {padding: 0px;
                     padding: 0px;
                     margin: 0px;
                     position:fixed;
-                    bottom:40px;
+                    bottom:20px;
                     z-index: 1;
                     }
 
 .inner_description  {text-align: left;
-                    width: 100%;
+                    width: 90%;
                     margin: auto;
                     margin-left:90px;
                     color:white;
                     }
 
-.slogan {font-family: 'Bitter', cursive;
+.slogan {font-family: 'Bitter', Arial, sans-serif;
+        position:relative;
+        top:30px;
         letter-spacing: .05em;
         font-size: 3.7vw;
-        line-height: 92%;
         text-shadow:3px 3px 9px #000000;}
 
 .description    {font-size: 1.5em;
-                font-family: 'Roboto Slab', cursive;
+                font-family: 'Roboto Slab', serif;
                 text-shadow:1px 1px 15px #000000;
-                line-height: 94%;
-                width:90%;
                 letter-spacing: .05em;}
 
 .no_logo_header {
@@ -512,13 +499,13 @@ footer {padding: 0px;
 
 .background_slider{width: 105%;
                     display: block;
-                    background-color:#D6DECF;
+                    background-color:white;
                     position: fixed;
                     left:-59px;
                     padding:0px;
                     top: 0px;
                     margin: auto;
-                    height: 1000vh;
+                    height: 1000px;
                     z-index: -2;}
 
 .bss-slides {position:relative;
@@ -536,7 +523,7 @@ footer {padding: 0px;
                 background-color: rgba(255,255,255, .5);
                 margin: auto;
                 padding: 15px;
-                margin-left:415px;
+                margin-left:425px;
                 margin-right:260px;}
 
 
@@ -545,7 +532,7 @@ footer {padding: 0px;
                 background-color: rgba(255,255,255, .8);
                 margin: auto;
                 padding: 15px;
-                margin-left:415px;
+                margin-left:425px;
                 margin-right:260px;
                 margin-top:90px;
                 font-size: .9em;
@@ -774,7 +761,7 @@ footer {padding: 0px;
                 background-color: rgba(255,255,255, .5);
                 margin: auto;
                 margin-top:70px;
-                margin-left:415px;
+                margin-left:425px;
                 margin-right:260px;}
 
 .contact_box_mobile {visibility: hidden;

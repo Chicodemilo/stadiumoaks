@@ -37,7 +37,7 @@ hr {border: 0;
 .center_light    {text-align: center;
                     font-size: .7em;}
 
-.bold   {font-weight: bolder}
+.bold   {font-weight: bolder;}
 
 .smaller    {font-size: .7em;}
 
@@ -119,7 +119,7 @@ a {text-decoration: none;
 
 .name   {font-family: 'Julius Sans One', sans-serif;
         letter-spacing: .01em;
-        font-size: 1.3  em;
+        font-size: 1.3em;
         line-height: 90%;}
 
 .nav_bar_links_button   {z-index: 8;
@@ -309,14 +309,13 @@ footer {padding: 3px;
         margin: auto;
         width: 95%;
         padding-top: 20px;
-        padding-bottom: 20px;
         text-shadow: 2px 2px 8px #000;}
 
 .description    {margin-left: auto;
                 text-align: center;
                 margin-right: 0;
-                width: 47%;
-                padding-right: 15px;
+                width: 43%;
+                padding-right: 40px;
                 font-family: 'Oswald', sans-serif;
                 font-size: 1.7vw;
                 letter-spacing: .05em;}

@@ -32,13 +32,13 @@
     .mobile_x polygon {transition: 0.5s;}
     .mobile_x:hover polygon {fill:#FC6060;}
     
-    .nav_bar_links span a {transition: .8s;}
-    .nav_bar_links span a:hover {background-color: #F0F8FF;}
+    .nav_bar_links span a {transition: .25s;}
+    .nav_bar_links span a:hover {background-color: #D5DFF3;}
 
-    #name_text p a {transition: .8s;}
+    #name_text p a {transition: .25s;}
     #name_text p a:link {color: #<?php echo $property_color_2; ?>;}
     #name_text p a:visited {color: #<?php echo $property_color_2; ?>;}
-    #name_text p a:hover {background-color: #F0F8FF;}
+    #name_text p a:hover {background-color: #D5DFF3;}
     #name_text p a:active {color:#BDBDBD; }
 
     #footer_info_left a:link {color: #<?php echo $property_color_3; ?>;}

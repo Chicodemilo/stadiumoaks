@@ -44,8 +44,10 @@
 
 </script>
 
-<div class="social_box" id="social_box">
 	<?php 
+		if($property_facebook != 'N' || $property_twitter != 'N' || $property_instagram != 'N' || $property_google_plus != 'N'){
+        	echo "<div class='social_box' id='social_box'>";
+        }
 
         if ($property_facebook != 'N') {
         			$property_facebook = prep_url($property_facebook);
@@ -150,8 +152,12 @@
 
 					echo "</a>";
 					}
+
+					if($property_facebook != 'N' || $property_twitter != 'N' || $property_instagram != 'N' || $property_google_plus != 'N'){
+			        	echo "</div>";
+			        }
          ?>
-</div>
+
 
 
 <footer>
@@ -179,10 +185,10 @@
 			</svg>
         </div>
         	<div class="footer_address_box">
-		        <?php echo "<span class='footer_address'>".$property_name; ?><br>
-		        <?php echo $property_phone; ?>&nbsp; &nbsp; 
-		        <?php echo $property_address; ?>
-		        <?php echo $property_city.", ".$property_state." ".$property_zip."</span>"; ?>
+		        <?php echo "<span class='footer_address_noshow'>".$property_name."</span>"; ?><br>
+		        <?php echo "<span class='footer_address_noshow'>".$property_phone."</span>"; ?>&nbsp; &nbsp; 
+		        <?php echo "<span class='footer_address'>".$property_address."</span>"; ?>
+		        <?php echo "<span class='footer_address'>".$property_city.", ".$property_state." ".$property_zip."</span>"; ?>
 	        </div>
         </div>
       

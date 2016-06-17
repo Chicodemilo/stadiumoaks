@@ -317,14 +317,13 @@ footer {padding: 3px;
         margin: auto;
         width: 95%;
         padding-top: 20px;
-        padding-bottom: 20px;
         text-shadow: 2px 2px 8px #000;}
 
 .description    {margin-left: auto;
                 text-align: center;
                 margin-right: 0;
-                width: 47%;
-                padding-right: 15px;
+                width: 43%;
+                padding-right: 40px;
                 color: white;
                 font-family: 'Oswald', sans-serif;
                 font-size: 1.7vw;

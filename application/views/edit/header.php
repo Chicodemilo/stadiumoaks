@@ -13,8 +13,10 @@
     <link href="<?php echo base_url();?>css/redmond/jquery-ui-1.10.4.custom.css" rel="stylesheet">
     <script src="<?php echo base_url();?>javascript/jquery-1.10.2.js"></script>
     <script type="text/javascript" src="<?php echo base_url();?>javascript/apartment_javascript.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>javascript/spectrum.js"></script>
     <link type="text/css" rel="stylesheet" href="<?php echo base_url();?>css/apartment_main.css">
     <link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>css/pikaday.css">
+    <link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>css/spectrum.css">
     <script src="<?php echo base_url() ?>javascript/moment.js"></script>
     <script src="<?php echo base_url() ?>javascript/pikaday.js"></script>
     <script>

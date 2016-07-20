@@ -1,7 +1,9 @@
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCn87Zc_6XoEGDPiAZM9WBofRLNaNOX6bU&callback=initMap"
+    type="text/javascript"></script>
+
 <script>
         
-        function initialize() {
+        function initMap() {
           var geocoder = new google.maps.Geocoder();
 
           var address = "<?php echo $main['property_address'] ?>"+" "+"<?php echo $main['property_city'] ?>"+" "+"<?php echo $main['property_state'] ?>";
@@ -49,8 +51,8 @@
             });
         }
 
-        google.maps.event.addDomListener(window, 'load', initialize);
-        google.maps.event.addDomListener(window, 'resize', initialize);
+        google.maps.event.addDomListener(window, 'load', initMap);
+        google.maps.event.addDomListener(window, 'resize', initMap);
 </script>
 <div class="contact_box">
   <div class="map-box">
@@ -119,7 +121,7 @@
             echo "&nbsp;&nbsp;&nbsp;";
             echo $value['open_hour'].":".$value['open_min'].$value['open_am_pm']." to ".$value['close_hour'].":".$value['close_min'].$value['close_am_pm']."";
          }
-         echo " - ".$value['day_condition'];
+         echo "&nbsp;&nbsp;&nbsp;".$value['day_condition'];
        } 
     ?>
     </ul>

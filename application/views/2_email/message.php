@@ -1,27 +1,26 @@
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCn87Zc_6XoEGDPiAZM9WBofRLNaNOX6bU&callback=initMap"
+    type="text/javascript"></script>
+
 <script>
         
-        function initialize() {
+        function initMap() {
           var geocoder = new google.maps.Geocoder();
-
-          var latlng = new google.maps.LatLng(31.4500, -100.4500);
-          var mapOptions = {
-            zoom: 14,
-            center: latlng
-          }
-          var mapOptions_mobile = {
-            zoom: 15,
-            center: latlng,
-            scrollwheel: false,
-            draggable: false
-          }
-          var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-          var map_mobile = new google.maps.Map(document.getElementById('map-canvas-mobile'), mapOptions_mobile);
 
           var address = "<?php echo $main['property_address'] ?>"+" "+"<?php echo $main['property_city'] ?>"+" "+"<?php echo $main['property_state'] ?>";
 
-            geocoder.geocode( { 'address': address}, function(results, status) {
+          geocoder.geocode( { 'address': address}, function(results, status) {
               if (status == google.maps.GeocoderStatus.OK) {
+                var mapOptions = {
+                  zoom: 14,
+                  scrollwheel: false,
+                }
+                var mapOptions_mobile = {
+                  zoom: 15,
+                  scrollwheel: false,
+                  draggable: false
+                }
+                var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+                var map_mobile = new google.maps.Map(document.getElementById('map-canvas-mobile'), mapOptions_mobile);
                 map.setCenter(results[0].geometry.location);
                 map_mobile.setCenter(results[0].geometry.location);
                 var marker = new google.maps.Marker({
@@ -51,8 +50,9 @@
               }
             });
         }
-        google.maps.event.addDomListener(window, 'load', initialize);
-        google.maps.event.addDomListener(window, 'resize', initialize);
+
+        google.maps.event.addDomListener(window, 'load', initMap);
+        google.maps.event.addDomListener(window, 'resize', initMap);
 </script>
 <div class="background_fade"></div>
 <div class="contact_box">
@@ -122,7 +122,7 @@
             echo "&nbsp;&nbsp;&nbsp;";
             echo $value['open_hour'].":".$value['open_min'].$value['open_am_pm']." to ".$value['close_hour'].":".$value['close_min'].$value['close_am_pm']."";
          }
-         echo " - ".$value['day_condition'];
+         echo "&nbsp;&nbsp;&nbsp;".$value['day_condition'];
        } 
     ?>
     </ul>

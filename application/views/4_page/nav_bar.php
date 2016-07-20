@@ -21,7 +21,7 @@
     </div>
     <div class="nav_bar_links_button" id="nav_bar_links_button">
             
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            <svg version="1.1" id="nav_bar_links_button_svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
              width="35px" height="35px" viewBox="0 0 35 35" enable-background="new 0 0 35 35" xml:space="preserve">
             <path fill="<?php echo "#".$property_color_3; ?>" d="M34.361,6.427c0,1.1-0.9,2-2,2H2.419c-1.1,0-2-0.9-2-2V2.706c0-1.1,0.9-2,2-2h29.942c1.1,0,2,0.9,2,2V6.427z
                 "/>

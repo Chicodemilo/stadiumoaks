@@ -123,6 +123,7 @@ a {text-decoration: none;
 
 .nav_bar_links_button   {z-index: 8;
                         position: fixed;
+                        cursor:pointer;
                         top:5px;
                         right: 5px;}
                         
@@ -309,7 +310,6 @@ footer {padding: 0px;
             margin:auto;
             position:relative;
             top:110px;
-            box-shadow: 2px 2px 15px #000000;
             }
 
 .logo_box   {position:fixed;
@@ -361,30 +361,35 @@ footer {padding: 0px;
 .outer_description  {
                     width: 100%;
                     background-color: rgba(255,255,255, .8);
-                    padding: 0px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
                     margin: 0px;
                     position:relative;
-                    top:-220px;
+                    top:-300px;
                     z-index: 1;
+                    float:left;
                     }
 
-.inner_description  {text-align: center;
-                    width: 87%;
+.inner_description  {width: 98%;
                     margin: auto;
-                    padding: 10px;
                     }
 
-.slogan {font-family: 'Dancing Script', cursive;
+.slogan {font-family: 'Poiret One', sans-serif;
+        display:block;
+        width:49%;
+        float:left;
         color:#282F37;
-        letter-spacing: .05em;
-        font-size: 3em;
-        line-height: 92%;
+        font-size: 2.3em;
+        font-weight:bolder;
+        line-height: 110%;
         text-align: center;}
 
-.description    {font-size: 1.2em;
-                font-family: 'Poiret One', cursive;
-                line-height: 94%;
-                letter-spacing: .05em;}
+.description    {font-size: 1.3em;
+                font-family: 'Oswald', sans-serif;
+                width:49%;
+                text-align:justify;
+                float:right;
+                line-height: 130%;}
 
 .no_logo_header {
     font-family: 'Dancing Script', cursive;
@@ -396,10 +401,10 @@ footer {padding: 0px;
 }
 
 .main_page_links {width:100%;
-                height:300px;
-                padding-top: 20px;
-                position:relative;
-                top:-100px;}
+                height:500px;
+                padding-top: 40px;
+                position:absolute;
+                top:600px;}
 
 .main_page_amen, .main_page_pics, .main_page_floorplans{
     display:inline-block;
@@ -418,7 +423,6 @@ footer {padding: 0px;
             font-size: 1.8em;
             text-align: center;
             position: relative;
-            top: -5%;
             transform: translateY(5%);
             border-bottom: 4px solid black;
 }
@@ -521,10 +525,13 @@ footer {padding: 0px;
 
 
 #map-canvas-main {
-                border-top:7px solid black;
-                border-bottom:7px solid black;
-                height: 500px;
-                width: 1100px;}
+    border-top:7px solid black;
+    border-bottom:7px solid black;
+    position:absolute;
+    top:950px;
+    height: 500px;
+    width: 1100px;
+}
 
 
 .under_map{

@@ -1,4 +1,4 @@
-<div class="center_box" style="background:#<?php echo $property_color_1 ?>">
+<div class="center_box" >
 
 	<div id="slider">
         <ul class="slides">
@@ -22,8 +22,8 @@
 	<div id="outer_description" class="outer_description" >	
 		<div id="inner_description" class="inner_description" >	
 			<span id="slogan" class="slogan" ><?php echo $property_slogan; ?></span>
-			<br>
-			<p id="description" class="description"><?php echo $property_description; ?></p>
+			
+			<span id="description" class="description"><?php echo $property_description; ?></span>
 		</div>
 	</div>
 

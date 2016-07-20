@@ -6,11 +6,41 @@ $(document).ready(function() {
     $('#contact_drop').mouseleave(function(event) {
         $('#contact_menu').fadeToggle('fast');
     });
+    console.log('LINKED JS LOADED');
 
-     
+    $('.upper_name').css({
+        position: 'relative',
+        left: '-400px'
+    });
+    $('.name_parts').css({
+        position: 'relative',
+        left: '-100px'
+    });
+    $('.upper_name').fadeIn({queue: false, duration: 4000});
+    $('.upper_name').animate({left: "0px"}, 4000);
+    $('.name_parts').animate({left: "0px"}, 5000);
+    $('.slogan').delay(4000).fadeIn(4500);
+
+    $(window).on('scroll', function() {
+        var scrollTop = $(this).scrollTop();
+
+        $('#nav_bar').each(function() {
+            var topDistance = $(this).offset().top;
+
+            if ( (topDistance+60) < scrollTop ) {
+                $('#nav_bar_scroll_top').css({top: "0px"});
+            }
+        });
+
+        $('#nav_bar').each(function() {
+            var topDistance = $(this).offset().top;
+
+            if ( (topDistance+61) > scrollTop ) {
+                $('#nav_bar_scroll_top').css({top: "-100px"});
+            }
+        });
+    });
  });
-
-
 
     var hide = 2;
     var left_position = -20;

@@ -117,7 +117,13 @@ class Home extends CI_Controller {
 			$footer_data = $this->page_data->get_footer_data();
             $footer_data['pic_data'] = $this->page_data->get_pic_data();
             $template = $header_data['template'];
-
+            $property_phone = $header_data['property_phone'];
+            $property_email = $header_data['property_email'];
+            $property_facebook = $header_data['property_facebook'];
+            $property_twitter = $header_data['property_twitter'];
+            $property_instagram = $header_data['property_instagram'];
+            $property_google_plus = $header_data['property_google_plus'];
+            $property_address = $header_data['property_address'];
 
 			$this->load->helper('captcha');
             $this->form_validation->set_rules('first_name', 'First Name','trim|strip_tags|xss_clean|required');
@@ -131,6 +137,14 @@ class Home extends CI_Controller {
                 $data['image'] = $this->captcha_model->create_image();
                 $data['hours'] = $hours_data;
                 $data['main'] = $nav_data;
+                $data['template'] = $template;
+                $data['property_address'] = $property_address;
+                $data['property_email'] = $property_email;
+                $data['property_phone'] = $property_phone;
+                $data['property_facebook'] = $property_facebook;
+                $data['property_twitter'] = $property_twitter;
+                $data['property_instagram'] = $property_instagram;
+                $data['property_google_plus'] = $property_google_plus;
                 $this->load->view($template.'_page/header.php', $header_data);
                 // $this->load->view('google_analytics.php');
                 $this->load->view($template.'_page/background.php', $background_data);

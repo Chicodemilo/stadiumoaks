@@ -1,6 +1,4 @@
 </div>
-
-
 <div class="background_slider">
 	 <div class="bss-slides">
 	 	<?php 

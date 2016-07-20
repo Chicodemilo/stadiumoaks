@@ -44,6 +44,7 @@ class View_model extends CI_Model{
         }
         $data['first_letter'] = strtolower($data['first_letter']);
         $data['property_name'] = $query[0]['property_name'];
+        $data['property_address'] = $query[0]['property_address'];
         $data['property_city'] = $query[0]['property_city'];
         $data['property_state'] = $query[0]['property_state'];
         $data['property_slogan'] = $query[0]['property_slogan'];
@@ -59,6 +60,12 @@ class View_model extends CI_Model{
         $data['property_color_1'] = $query[0]['property_color_1'];
         $data['property_color_2'] = $query[0]['property_color_2'];
         $data['property_color_3'] = $query[0]['property_color_3'];
+        $data['property_email'] = $query[0]['property_email'];
+        $data['property_facebook'] = $query[0]['property_facebook'];
+        $data['property_twitter'] = $query[0]['property_twitter'];
+        $data['property_instagram'] = $query[0]['property_instagram'];
+        $data['property_google_plus'] = $query[0]['property_google_plus'];
+        $data['property_phone'] = $query[0]['property_phone'];
         $this->db->where('logo', 'Y');
             $query = $this->db->get('pictures')->result_array();
             if (count($query) > 0) {
@@ -124,6 +131,12 @@ class View_model extends CI_Model{
             $data['property_city'] = $query[0]['property_city'];
             $data['property_state'] = $query[0]['property_state'];
             $data['property_zip'] = $query[0]['property_zip'];
+            $data['property_phone'] = $query[0]['property_phone'];
+            $data['property_email'] = $query[0]['property_email'];
+            $data['property_facebook'] = $query[0]['property_facebook'];
+            $data['property_twitter'] = $query[0]['property_twitter'];
+            $data['property_instagram'] = $query[0]['property_instagram'];
+            $data['property_google_plus'] = $query[0]['property_google_plus'];
 
             $this->db->where('logo', 'Y');
             $query = $this->db->get('pictures')->result_array();

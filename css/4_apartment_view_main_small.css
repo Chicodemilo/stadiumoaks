@@ -104,6 +104,7 @@ a {text-decoration: none;
 
 .nav_bar_links_button   {z-index: 8;
                         position: fixed;
+                        cursor:pointer;
                         top:5px;
                         right: 5px;}
 
@@ -346,31 +347,35 @@ footer {padding: 0px;
 .outer_description  {
                     width: 100%;
                     background-color: rgba(255,255,255, .8);
-                    padding: 0px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
                     margin: 0px;
                     position:relative;
                     top:-300px;
                     z-index: 1;
+                    float:left;
                     }
 
-.inner_description  {text-align: center;
-                    width: 95%;
-                    max-width: 700px;
+.inner_description  {width: 98%;
                     margin: auto;
-                    padding: 10px;
                     }
 
-.slogan {font-family: 'Dancing Script', cursive;
+.slogan {font-family: 'Poiret One', sans-serif;
+        display:block;
+        width:49%;
+        float:left;
         color:#282F37;
-        letter-spacing: .05em;
-        font-size: 2.1em;
-        line-height: 92%;
+        font-size: 1.9em;
+        font-weight:bolder;
+        line-height: 110%;
         text-align: center;}
 
 .description    {font-size: 1.1em;
-                font-family: 'Poiret One', cursive;
-                line-height: 94%;
-                letter-spacing: .05em;}
+                font-family: 'Oswald', sans-serif;
+                width:49%;
+                text-align:justify;
+                float:right;
+                line-height: 130%;}
 
 .no_logo_header {
     font-family: 'Dancing Script', cursive;
@@ -383,10 +388,10 @@ footer {padding: 0px;
 
 .main_page_links{
     width:100%;
-    height:300px;
-    padding-top: 20px;
-    position:relative;
-    top:-100px;
+    height:500px;
+    padding-top: 40px;
+    position:absolute;
+    top:600px;
 }
 
 .main_page_amen, .main_page_pics, .main_page_floorplans{
@@ -509,10 +514,13 @@ footer {padding: 0px;
 
 
 #map-canvas-main {
-                border-top:7px solid black;
-                border-bottom:7px solid black;
-                height: 500px;
-                width: 100%;}
+    border-top:7px solid black;
+    border-bottom:7px solid black;
+    position:absolute;
+    top:950px;
+    height: 500px;
+    width: 1100px;
+}
 
 
 .under_map{

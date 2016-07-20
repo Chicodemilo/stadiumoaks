@@ -1,7 +1,10 @@
 /******************************** BODY AND UNIVERSAL  ***************************/
 
-body {font-family: arial;
-    margin: 0px;}
+body {
+    font-family: arial;
+    margin: 0px;
+    background:rgb(247,238,232);
+}
 
 textarea {resize: none;}
 
@@ -338,12 +341,13 @@ footer {padding: 0px;
 
 .slogan {font-family: 'Bitter', Arial, sans-serif;
         position:relative;
-        top:30px;
+        top:0px;
+        line-height:1.2em;
         letter-spacing: .05em;
         font-size: 3.7vw;
         text-shadow:3px 3px 9px #000000;}
 
-.description    {font-size: 1.5em;
+.description    {font-size: 1.2em;
                 font-family: 'Roboto Slab', serif;
                 text-shadow:1px 1px 15px #000000;
                 letter-spacing: .05em;}
@@ -497,22 +501,25 @@ footer {padding: 0px;
     height:300px;
 }
 
-.background_slider{width: 105%;
+.background_slider{width: 105vw;
                     display: block;
                     background-color:white;
                     position: fixed;
-                    left:-59px;
+                    top:-40px;
+                    left:-40px;
                     padding:0px;
-                    top: 0px;
-                    margin: auto;
-                    height: 1000px;
+                    height: 105vh;
                     z-index: -2;}
 
-.bss-slides {position:relative;
-            top:-80px;}
+.bss-slides {
+    position:relative;
+}
 
-.bss-slides figure img{}
-
+.bss-slides figure img{
+    width:105vw;
+    height:105vh;
+    object-fit: cover;
+}
 
 /********************************   PICTURES   ***************************/
 

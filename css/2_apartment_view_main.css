@@ -114,12 +114,12 @@ a {text-decoration: none;
                 height: 40px; 
                 vertical-align: middle;}
 
-#name_text p a {font-size: 1.2em;
-                padding: 8px;}
+#name_text p a {font-size: 1.1em;
+                padding: 3px;}
 
 .name   {font-family: 'Julius Sans One', sans-serif;
         letter-spacing: .01em;
-        font-size: 1.3em;
+        font-size: 1.1em;
         line-height: 90%;}
 
 .nav_bar_links_button   {z-index: 8;
@@ -127,7 +127,6 @@ a {text-decoration: none;
                         top:5px;
                         right: 5px;
                         visibility: hidden;}
-
 
 .address_bar    {
                 min-width: 870px;
@@ -305,14 +304,15 @@ footer {padding: 3px;
 .slogan {font-family: 'Playball', cursive;
         letter-spacing: .05em;
         font-size: 5.2vw;
-        text-align: center;
+        text-align: right;
+        line-height:1.1em;
         margin: auto;
         width: 95%;
         padding-top: 20px;
         text-shadow: 2px 2px 8px #000;}
 
 .description    {margin-left: auto;
-                text-align: center;
+                text-align: justify;
                 margin-right: 0;
                 width: 43%;
                 padding-right: 40px;

@@ -1,7 +1,10 @@
 /******************************** BODY AND UNIVERSAL  ***************************/
 
-body {font-family: arial;
-    margin: 0px;}
+body {
+    font-family: arial;
+    margin: 0px;
+    background:rgb(247,238,232);
+}
 
 textarea {resize: none;}
 
@@ -319,7 +322,7 @@ footer {position: fixed;
             background: rgba(0, 0, 0, .6);
             border-bottom:1px solid #EBEBEB;
             padding:5px;
-            padding-left:35px;
+            padding-left:5px;
             z-index: 3;}
 
 .logo_box_mobile a {cursor:pointer;}
@@ -358,14 +361,16 @@ footer {position: fixed;
         width:80%;
         text-shadow:3px 3px 9px #000000;}
 
-.description    {font-size: 1.2em;
-                font-family: 'Roboto Slab', cursive;
-                text-shadow:none;
-                position:relative;
-                top:20px;
-                margin:auto;
-                width:90%;
-                letter-spacing: .05em;}
+.description    {font-size: 1em;
+    line-height:1.2em;
+    font-family: 'Roboto Slab', cursive;
+    text-shadow:none;
+    position:relative;
+    top:20px;
+    margin:auto;
+    width:95%;
+    letter-spacing: .05em;
+}
 
 .no_logo_header {
     font-family: 'Bitter', sans-serif;
@@ -377,8 +382,7 @@ footer {position: fixed;
 
 .no_logo_header_small {
     font-family: 'Roboto Slab', sans-serif;
-    font-size: 1.3em;
-    letter-spacing:.05em;
+    font-size: 1em;
     line-height: 1.2em;
     align-content: left;
     text-shadow: none;
@@ -532,22 +536,25 @@ footer {position: fixed;
     height:300px;
 }
 
-.background_slider{width: 250%;
+.background_slider{width: 105vw;
                     display: block;
                     background-color:white;
                     position: fixed;
-                    left:-300px;
+                    top:-40px;
+                    left:-40px;
                     padding:0px;
-                    top: 0px;
-                    margin: auto;
-                    height: 1000vh;
+                    height: 105vh;
                     z-index: -2;}
 
-.bss-slides {position:relative;
-            top:-80px;}
+.bss-slides {
+    position:relative;
+}
 
-.bss-slides figure img{}
-
+.bss-slides figure img{
+    width:105vw;
+    height:105vh;
+    object-fit: cover;
+}
 
 /********************************   PICTURES   ***************************/
 

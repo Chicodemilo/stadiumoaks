@@ -1,7 +1,10 @@
 /******************************** BODY AND UNIVERSAL  ***************************/
 
-body {font-family: arial;
-    margin: 0px;}
+body {
+    font-family: arial;
+    margin: 0px;
+    background:rgb(247,238,232);
+}
 
 textarea {resize: none;}
 
@@ -519,22 +522,25 @@ footer {display:none;}
     height:300px;
 }
 
-.background_slider{width: 125%;
+.background_slider{width: 105vw;
                     display: block;
                     background-color:white;
                     position: fixed;
-                    left:-110px;
+                    top:-40px;
+                    left:-40px;
                     padding:0px;
-                    top: 0px;
-                    margin: auto;
-                    height: 1000vh;
+                    height: 105vh;
                     z-index: -2;}
 
-.bss-slides {position:relative;
-            top:-80px;}
+.bss-slides {
+    position:relative;
+}
 
-.bss-slides figure img{}
-
+.bss-slides figure img{
+    width:105vw;
+    height:105vh;
+    object-fit: cover;
+}
 
 /********************************   PICTURES   ***************************/
 

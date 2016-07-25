@@ -1,7 +1,6 @@
 </div>
 <div class="background_fade">
 	<div class="background_gradient"></div>
-	
 </div>
 <div class="header_main_pic_mob">
 					<?php 

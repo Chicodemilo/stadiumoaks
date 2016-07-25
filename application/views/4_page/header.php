@@ -21,6 +21,7 @@
     <link href='http://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Poiret+One|Stalemate' rel='stylesheet' type='text/css'>
     <link href="http://fonts.googleapis.com/css?family=Dancing+Script:700|EB+Garamond" rel="stylesheet" type="text/css" />
+    <meta name="format-detection" content="telephone=no">
     <script>
         // google analytics
     </script>

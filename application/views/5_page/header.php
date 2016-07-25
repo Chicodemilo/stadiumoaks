@@ -18,8 +18,7 @@
     <link rel='stylesheet' media='only screen and (max-width: 1078px)' href='<?php echo base_url();?>css/<?php echo $template ?>_apartment_view_main_small.css' />
     <link rel='stylesheet' media='only screen and (max-width: 766px)' href='<?php echo base_url();?>css/<?php echo $template ?>_apartment_view_main_xsmall.css' />
     <link rel='stylesheet' href='<?php echo base_url();?>slide/css/simple-slideshow-styles.css' />
-
-    
+    <meta name="format-detection" content="telephone=no">
     <link href='https://fonts.googleapis.com/css?family=Yesteryear' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Bitter:700' rel='stylesheet' type='text/css'>

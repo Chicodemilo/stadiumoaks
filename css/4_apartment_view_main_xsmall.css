@@ -817,9 +817,7 @@ footer {padding: 0px;
                     overflow: auto;
                     font-family: 'Oswald', Arial, sans-serif;
                     font-size: 1.1em;;
-                    color:black; 
-                    position:relative;
-                    top:15px; }
+                    color:black; }
 
 .contact_box_form input {
                         border:none;

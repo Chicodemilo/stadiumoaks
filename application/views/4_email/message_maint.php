@@ -8,27 +8,27 @@
             <input type="hidden" name="system_date">
             <table id="contact_table">
                 <tr><td class="righter_width">First Name</td><td>
-                    <input type="text" maxlength="20" id="first_name" size="45" name="first_name" 
+                    <input type="text" maxlength="20" id="first_name" size="40" name="first_name" 
                            placeholder="<?php if (form_error('first_name') != ''){echo form_error('first_name');}else{echo '';}?>"
                            value="<?php if (set_value('first_name') != ''){echo set_value('first_name');}else{echo '';}?>"
                            /></td></tr>
                 <tr><td class="righter">Last Name</td><td>
-                    <input type="text" maxlength="20" id="last_name" size="45" name="last_name" 
+                    <input type="text" maxlength="20" id="last_name" size="40" name="last_name" 
                            placeholder="<?php if (form_error('last_name') != ''){echo form_error('last_name');}else{echo '';}?>"
                            value="<?php if (set_value('last_name') != ''){echo set_value('last_name');}else{echo '';}?>"
                            /></td></tr>
                 <tr><td class="righter">Apartment #</td><td>
-                        <input type="text" maxlength="10" id="unit_number" size="45" name="unit_number" 
+                        <input type="text" maxlength="10" id="unit_number" size="40" name="unit_number" 
                                placeholder="<?php if (form_error('unit_number') != ''){echo form_error('unit_number');}else{echo '';}?>"
                                value="<?php if (form_error('unit_number') != ''){echo '';}else{echo set_value('unit_number');}?>"
                                /></td></tr>
                 <tr><td class="righter">Email</td><td>
-                        <input type="text" maxlength="50" id="email" size="45" name="email" 
+                        <input type="text" maxlength="50" id="email" size="40" name="email" 
                                placeholder="<?php if (form_error('email') != ''){echo form_error('email');}else{echo '';}?>"
                                value="<?php if (form_error('email') != ''){echo '';}else{echo set_value('email');}?>"
                                /></td></tr>
                 <tr><td class="righter">Phone</td><td>
-                        <input type="text" maxlength="13" id="phone" size="45" name="phone" 
+                        <input type="text" maxlength="13" id="phone" size="40" name="phone" 
                                placeholder="<?php if (form_error('phone') != ''){echo form_error('phone');}else{echo '';}?>"
                                value="<?php if (set_value('phone') != ''){echo set_value('phone');}else{echo '';}?>"
                                /></td></tr>

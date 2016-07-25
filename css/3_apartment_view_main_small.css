@@ -333,6 +333,7 @@ footer {padding: 3px;
                 width: 100%;
                 font-size: 1.2em;
                 letter-spacing: .05em;
+                text-align:justify;
                 color: white;
                 font-family: 'Oswald', Arial, sans-serif;}
 
@@ -450,7 +451,7 @@ footer {padding: 3px;
 
 .floorplan_info table   {width: 100%;
                         border-collapse: collapse;
-                        background-color:rgba(255,255,255, .6)}
+                        background-color:rgba(255,255,255, .6);}
 
 .floorplan_info table tr    {height: 35px;
                             border-top: 1px solid #ccc;
@@ -461,14 +462,14 @@ footer {padding: 3px;
 
 .floorplan_name {color:black;
                 font-family: 'Julius Sans One', Arial, sans-serif;
-                font-size: 1.5em}
+                font-size: 1.5em;}
 
 .floorplan_text {color:black;
                 font-family: 'Julius Sans One', Arial, sans-serif;
-                font-size: 1.1em}
+                font-size: 1.1em;}
 
 .floorplan_text_small   {font-family: 'Julius Sans One', Arial, sans-serif;
-                        font-size: 1em}
+                        font-size: 1em;}
 .mobile_floorplan_bottom    {height: 60px;}
 
 /********************************   AMENITIES   ***************************/
@@ -506,8 +507,9 @@ footer {padding: 3px;
                 color:white;
                 margin-top: 130px;
                 margin-bottom: 0px;
+                text-align:justify;
                 font-family: 'Oswald', sans-serif;;
-                font-size: 1.4em }
+                font-size: 1.4em; }
 
 .amenities_text p    {width: 85%;
                     max-width: 1000px;
@@ -522,13 +524,13 @@ footer {padding: 3px;
                 color:black;
                 margin-top: 20px;
                 font-family: 'Oswald', sans-serif;
-                font-size: 1.4em }
+                font-size: 1.4em; }
 
 .amenities_pet_small    {font-size: .9em;}
 .amenities_pet_xsmall    {font-size: .9em;}
 
 .amenities_list {width: 100%;
-                margin-top: 130px;
+                margin-top: 40px;
                 padding: 10px;
                 background-color:rgba(255,255,255, .8);
                 border: 1px solid #ccc;
@@ -536,7 +538,7 @@ footer {padding: 3px;
                 color:black;
                 margin-bottom: 20px;
                 font-family: 'Oswald', sans-serif;
-                font-size: 1.4em}
+                font-size: 1.4em;}
 
 .amenities_list ul li {line-height: 1.5em;}
 

@@ -149,19 +149,18 @@ a {text-decoration: none;
                     top:0px;
                     right:-280px;
                     font-family: 'Roboto Slab', sans-serif;
-                    text-shadow:0px 0px 11px #000000;
+                    text-shadow:3px 3px 9px #000000;
                     font-size: 2em;
                     line-height: 1em;
                     margin: auto;
                     width: 230px;
-                    height:100vh;
                     display: block;
                     z-index: 51;
                     text-align: center;
-                    background:rgba(230, 230, 230, 0.9);
+                    background:rgba(255, 255, 255, 0.8);
                     box-shadow:3px 3px 15px #000;
                     padding:20px;
-                    padding-top:40px;
+                    padding-top:0;
                     } 
 
 .front_page_link:link{color:white;
@@ -171,8 +170,7 @@ a {text-decoration: none;
 .front_page_link:active{color:#9A99B2;}
 
 #mobile_x   {position:relative;
-            top:-447px;
-            left:-115px;}
+            left:-100px;}
 
 .nav_bar_links  span {font-size: 1.5em;
                     font-family: 'Roboto Slab', sans-serif;
@@ -184,7 +182,7 @@ a {text-decoration: none;
                 font-size:1.1em;}
 
 .amp_word_one   {line-height:1.1;}
-.price_word {font-size:1.8em;
+.price_word {font-size:1.5em;
             line-height:.9em;}
 .pics_link  {border-top:1px dashed white;
             padding-top:12px;
@@ -202,12 +200,11 @@ a {text-decoration: none;
                         border-bottom:1px dashed white;
                         font-size:1.5em;}
 
-.amp_word_two   {font-size:.7em;
+.amp_word_two   {font-size:.8em;
                 line-height:1.5em;}
 
-.loc_word   {font-size:.9em;
+.loc_word   {font-size:.8em;
             line-height:.6em;}           
-
 
 /********************************  FOOTER ***************************/
 .cont_banner_outer  {width: 1100px;

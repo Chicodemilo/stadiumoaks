@@ -306,9 +306,16 @@
 
     </div>
      <div id="nav_bar_links_mobile" class="nav_bar_links_mobile">
+             <div class="mobile_nav_bar_closer">
+                        <svg version="1.1" id="mobile_x" class="mobile_x" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 width="35px" height="35px" viewBox="0 0 198 198" enable-background="new 0 0 198 198" xml:space="preserve">
+                            <polygon fill="#890E0E" points="171.25,19.941 100.535,90.655 29.82,19.941 20.111,29.651 90.825,100.365 20.112,171.078 29.822,180.789 
+                                100.535,110.075 171.248,180.787 180.957,171.078 110.244,100.365 180.957,29.651 "/>
+                        </svg>
+            </div>
             <span>
                 <a href="<?php echo base_url() ?>home/floorplans" class="front_page_link">
-                    <div class="fp_and_prices">FLOORPLANS<br><span class="amp_word_one">&amp;</span><br><span class="price_word">PRICES</span>
+                    <div class="fp_and_prices">FLOORPLANS<br><span class="amp_word_one">&amp;</span> <span class="price_word">PRICES</span>
                     </div>
                 </a>
 
@@ -326,18 +333,12 @@
                 
                 <a href="<?php echo base_url() ?>home/contact" class="front_page_link">
                     <div class="contac_and_loc_link">
-                        CONTACT<br><span class="amp_word_two">&amp;</span><br><span class="loc_word">LOCATION</span>
+                        CONTACT<br><span class="amp_word_two">&amp;</span> <span class="loc_word">LOCATION</span>
                     </div>
                 </a>
                 
             </span>
-            <div class="mobile_nav_bar_closer">
-                <svg version="1.1" id="mobile_x" class="mobile_x" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                         width="35px" height="35px" viewBox="0 0 198 198" enable-background="new 0 0 198 198" xml:space="preserve">
-                    <polygon fill="#890E0E" points="171.25,19.941 100.535,90.655 29.82,19.941 20.111,29.651 90.825,100.365 20.112,171.078 29.822,180.789 
-                        100.535,110.075 171.248,180.787 180.957,171.078 110.244,100.365 180.957,29.651 "/>
-                </svg>
-            </div>
+            
     </div>
 
 

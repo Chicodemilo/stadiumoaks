@@ -363,6 +363,7 @@ footer {padding: 0px;
     width:100%;
     height: 52.1vw;
     z-index:-6;
+    overflow:hidden;
 }
 
 .header_main_pic_mob img{

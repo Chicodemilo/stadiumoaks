@@ -2,6 +2,11 @@
 <div class="background_fade">
 	<div class="background_gradient"></div>
 </div>
+<div class="header_main_pic_mob">
+					<?php 
+						echo "<img src='".base_url()."images/pictures/".$pic_data['main_pic_id']."/".$pic_data['main_pic_name']."' alt='".$pic_data['main_pic_name']."'>";
+					?>
+</div>
 <div class="slider_expander">
 	<div class="background_slider">
 		 <div class="bss-slides">
@@ -17,6 +22,7 @@
 		 </div>
 	</div>
 </div>
+
 
 <script>
 

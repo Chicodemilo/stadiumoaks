@@ -502,7 +502,7 @@ footer {padding: 3px;
 .amenities_pic img {width: 100%;}
 
 .amenities_text {width: 100%;
-                padding: 15px;
+                padding: 3px;
                 background-color:rgba(0,0,0, .3);
                 color:white;
                 margin-top: 130px;
@@ -511,7 +511,7 @@ footer {padding: 3px;
                 font-family: 'Oswald', sans-serif;;
                 font-size: 1.4em; }
 
-.amenities_text p    {width: 85%;
+.amenities_text p    {width: 95%;
                     max-width: 1000px;
                     margin: auto;
                     display: block;}

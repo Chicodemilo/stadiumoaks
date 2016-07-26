@@ -1,28 +1,4 @@
 </div>
-<div class="background_fade">
-	<div class="background_gradient"></div>
-</div>
-<div class="header_main_pic_mob">
-					<?php 
-						echo "<img src='".base_url()."images/pictures/".$pic_data['main_pic_id']."/".$pic_data['main_pic_name']."' alt='".$pic_data['main_pic_name']."'>";
-					?>
-</div>
-<div class="slider_expander">
-	<div class="background_slider">
-		 <div class="bss-slides">
-		 	<?php 
-					foreach ($pic_data[pictures] as $key => $value) {
-						echo "<figure>";
-						echo "<img src='".base_url()."images/pictures/".$value['id']."/".$value['name']."' alt='".$value['caption']."' width='100%''>";
-						echo "</figure>";
-					}
-					
-
-				?>
-		 </div>
-	</div>
-</div>
-
 
 
 <script>

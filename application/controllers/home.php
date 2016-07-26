@@ -31,7 +31,7 @@ class Home extends CI_Controller {
         $body_data['pic_data'] = $this->page_data->get_pic_data();
 		$nav_data = $this->page_data->get_nav_data();
 		$footer_data = $this->page_data->get_footer_data();
-        $footer_data['pic_data'] = $this->page_data->get_pic_data();
+        $background_data['pic_data'] = $this->page_data->get_pic_data();
         $template = $header_data['template'];
 
 		$this->load->view($template.'_page/header.php', $header_data);
@@ -53,17 +53,16 @@ class Home extends CI_Controller {
 		$pic_data = $this->page_data->get_pic_data();
 		$nav_data = $this->page_data->get_nav_data();
 		$footer_data = $this->page_data->get_footer_data();
-        $footer_data['pic_data'] = $this->page_data->get_pic_data();
         $template = $header_data['template'];
 
 		$this->load->view($template.'_page/header.php', $header_data);
         // $this->load->view('google_analytics.php');
-		$this->load->view($template.'_page/background.php', $background_data);
 		$this->load->view($template.'_page/pic.php', $pic_data);
         if($template == 6 || $template || 7){
             $this->load->view($template.'_page/nav_bar_only_top.php', $nav_data);
         }else{
             $this->load->view($template.'_page/nav_bar.php', $nav_data);
+            $this->load->view($template.'_page/background.php', $background_data);
         }
 		$this->load->view($template.'_page/footer.php', $footer_data);	
 	}
@@ -84,12 +83,12 @@ class Home extends CI_Controller {
 
 		$this->load->view($template.'_page/header.php', $header_data);
         // $this->load->view('google_analytics.php');
-		$this->load->view($template.'_page/background.php', $background_data);
 		$this->load->view($template.'_page/amenities.php', $amenities_data);
 		if($template == 6 || $template || 7){
             $this->load->view($template.'_page/nav_bar_only_top.php', $nav_data);
         }else{
             $this->load->view($template.'_page/nav_bar.php', $nav_data);
+            $this->load->view($template.'_page/background.php', $background_data);
         }
 		$this->load->view($template.'_page/footer.php', $footer_data);	
 	}
@@ -108,12 +107,12 @@ class Home extends CI_Controller {
 
 		$this->load->view($template.'_page/header.php', $header_data);
         // $this->load->view('google_analytics.php');
-		$this->load->view($template.'_page/background.php', $background_data);
 		$this->load->view($template.'_page/floorplan.php', $floorplan_data);
 		if($template == 6 || $template || 7){
             $this->load->view($template.'_page/nav_bar_only_top.php', $nav_data);
         }else{
             $this->load->view($template.'_page/nav_bar.php', $nav_data);
+            $this->load->view($template.'_page/background.php', $background_data);
         }
 		$this->load->view($template.'_page/footer.php', $footer_data);	
 	}
@@ -159,12 +158,12 @@ class Home extends CI_Controller {
                 $data['property_google_plus'] = $property_google_plus;
                 $this->load->view($template.'_page/header.php', $header_data);
                 // $this->load->view('google_analytics.php');
-                $this->load->view($template.'_page/background.php', $background_data);
                 $this->load->view($template.'_email/message.php', $data);
                 if($template == 6 || $template || 7){
                     $this->load->view($template.'_page/nav_bar_only_top.php', $nav_data);
                 }else{
                     $this->load->view($template.'_page/nav_bar.php', $nav_data);
+                    $this->load->view($template.'_page/background.php', $background_data);
                 }
                 $this->load->view($template.'_page/footer.php', $footer_data);
                 }else{
@@ -191,12 +190,12 @@ class Home extends CI_Controller {
                     if ($sent == true){
                         $this->load->view($template.'_page/header.php', $header_data);
                         // $this->load->view('google_analytics.php');
-		                $this->load->view($template.'_page/background.php', $background_data);
                         $this->load->view($template.'_email/sucess.php');
                         if($template == 6 || $template || 7){
                             $this->load->view($template.'_page/nav_bar_only_top.php', $nav_data);
                         }else{
                             $this->load->view($template.'_page/nav_bar.php', $nav_data);
+                            $this->load->view($template.'_page/background.php', $background_data);
                         }
 		                $this->load->view($template.'_page/footer.php', $footer_data);
                     }
@@ -230,7 +229,6 @@ class Home extends CI_Controller {
                 $data['property_emergency_phone'] = $emergency_data;
                 $this->load->view($template.'_page/header.php', $header_data);
                 // $this->load->view('google_analytics.php');
-                $this->load->view($template.'_page/background.php', $background_data);
                 $this->load->view($template.'_email/message_maint.php', $data);
                 if($template == 6 || $template || 7){
                     $this->load->view($template.'_page/nav_bar_only_top.php', $nav_data);
@@ -264,12 +262,12 @@ class Home extends CI_Controller {
                     if ($sent == true){
                         $this->load->view($template.'_page/header.php', $header_data);
                         // $this->load->view('google_analytics.php');
-		                $this->load->view($template.'_page/background.php', $background_data);
                         $this->load->view($template.'_email/sucess.php');
                         if($template == 6 || $template || 7){
                             $this->load->view($template.'_page/nav_bar_only_top.php', $nav_data);
                         }else{
                             $this->load->view($template.'_page/nav_bar.php', $nav_data);
+                            $this->load->view($template.'_page/background.php', $background_data);
                         }
 		                $this->load->view($template.'_page/footer.php', $footer_data);
                     }

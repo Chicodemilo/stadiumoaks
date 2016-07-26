@@ -4,14 +4,20 @@
 			<?php 
 
 			$exp_name = explode(' ', $property_name);
-			
+			$yes_the = "N";
 			foreach ($exp_name as $key => $value) {
 				if($value == "The" || $value == "the" || $value == "THE"){
-					echo "<span class='the' style='color:#444444;'>".$value."</span><br>";
-					
+					echo "<span class='the' style='color:#222222;'>".$value."</span><br>";
+					$yes_the = "Y";
 				}else{
 					if($value == "Apartment" || $value == "apartment" || $value == "APARTMENT" || $value == "Apartments" || $value == "apartments" || $value == "APARTMENTS" || $value == "Apts" || $value == "apts" || $value == "APTS"|| $value == "Townhomes" || $value == "townhomes" || $value == "TOWNHOMES"){
-						echo "<br><span class='apt_word' style='color:#444444;'>".$value."</span>";
+						if($yes_the == "N"){
+							echo "<br>";
+						}
+						echo "<span class='apt_word' style='color:#222222;'>".$value."</span>";
+						if($key < count($exp_name)-1){
+							echo "<br>";
+						}
 					}else{
 						echo "<span class='name_parts'>".$value."</span> ";
 					}

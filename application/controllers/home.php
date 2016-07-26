@@ -86,7 +86,11 @@ class Home extends CI_Controller {
         // $this->load->view('google_analytics.php');
 		$this->load->view($template.'_page/background.php', $background_data);
 		$this->load->view($template.'_page/amenities.php', $amenities_data);
-		$this->load->view($template.'_page/nav_bar.php', $nav_data);
+		if($template == 6 || $template || 7){
+            $this->load->view($template.'_page/nav_bar_only_top.php', $nav_data);
+        }else{
+            $this->load->view($template.'_page/nav_bar.php', $nav_data);
+        }
 		$this->load->view($template.'_page/footer.php', $footer_data);	
 	}
 // FLOORPLAN PAGE *********************************************************************************
@@ -106,7 +110,11 @@ class Home extends CI_Controller {
         // $this->load->view('google_analytics.php');
 		$this->load->view($template.'_page/background.php', $background_data);
 		$this->load->view($template.'_page/floorplan.php', $floorplan_data);
-		$this->load->view($template.'_page/nav_bar.php', $nav_data);
+		if($template == 6 || $template || 7){
+            $this->load->view($template.'_page/nav_bar_only_top.php', $nav_data);
+        }else{
+            $this->load->view($template.'_page/nav_bar.php', $nav_data);
+        }
 		$this->load->view($template.'_page/footer.php', $footer_data);	
 	}
 
@@ -153,7 +161,11 @@ class Home extends CI_Controller {
                 // $this->load->view('google_analytics.php');
                 $this->load->view($template.'_page/background.php', $background_data);
                 $this->load->view($template.'_email/message.php', $data);
-                $this->load->view($template.'_page/nav_bar.php', $nav_data);
+                if($template == 6 || $template || 7){
+                    $this->load->view($template.'_page/nav_bar_only_top.php', $nav_data);
+                }else{
+                    $this->load->view($template.'_page/nav_bar.php', $nav_data);
+                }
                 $this->load->view($template.'_page/footer.php', $footer_data);
                 }else{
                 if ($this->input->post('message')){
@@ -181,7 +193,11 @@ class Home extends CI_Controller {
                         // $this->load->view('google_analytics.php');
 		                $this->load->view($template.'_page/background.php', $background_data);
                         $this->load->view($template.'_email/sucess.php');
-                        $this->load->view($template.'_page/nav_bar.php', $nav_data);
+                        if($template == 6 || $template || 7){
+                            $this->load->view($template.'_page/nav_bar_only_top.php', $nav_data);
+                        }else{
+                            $this->load->view($template.'_page/nav_bar.php', $nav_data);
+                        }
 		                $this->load->view($template.'_page/footer.php', $footer_data);
                     }
                 }
@@ -216,7 +232,11 @@ class Home extends CI_Controller {
                 // $this->load->view('google_analytics.php');
                 $this->load->view($template.'_page/background.php', $background_data);
                 $this->load->view($template.'_email/message_maint.php', $data);
-                $this->load->view($template.'_page/nav_bar.php', $nav_data);
+                if($template == 6 || $template || 7){
+                    $this->load->view($template.'_page/nav_bar_only_top.php', $nav_data);
+                }else{
+                    $this->load->view($template.'_page/nav_bar.php', $nav_data);
+                }
                 $this->load->view($template.'_page/footer.php', $footer_data);
                 }else{
                 if ($this->input->post('message')){
@@ -246,7 +266,11 @@ class Home extends CI_Controller {
                         // $this->load->view('google_analytics.php');
 		                $this->load->view($template.'_page/background.php', $background_data);
                         $this->load->view($template.'_email/sucess.php');
-                        $this->load->view($template.'_page/nav_bar.php', $nav_data);
+                        if($template == 6 || $template || 7){
+                            $this->load->view($template.'_page/nav_bar_only_top.php', $nav_data);
+                        }else{
+                            $this->load->view($template.'_page/nav_bar.php', $nav_data);
+                        }
 		                $this->load->view($template.'_page/footer.php', $footer_data);
                     }
                 }

@@ -106,10 +106,6 @@ a {text-decoration: none;
 }
 
 .nav_bar_only_top{
-    display:none;
-}
-
-.nav_bar_only_top_see {
     display:block;
     margin-left: 0px;
     position: fixed;

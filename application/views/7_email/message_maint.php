@@ -125,12 +125,4 @@
     }).mouseout(function(){
         $(this).animate({color:'#8B7355'}, 400);
     }); 
-
-   jQuery(document).ready(function($) {
-      var temp_number = <?php echo $template; ?>;
-        if(temp_number === 7){
-            $('#nav_bar').addClass('nav_bar_gone');
-            $('#nav_bar_only_top').addClass('nav_bar_only_top_see');
-        }
-    });
 </script>

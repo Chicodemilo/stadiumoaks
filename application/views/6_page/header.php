@@ -20,7 +20,7 @@
     <link rel='stylesheet' href='<?php echo base_url();?>slide/css/simple-slideshow-styles.css' />
 
     <link href='https://fonts.googleapis.com/css?family=Yesteryear' rel='stylesheet' type='text/css'>
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,300" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Playfair+Display+SC:400,400italic' rel='stylesheet' type='text/css'>
     
     <script>

@@ -27,7 +27,7 @@ $(document).ready(function() {
         $('#nav_bar').each(function() {
             var topDistance = $(this).offset().top;
 
-            if ( (topDistance+60) < scrollTop ) {
+            if ( (topDistance+42) < scrollTop ) {
                 $('#nav_bar_scroll_top').css({top: "0px"});
             }
         });
@@ -35,7 +35,7 @@ $(document).ready(function() {
         $('#nav_bar').each(function() {
             var topDistance = $(this).offset().top;
 
-            if ( (topDistance+61) > scrollTop ) {
+            if ( (topDistance+43) > scrollTop ) {
                 $('#nav_bar_scroll_top').css({top: "-100px"});
             }
         });

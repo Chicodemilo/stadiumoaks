@@ -116,9 +116,6 @@ a {text-decoration: none;
     box-shadow:0px 0px 30px #000000;
 }
 
-.nav_bar_gone{
-    display:none;
-}
 
 #nav_bar_scroll_top    {
     margin-left: 0px;
@@ -132,10 +129,6 @@ a {text-decoration: none;
 }
 
 .nav_bar_only_top{
-    display:none;
-}
-
-.nav_bar_only_top_see {
     display:block;
     margin-left: 0px;
     position: fixed;

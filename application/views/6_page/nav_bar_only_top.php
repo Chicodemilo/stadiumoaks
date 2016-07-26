@@ -1,36 +1,5 @@
-<div id="nav_bar" style='background-color:#<?php echo $property_color_2; ?>;'>
-   
-    <div id="nav_bar_inner">
-        <div class="logo_box">
-            <a href="<?php echo base_url() ?>home/">
-
-                <?php 
-                    if($logo_name != 'N'){
-                        
-                        echo "<img id='logo' src='".base_url()."images/logos/property/".$logo_name."' alt='".$logo_name."'>";
-
-                    }else{
-                        echo "<div class='no_logo_name' style='color:#".$property_color_3."'><span class='name'>".$property_name."</span></div>"; 
-                    }
-                 ?>
-
-                </a>
-
-            </div>
-            <div id="nav_bar_links" class="nav_bar_links" style="color:#<?php echo $property_color_2; ?>">
-                <span>
-                    <a href="<?php echo base_url() ?>home/floorplans">FLOORPLANS &amp; PRICES</a>
-                    <a href="<?php echo base_url() ?>home/pictures">PICTURES</a>
-                    <a href="<?php echo base_url() ?>home/amenities">AMENITIES</a>
-                    <a href="<?php echo base_url() ?>home/contact">CONTACT</a>
-                    <!-- &nbsp;&nbsp;&bull;&nbsp;&nbsp;<a href="<?php echo base_url() ?>home/contact">Residents</a> -->
-                </span>
-            </div>
-    </div>
-</div>
-
-<div id="nav_bar_scroll_top" style='background-color:#<?php echo $property_color_2; ?>;'>
-    <div class="mobile_hamburger" id="mobile_hamburger">
+<div id="nav_bar_only_top" class="nav_bar_only_top" style='background-color:#<?php echo $property_color_2; ?>;'>
+    <div class="mobile_hamburger_only_top" id="mobile_hamburger_only_top">
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
          width="25px" height="25px" viewBox="0 0 25 25" enable-background="new 0 0 25 25" xml:space="preserve">
         <rect x="0.419" y="0.706" fill="#<?php echo $property_color_1; ?>" width="24.12" height="5.486"/>
@@ -38,7 +7,6 @@
         <rect x="0.419" y="19.041" fill="#<?php echo $property_color_1; ?>" width="24.12" height="5.486"/>
         </svg>
     </div>
-
     <div id="nav_bar_inner">
         <div class="logo_box_scroll_top">
             <a href="<?php echo base_url() ?>home/">

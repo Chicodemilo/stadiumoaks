@@ -60,7 +60,11 @@ class Home extends CI_Controller {
         // $this->load->view('google_analytics.php');
 		$this->load->view($template.'_page/background.php', $background_data);
 		$this->load->view($template.'_page/pic.php', $pic_data);
-		$this->load->view($template.'_page/nav_bar.php', $nav_data);
+        if($template == 6 || $template || 7){
+            $this->load->view($template.'_page/nav_bar_only_top.php', $nav_data);
+        }else{
+            $this->load->view($template.'_page/nav_bar.php', $nav_data);
+        }
 		$this->load->view($template.'_page/footer.php', $footer_data);	
 	}
 

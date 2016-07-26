@@ -71,6 +71,7 @@
 		var temp_number = <?php echo $template; ?>;
 	    if(temp_number === 6){
 	        $('#nav_bar').addClass('nav_bar_gone');
+            $('#mobile_hamburger').addClass('nav_bar_gone');
 	        $('#nav_bar_only_top').addClass('nav_bar_only_top_see');
 	    }
 		<?php

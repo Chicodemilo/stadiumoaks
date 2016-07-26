@@ -101,6 +101,8 @@ a {text-decoration: none;
     right:10px;
     display:block;
     cursor:pointer;
+    height:30px;
+    width:30px;
 }
 
 .mobile_hamburger_only_top{
@@ -109,16 +111,18 @@ a {text-decoration: none;
     right:10px;
     display:block;
     cursor:pointer;
+    height:30px;
+    width:30px;
 }
 
 .mobile_hamburger svg{
-    width:120%;
-    height:120%;
+    width:30px;
+    height:30px;
 }
 
 .mobile_hamburger_only_top svg{
-    width:120%;
-    height:120%;
+    width:30px;
+    height:30px;
 }
 
 #nav_bar    {

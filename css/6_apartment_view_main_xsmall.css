@@ -56,14 +56,14 @@ a {text-decoration: none;
     cursor: pointer;}
 
 .body_link_xsmall   {font-size: .6em;
-                    font-family: 'Raleway', Arial, sans-serif;}
+                    font-family: 'Raleway', Arial, sans-serif; font-weight:300;}
 .body_link_xsmall a:link {color:#4F94CD;}
 .body_link_xsmall a:hover   {color:#0000EE;}
 .body_link_xsmall a:visited {}
 .body_link_xsmall a:active  {color:#9FB6CD;}
 
 .body_link_small   {font-size: .8em;
-                    font-family: 'Raleway', Arial, sans-serif;}
+                    font-family: 'Raleway', Arial, sans-serif; font-weight:300;}
 .body_link_small a:link {color:#4F94CD;}
 .body_link_small a:hover   {color:#0000EE;}
 .body_link_small a:visited {}
@@ -71,7 +71,7 @@ a {text-decoration: none;
 
 
 .body_link  {font-size: 1em;
-            font-family: 'Raleway', Arial, sans-serif;}
+            font-family: 'Raleway', Arial, sans-serif; font-weight:300;}
 .body_link a:link {color:#4F94CD;}
 .body_link a:hover   {color:#0000EE;}
 .body_link a:visited {}
@@ -87,6 +87,7 @@ a {text-decoration: none;
     cursor:pointer;
     height:30px;
     width:30px;
+    z-index:30;
 }
 
 .mobile_hamburger_only_top{
@@ -97,6 +98,7 @@ a {text-decoration: none;
     cursor:pointer;
     height:30px;
     width:30px;
+    z-index:30;
 }
 
 .mobile_hamburger svg{
@@ -193,8 +195,8 @@ a {text-decoration: none;
 
 .nav_bar_links_mobile {
     position: fixed;
-    font-family: 'Raleway', Arial, sans-serif;
-    font-size: 1.7em;
+    font-family: 'Raleway', Arial, sans-serif; font-weight:200;
+    font-size: 1.6em;
     line-height: 1.7em;
     text-align:right;
     top: -350px;
@@ -397,14 +399,15 @@ footer {padding: 0px;
 .name_slogan {
     position:absolute;
     display:block;
-    width: 100%;
+    width: 90%;
     margin: auto;
     z-index: 20;
     margin-top:7vw;
 }
 
 .upper_name {
-    font-family: 'Raleway', Arial, sans-serif;
+    font-family: 'Raleway', Arial, sans-serif; font-weight:300;
+    font-weight:300;
     position:relative;
     top:-20px;
     padding-left:20px;
@@ -415,13 +418,14 @@ footer {padding: 0px;
 }
 
 .slogan {
-    font-family: 'Raleway', Arial, sans-serif;
+    font-family: 'Raleway', Arial, sans-serif; font-weight:300;
+    font-weight:300;
     color:#C6C6C6;
     position:relative;
     top:-10px;
     left:20px;
     letter-spacing: .07em;
-    font-size: 1.1em;
+    font-size: 1em;
     line-height:1.1em;
     width:90%;
     display:none;
@@ -470,7 +474,7 @@ footer {padding: 0px;
 
 .description{display:block;
     font-size: 1.1em;
-    font-family: 'Raleway', Arial, sans-serif;
+    font-family: 'Raleway', Arial, sans-serif; font-weight:300;
     letter-spacing: .05em;
 
 }
@@ -495,7 +499,7 @@ footer {padding: 0px;
     padding-right:20px;
     width:90%;
     text-align:right;
-    font-family: 'Raleway', Arial, sans-serif;
+    font-family: 'Raleway', Arial, sans-serif; font-weight:300;
     font-size:.9em;
     letter-spacing:.07em;
     line-height:2.1em;
@@ -563,7 +567,7 @@ footer {padding: 0px;
 
 .main_cont_mobile{
     display:block;
-    font-family: 'Raleway', Arial, sans-serif;
+    font-family: 'Raleway', Arial, sans-serif; font-weight:300;
     padding-left:10px;
     line-height:2em;
 }
@@ -593,7 +597,7 @@ footer {padding: 0px;
                 width:100%;
                 font-size: 1.4em;
                 color: #575757;
-                font-family: 'Raleway', Arial, sans-serif;}
+                font-family: 'Raleway', Arial, sans-serif; font-weight:300;}
 
 .pic_main_text_none  {margin: auto;
                     margin-top: 100px;
@@ -746,14 +750,14 @@ footer {padding: 0px;
 .floorplan_info table tr td {padding:10px;}
 
 .floorplan_name {color:black;
-                font-family: 'Raleway', Arial, sans-serif;
+                font-family: 'Raleway', Arial, sans-serif; font-weight:300;
                 font-size: 3.2em;}
 
 .floorplan_text {color:black;
-                font-family: 'Raleway', Arial, sans-serif;
+                font-family: 'Raleway', Arial, sans-serif; font-weight:300;
                 font-size: 1em;}
 
-.floorplan_text_small   {font-family: 'Raleway', Arial, sans-serif;
+.floorplan_text_small   {font-family: 'Raleway', Arial, sans-serif; font-weight:300;
                         font-size: 1em;}
 
 /********************************   AMENITIES   ***************************/
@@ -791,7 +795,7 @@ footer {padding: 0px;
                 margin-bottom:20px;
                 text-align:center;
                 color:black;
-                font-family: 'Raleway', Arial, sans-serif;
+                font-family: 'Raleway', Arial, sans-serif; font-weight:300;
                 font-size: 1.2em; }
 
 .amenities_pet {width: 90%;
@@ -804,17 +808,17 @@ footer {padding: 0px;
                 margin-top: 20px;
                 margin-bottom: 20px;
                 text-align: center;
-                font-family: 'Raleway', Arial, sans-serif;
+                font-family: 'Raleway', Arial, sans-serif; font-weight:300;
                 font-size: 1.3em; }
 
 .amenities_pet_small    {font-size: .8em;
                         display:block;
                         text-align:left;
-                        font-family: 'Raleway', Arial, sans-serif;}
+                        font-family: 'Raleway', Arial, sans-serif; font-weight:300;}
 
 .amenities_pet_xsmall   {font-size: .7em;
                         text-align:left;
-                        font-family: 'Raleway', Arial, sans-serif;}
+                        font-family: 'Raleway', Arial, sans-serif; font-weight:300;}
 
 .amenities_list {width: 90%;
                 margin:auto;
@@ -824,7 +828,7 @@ footer {padding: 0px;
                 box-shadow: 3px 3px 6px #888888;
                 color:black;
                 margin-bottom: 20px;
-                font-family: 'Raleway', Arial, sans-serif;
+                font-family: 'Raleway', Arial, sans-serif; font-weight:300;
                 font-size: 1em;}
 
 .amenities_list ul li {line-height: 1.3em;}
@@ -832,7 +836,7 @@ footer {padding: 0px;
 .amenities_title    {font-size: 1.5em;
                     display: block;
                     text-align: center;
-                    font-family: 'Raleway', Arial, sans-serif;}
+                    font-family: 'Raleway', Arial, sans-serif; font-weight:300;}
 
 .super  {vertical-align: super;
         font-size: .4em;}
@@ -858,7 +862,7 @@ footer {padding: 0px;
     padding-top:20px;
     margin-bottom: 20px;
     overflow: auto;
-    font-family: 'Raleway', Arial, sans-serif;
+    font-family: 'Raleway', Arial, sans-serif; font-weight:300;
     font-size: .9em;;
     color:black; 
 }
@@ -872,7 +876,7 @@ footer {padding: 0px;
     margin-top:90px;
     margin-bottom: 20px;
     overflow: auto;
-    font-family: 'Raleway', Arial, sans-serif;
+    font-family: 'Raleway', Arial, sans-serif; font-weight:300;
     font-size: .9em;;
     color:black; 
 }
@@ -887,7 +891,7 @@ footer {padding: 0px;
                     width: 100%; 
                     margin-bottom: 20px;
                     overflow: auto;
-                    font-family: 'Raleway', Arial, sans-serif;
+                    font-family: 'Raleway', Arial, sans-serif; font-weight:300;
                     font-size: 1.1em;
                     color:black; }
 
@@ -898,7 +902,7 @@ footer {padding: 0px;
                         margin-bottom:10px;
                         padding-left:6px;
                         font-size:1em;
-                        font-family: 'Raleway', Arial, sans-serif;
+                        font-family: 'Raleway', Arial, sans-serif; font-weight:300;
                         color:#160B62;
                         }
 
@@ -909,7 +913,7 @@ footer {padding: 0px;
                             margin-bottom:10px;
                             padding-left:6px;
                             font-size:1em;
-                            font-family: 'Raleway', Arial, sans-serif;
+                            font-family: 'Raleway', Arial, sans-serif; font-weight:300;
                             color:#160B62;
                             }  
 
@@ -920,7 +924,7 @@ footer {padding: 0px;
                         margin-bottom:10px;
                         padding-left:6px;
                         font-size:1em;
-                        font-family: 'Raleway', Arial, sans-serif;
+                        font-family: 'Raleway', Arial, sans-serif; font-weight:300;
                         color:#160B62;
                         }
 
@@ -931,7 +935,7 @@ footer {padding: 0px;
                             margin-bottom:10px;
                             padding-left:6px;
                             font-size:1em;
-                            font-family: 'Raleway', Arial, sans-serif;
+                            font-family: 'Raleway', Arial, sans-serif; font-weight:300;
                             color:#160B62;
                             }              
 
@@ -961,7 +965,7 @@ footer {padding: 0px;
     padding-left:70px;
     margin-bottom: 20px;
     overflow: auto;
-    font-family: 'Raleway', Arial, sans-serif;
+    font-family: 'Raleway', Arial, sans-serif; font-weight:300;
     font-size: 1.2em;;
     line-height:1.4em;
     color:black; 

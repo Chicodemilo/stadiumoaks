@@ -94,57 +94,51 @@
 
 <script type="text/javascript" >
     $(document).ready(function() {
+		$(function() {
 
-	
-	$(function() {
-
-	    //settings for slider
-	    var width = 1100;
-	    var animationSpeed = 3000;
-	    var pause = 9000;
-	    var currentSlide = 1;
+		    //settings for slider
+		    var width = 1100;
+		    var animationSpeed = 3000;
+		    var pause = 9000;
+		    var currentSlide = 1;
 
 
-	    //cache DOM elements
-	    var $slider = $('#slider');
-	    var $slideContainer = $('.slides', $slider);
-	    var $slides = $('.slide', $slider);
-		var big_width = 1100 * ($slides.length + 2);
-		$(".slides").width(big_width);
-	    var interval;
+		    //cache DOM elements
+		    var $slider = $('#slider');
+		    var $slideContainer = $('.slides', $slider);
+		    var $slides = $('.slide', $slider);
+			var big_width = 1100 * ($slides.length + 2);
+			$(".slides").width(big_width);
+		    var interval;
 
-	    function startSlider() {
-	        interval = setInterval(function() {
-	            $slideContainer.animate({'margin-left': '-='+width}, animationSpeed, function() {
-	                if (++currentSlide === $slides.length) {
-	                    currentSlide = 1;
-	                    $slideContainer.css('margin-left', 0);
-	                }
-	            });
-	        }, pause);
-	    }
-	    function pauseSlider() {
-	        clearInterval(interval);
-	    }
+		    function startSlider() {
+		        interval = setInterval(function() {
+		            $slideContainer.animate({'margin-left': '-='+width}, animationSpeed, function() {
+		                if (++currentSlide === $slides.length) {
+		                    currentSlide = 1;
+		                    $slideContainer.css('margin-left', 0);
+		                }
+		            });
+		        }, pause);
+		    }
+		    function pauseSlider() {
+		        clearInterval(interval);
+		    }
 
-	    $slideContainer
-	        .on('mouseenter', pauseSlider)
-	        .on('mouseleave', startSlider);
+		    $slideContainer
+		        .on('mouseenter', pauseSlider)
+		        .on('mouseleave', startSlider);
 
-	    startSlider();
-
-
-	});
+		    startSlider();
 
 
-
-
+		});
     });
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCn87Zc_6XoEGDPiAZM9WBofRLNaNOX6bU&callback=initMap" type="text/javascript"></script>
 <script>
         
-        function initialize() {
+        function initMap() {
           var geocoder = new google.maps.Geocoder();
 
           var address = "<?php echo $property_address ?>"+" "+"<?php echo $property_city ?>"+" "+"<?php echo $property_state?>";

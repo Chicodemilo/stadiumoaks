@@ -471,7 +471,7 @@ footer {padding: 3px;
 
 .floorplan_info table   {width: 100%;
                         border-collapse: collapse;
-                        background-color:rgba(255,255,255, .6)}
+                        background-color:rgba(255,255,255, .6);}
 
 .floorplan_info table tr    {height: 35px;
                             border-top: 1px solid #ccc;
@@ -489,7 +489,7 @@ footer {padding: 3px;
                 font-size: .9em;}
 
 .floorplan_text_small   {font-family: 'Julius Sans One', Arial, sans-serif;
-                        font-size: .9em}
+                        font-size: .9em;}
 
 /********************************   AMENITIES   ***************************/
 
@@ -521,7 +521,7 @@ footer {padding: 3px;
                 color:black;
                 margin-bottom: 20px;
                 font-family: 'Oswald', Arial, sans-serif;
-                font-size: 1.1em }
+                font-size: 1.1em;}
 
 .amenities_pet {margin-left: auto;
                 margin-right: 3%;
@@ -531,7 +531,7 @@ footer {padding: 3px;
                 color:black;
                 margin-top: 20px;
                 font-family: 'Oswald', Arial, sans-serif;
-                font-size: 1.2em }
+                font-size: 1.2em; }
 
 .amenities_pet_small    {font-size: .8em;}
 .amenities_pet_xsmall    {font-size: .7em;}

@@ -110,6 +110,7 @@ a {text-decoration: none;
             height: 120px;
             width: 280px;
             margin-left: 20px;
+            margin-top:5px;
             overflow: hidden;}
 
 #name_text p    {display: table-cell; 
@@ -118,7 +119,7 @@ a {text-decoration: none;
 
 .name   {font-family: 'Josefin Slab', Arial, sans-serif;
         letter-spacing: .05em;
-        font-size: 2.3em;
+        font-size: 1.9em;
         line-height: 90%;}
 
 .nav_bar_links_button   {z-index: 8;

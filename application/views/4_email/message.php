@@ -1,5 +1,4 @@
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCn87Zc_6XoEGDPiAZM9WBofRLNaNOX6bU&callback=initMap"
-    type="text/javascript"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCn87Zc_6XoEGDPiAZM9WBofRLNaNOX6bU&callback=initMap" type="text/javascript"></script>
 
 <script>
         
@@ -131,35 +130,8 @@
   </div>
   <div class="below_hours"></div>
   </div>
-
-    <div class="address_box">
-      <?php echo $main['property_name']."<br>".$main['property_address']." ".$main['property_city'].", ".$main['property_state']." ".$main['property_zip']; ?>
-    </div>
-    <div id="map-canvas-mobile"></div>
-    <div class="contact_box_inner">
-      Office Hours:
-      <ul class="hours_list">
-      <?php
-        foreach ($hours as $value) {
-           echo "<li>";
-           echo $value['day_type'];
-           
-           if($value['day_condition'] == "Closed" || $value['open_hour'] == 0 || $value['close_hour'] == 0 || $value['day_condition'] == "By Appointment"){
-            echo "";
-           }else{
-              if($value['open_min'] == 0){$value['open_min'] = "00";}
-              if($value['close_min'] == 0){$value['close_min'] = "00";}
-              echo "&nbsp;&nbsp;&nbsp;";
-              echo $value['open_hour'].":".$value['open_min'].$value['open_am_pm']." to ".$value['close_hour'].":".$value['close_min'].$value['close_am_pm']."";
-           }
-           echo " - ".$value['day_condition'];
-         } 
-      ?>
-      </ul>
-      <hr>
-      <p class='body_link_small'><a href="<?php echo base_url();?>home/contact_maint">Click Here to Send a Maintenance Request</a></p>
-  </div>
-  <div class="below_hours"></div>
+  <div id="map-canvas-mobile"></div>
+  <div class="below_hours"> </div>
   </div>
 </div>
 <script type="text/javascript" >

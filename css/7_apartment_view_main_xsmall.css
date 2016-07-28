@@ -1,20 +1,4 @@
-
-.header_main_pic_mob{
-    position: fixed;
-    top:0px;
-    top: 0px;
-    display:block;
-    width:100%;
-    height: 52.1vw;
-    z-index:-6;
-    overflow:hidden;
-}
-
-.header_main_pic_mob img{
-    width:100%;
-    height: 52.1vw;
-    object-fit:cover;
-}/******************************** BODY AND UNIVERSAL  ***************************/
+/******************************** BODY AND UNIVERSAL  ***************************/
 
 body {font-family: arial;
     margin: 0px;}
@@ -371,18 +355,23 @@ footer {padding: 0px;
 }
 
 .header_main_pic_mob{
-    width:100%;
+    width:100vw;
     height: 52.1vw;
+    overflow:hidden;
 }
 
 .header_main_pic_mob img{
+    width:100vw;
     object-fit:cover;
     position: absolute;
     top:0px;
     top: 0px;
     display:block;
     z-index:-5;
-    overflow:hidden;
+}
+
+.background_image{
+    display:none;
 }
 
 /********************************   BODY   ***************************/

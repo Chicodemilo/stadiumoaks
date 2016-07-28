@@ -358,20 +358,24 @@ footer {padding: 0px;
 }
 
 .header_main_pic_mob{
-    width:100%;
+    width:100vw;
     height: 52.1vw;
+    overflow:hidden;
 }
 
 .header_main_pic_mob img{
+    width:100vw;
     object-fit:cover;
     position: absolute;
     top:0px;
     top: 0px;
     display:block;
     z-index:-5;
-    overflow:hidden;
 }
 
+.background_image{
+    display:none;
+}
 
 /********************************   BODY   ***************************/
 
@@ -538,14 +542,7 @@ footer {padding: 0px;
 
 
 .background_slider{
-    width: 100%;
-    display: block;
-    background-color:white;
-    margin: auto;
-    height: 400px;
-    position:absolute;
-    overflow-x:hidden;
-    overflow-y:hidden;
+    display:none;
 }
 
 .bss-slides {

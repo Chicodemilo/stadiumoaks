@@ -97,7 +97,7 @@ class Edit_model extends CI_Model{
 			$orders = $this->db->get('pictures')->result_array();
 			$order_new = $orders[0]['pic_order'] + 1;
 
-			$data = array('id' => $id_new, 'cover_pic' => 'N', 'logo' => 'N', 'management_logo' => 'N', 'amenities_page_main_pic' => 'N', 'picture_page_main_pic' => 'N', 'pic_order' => $order_new, 'active' => 'Y');
+			$data = array('id' => $id_new, 'name' => null, 'caption' => null,'cover_pic' => 'N', 'logo' => 'N', 'management_logo' => 'N', 'amenities_page_main_pic' => 'N', 'picture_page_main_pic' => 'N', 'pic_order' => $order_new, 'active' => 'Y');
 			return $data;
 		}
 	}
@@ -200,7 +200,7 @@ class Edit_model extends CI_Model{
 		$ids = $this->db->get('pictures')->result_array();
 		$id_new = $ids[0]['id'] + 1;
 		$order_new = null;
-		$data = array('id' => $id_new, 'name' => null, 'cover_pic' => 'N', 'logo' => 'N', 'management_logo' => 'N', 'amenities_page_main_pic' => 'N', 'picture_page_main_pic' => 'N', 'pic_order' => $order_new, 'active' => 'Y', 'logo' => 'Y');
+		$data = array('id' => $id_new, 'name' => null, 'caption' => null,'cover_pic' => 'N', 'logo' => 'N', 'management_logo' => 'N', 'amenities_page_main_pic' => 'N', 'picture_page_main_pic' => 'N', 'pic_order' => $order_new, 'active' => 'Y', 'logo' => 'Y');
 		return $data;
 	}
 
@@ -218,7 +218,7 @@ class Edit_model extends CI_Model{
 		$ids = $this->db->get('pictures')->result_array();
 		$id_new = $ids[0]['id'] + 1;
 		$order_new = null;
-		$data = array('id' => $id_new, 'name' => null, 'cover_pic' => 'N', 'logo' => 'N', 'management_logo' => 'N', 'amenities_page_main_pic' => 'N', 'picture_page_main_pic' => 'N', 'pic_order' => $order_new, 'active' => 'Y', 'management_logo' => 'Y');
+		$data = array('id' => $id_new, 'name' => null, 'caption' => null, 'cover_pic' => 'N', 'logo' => 'N', 'management_logo' => 'N', 'amenities_page_main_pic' => 'N', 'picture_page_main_pic' => 'N', 'pic_order' => $order_new, 'active' => 'Y', 'management_logo' => 'Y');
 		return $data;
 	}
 

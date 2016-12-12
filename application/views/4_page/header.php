@@ -16,11 +16,11 @@
     <link rel='stylesheet' media='only screen and (min-width: 1079px)' href='<?php echo base_url();?>css/<?php echo $template ?>_apartment_view_main.css' />
     <link rel='stylesheet' media='only screen and (max-width: 1078px)' href='<?php echo base_url();?>css/<?php echo $template ?>_apartment_view_main_small.css' />
     <link rel='stylesheet' media='only screen and (max-width: 730px)' href='<?php echo base_url();?>css/<?php echo $template ?>_apartment_view_main_xsmall.css' />
-    <link href='http://fonts.googleapis.com/css?family=Josefin+Slab:300,400' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Slab:300,400' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Poiret+One|Stalemate' rel='stylesheet' type='text/css'>
-    <link href="http://fonts.googleapis.com/css?family=Dancing+Script:700|EB+Garamond" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script:700|EB+Garamond" rel="stylesheet" type="text/css" />
     <meta name="format-detection" content="telephone=no">
     <script>
         // google analytics

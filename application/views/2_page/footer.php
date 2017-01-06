@@ -32,6 +32,8 @@
       
         <div id="footer_info_left" style="color:#<?php echo $property_color_3 ?>;">
         <a href="http://www.sanangelo.apartments">See Us On SANANGELO.APARTMENTS</a>
+        <br>
+        <a href="http://www.mileschick.com">website development &amp; design by Miles Chick, Web Developer</a>
 	         <?php 
 	        	if($management_logo_name != 'N'){
 	        		echo "<div id='property_management_logo_box' class='property_management_logo_box'>";

@@ -695,8 +695,6 @@ public function do_upload_man_logo(){
     $new_pic_data = $this->id->get_new_man_logo_data();
     $id = $new_pic_data['id'];
 
-    echo $id;
-
     if(!is_dir('./images/logos/management')){
             mkdir('./images/logos/management/', 0777, true);
         }

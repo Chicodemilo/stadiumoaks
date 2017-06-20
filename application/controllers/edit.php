@@ -684,6 +684,8 @@ public function man_logo_upload(){
 
 
 public function do_upload_man_logo(){
+
+
     $this->db->where('management_logo', 'Y');
     $this->db->delete('pictures');
     $this->load->helper('file');
@@ -692,6 +694,8 @@ public function do_upload_man_logo(){
     $this->load->model('edit_model', 'id');
     $new_pic_data = $this->id->get_new_man_logo_data();
     $id = $new_pic_data['id'];
+
+    echo $id;
 
     if(!is_dir('./images/logos/management')){
             mkdir('./images/logos/management/', 0777, true);

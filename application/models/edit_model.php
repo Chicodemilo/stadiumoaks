@@ -214,6 +214,16 @@ class Edit_model extends CI_Model{
 	}
 
 
+	public function get_new_man_logo_data(){
+		$this->db->order_by('id', 'desc');
+		$ids = $this->db->get('pictures')->result_array();
+		$id_new = $ids[0]['id'] + 1;
+		$order_new = null;
+		$data = array('id' => $id_new, 'name' => '', 'caption' => '','cover_pic' => 'N', 'logo' => 'N', 'management_logo' => 'Y', 'amenities_page_main_pic' => 'N', 'picture_page_main_pic' => 'N', 'pic_order' => $order_new, 'active' => 'Y');
+		return $data;
+	}
+
+
 	public function get_man_logo(){
 		$this->db->where('logo', 'N');
 		$this->db->where('management_logo', 'Y');

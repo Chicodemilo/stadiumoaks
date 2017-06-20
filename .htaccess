@@ -5,7 +5,7 @@
 # then Save File As ".htaccess"
 
 RewriteEngine On
-RewriteBase /greatsite.apartments/z_temp_site_
+# RewriteBase /greatsite.apartments/z_temp_site_
 
 RewriteCond %{REQUEST_URI} ^system.*
 RewriteRule ^(.*)$ /index.php?/$1 [L]

@@ -6,7 +6,7 @@ class Contact extends CI_Controller{
 
 
 // SESSION *********************************************************************************
-
+//test
 	public function __construct(){
         parent::__construct();
         $this->load->database();
